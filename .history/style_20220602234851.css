@@ -147,31 +147,21 @@ section {
 .intro-section {
   z-index: 1;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: 2.5rem;
   position: relative;
-  justify-content: space-evenly;
+  margin-top: 3.125rem;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 50px;
 }
 
-.intro-headings {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.intro-img img {
+.intro-section img {
   background-color: #93253b;
   border: 1px solid #93253b;
-}
-
-.intro-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+    top: 30vh;
 }
 
 .about-section {
@@ -184,7 +174,7 @@ section {
 
 .p-pic {
   border-radius: 50%;
-  width: calc(100% - 259px);
+  width: 25rem;
 }
 
 
@@ -289,8 +279,15 @@ h4 {
 
 .intro-section h1 {
   text-align: end;
+
 }
 
+.intro-section h3 {
+  position: absolute;
+  top: 31.5vh;
+  left: 217px;
+
+}
 .stack {
   color: burlywood;
 }
