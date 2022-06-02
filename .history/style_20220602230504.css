@@ -277,19 +277,11 @@ h4 {
   font-family: 'Poiret One', cursive;
 }
 
-.intro-section h1 {
-  text-align: end;
-
-}
-
-.intro-section h3 {
-  position: absolute;
-  top: 256px;
-  left: 217px;
-
+.section h3 {
+  
 }
 .stack {
-  color: burlywood;
+
 }
 
 .first-name {
@@ -297,7 +289,7 @@ h4 {
   font-size: 7rem;
   color: #e8dec5;
   line-height: 0.8;
-  letter-spacing: -1px;
+  letter-spacing: 0.0rem;
 }
 
 .last-name {
