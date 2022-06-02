@@ -73,8 +73,7 @@ Navigation
 .nav-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
   justify-content: flex-end;
   padding-right: 15px;
   padding-left: 15px;
@@ -157,8 +156,8 @@ section {
 }
 
 .intro-section img {
-  background-color: #93253b;
-  border: 1px solid #93253b;
+  background-color: #c22948;
+  border: 1px solid #c22948;
 }
 
 .about-section {

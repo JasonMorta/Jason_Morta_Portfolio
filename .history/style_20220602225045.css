@@ -73,8 +73,7 @@ Navigation
 .nav-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
   justify-content: flex-end;
   padding-right: 15px;
   padding-left: 15px;

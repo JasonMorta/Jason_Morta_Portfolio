@@ -73,8 +73,7 @@ Navigation
 .nav-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
   justify-content: flex-end;
   padding-right: 15px;
   padding-left: 15px;
@@ -151,14 +150,10 @@ section {
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 2.5rem;
-}
-
-.intro-section img {
-  background-color: #93253b;
-  border: 1px solid #93253b;
 }
 
 .about-section {
