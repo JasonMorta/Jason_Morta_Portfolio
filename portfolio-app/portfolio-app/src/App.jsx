@@ -5,6 +5,7 @@ import HeroImage from './components/HeroImage';
 import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import MyWorks from './components/MyWork'
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
         <HeroImage />
         <AboutMe />
         <Education />
+        <MyWorks />
         <Contact />
 
       </div>

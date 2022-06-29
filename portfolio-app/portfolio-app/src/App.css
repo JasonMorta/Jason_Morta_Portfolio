@@ -579,11 +579,11 @@ My Work / Cards
   -webkit-border-image: -webkit-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image-slice: 1;
+  margin: 15px 0px;
+  background-image: url(./img/bkg.png);
+  
 }
 
-.project-card:hover {
-  background-color: rgba(128, 128, 128, 0.034);
-}
 
 .image-container {
   width: 95px;
@@ -597,8 +597,7 @@ My Work / Cards
 }
 
 .project-card img {
-  margin: auto;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 
 .project-card p {
@@ -612,4 +611,13 @@ My Work / Cards
 
 .stacks img {
   margin-bottom: 0;
+  margin: 0;
+}
+
+.stacks {
+  background-color: #c22948;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
 }

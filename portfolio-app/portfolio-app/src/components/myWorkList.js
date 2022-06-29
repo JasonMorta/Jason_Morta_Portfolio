@@ -1,5 +1,5 @@
 
-import js from '../img/js.svg'
+import js from '../img/JS.svg'
 import jq from '../img/jquery-official.svg'
 import bs from '../img/boots.svg'
 import pic1 from '../img/workPreviews/store.jpg'
@@ -16,8 +16,8 @@ export default [
          'VAT calculation',
          'shipping methods',
          'save cart to localStorage'
-      ]
-
+      ],
+      link: 'https://github.com/JasonMorta/Level-1-Capstone-Project-My-online-store.git'
 
    }
 ]
