@@ -19,16 +19,16 @@ export default [
    {
       id: 'js',
       skill_img: js,
-      description: `<em>Javascript</em>: I regularly use JS to add extra functionality to my projects, using some of the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.`
+      description: `Javascript: I regularly use JS to add extra functionality to my projects, using some of the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.`
    },
    {
       id: 'jq',
       skill_img: jQ,
-      description: `<em>JQUERY</em>: This library makes adding animation with JS much easier and faster. Because of its support on all modern browsers I tend to use jQuery more often.`
+      description: `JQUERY: This library makes adding animation with JS much easier and faster. Because of its support on all modern browsers I tend to use jQuery more often.`
    },
    {
       id: 'bs',
       skill_img: boot,
-      description: `<em>BOOTSTRAP</em>: To quickly create responsive tables, images, or forms, I turn to bootstrap but add my own styling to give my code a personal touch.`
+      description: `BOOTSTRAP: To quickly create responsive tables, images, or forms, I turn to bootstrap but add my own styling to give my code a personal touch.`
    },
 ]
