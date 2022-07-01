@@ -7,12 +7,13 @@ export default function MyWork() {
 
 
 
-  const myWork = works.map((item) => {
+  const myWork = works.map((item, index) => {
     return (
-      <div className="project-card-container" >
+      <div className="project-card-container" key={index}>
       <div className="project-card" >
-        {item.prev.map((pic) => (
+        {item.prev.map((pic, index) => (
           <img
+          key={index}
             src={pic}
             alt="store"
             style={{ width: "200px" }}
@@ -24,14 +25,14 @@ export default function MyWork() {
           {item.title}
         </h3>
         <div className="stacks">
-          {item.skills.map((skill) => (
-            <img src={skill} alt="" width="40px" />
+          {item.skills.map((skill, index) => (
+            <img src={skill} alt="" width="40px" key={index} />
           ))}
         </div>
         <p style={{ color: "gray", marginBottom: 0 }}>Key features</p>
         <ul>
-          {item.features.map((ftr) => (
-            <li>{ftr}</li>
+          {item.features.map((ftr, index) => (
+            <li key={index}>{ftr}</li>
           ))}
         </ul>
         <a href={item.link}>

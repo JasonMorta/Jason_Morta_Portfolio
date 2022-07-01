@@ -1,0 +1,8 @@
+.first-name{
+   transition: 2s;
+}
+
+.first-name:hover {
+   transition: .1s;
+  color: #C22948;
+}

@@ -5,8 +5,8 @@ export default function Education() {
 
 
 
-   const mySkills = skills.map(skill => {
-      return   <div className="skill-card">
+   const mySkills = skills.map((skill, index) => {
+      return   <div className="skill-card"  key={index}>
                   <div className='image-container'>
                      <img src={skill.skill_img} alt="skill pic"/>
                   </div>
@@ -17,8 +17,8 @@ export default function Education() {
 
 
   return (
-   <section id="section-2" class="about-section">
-   <div class="div-cont">
+   <section id="section-2" className="about-section">
+   <div className="div-cont">
       <header>
          <em style={{color: 'gray'}}>Education</em>
          <p>In 2009 I finished high school and started working as a machine operator at QTec Moulding. I took a few online classes when I started(2019) my web dev career, but didn't get as much out of it as I have hoped for. I'm now(April 2022) enrolled at <a href="https://www.hyperiondev.com/">Hyperion Dev's</a> on-site boot camp.
@@ -27,7 +27,7 @@ export default function Education() {
 
       <h3>Skill Stack</h3>
 
-      <div class="contentContainer" id="stacks">
+      <div className="contentContainer" id="stacks">
          
          {mySkills}
         
