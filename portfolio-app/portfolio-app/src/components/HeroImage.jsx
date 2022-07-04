@@ -28,12 +28,12 @@ export default function HeroImage(props) {
   function edit(e) {
 
    if (e.target.dataset.id === "1"){
-      let newName = prompt("Change Name", props.name);
+      let newName = prompt("Change Name", "Enter a name");
       if (newName != null) {
          props.name.splice(0, 100);
         let text = newName.split("");
         props.name.push(text);
-        console.log(props.name);
+        console.log("props: "+typeof props.name);
       }
    }
       props.count()

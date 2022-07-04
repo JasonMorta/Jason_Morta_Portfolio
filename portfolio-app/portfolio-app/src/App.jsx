@@ -16,20 +16,25 @@ export default class App extends Component {
 
     this.state = {
       name: ['J','a','s','o','n'],
-      counter: 1
+      counter: 1,
+      newTest: [],
+      newName: [],
+      prompt:[]
+      
     };
-    console.log("Initial: "+this.state.name)
+    console.log("Initial: "+ typeof this.state.name)
   }
 
  
 
   count=()=>{
     this.setState({
+      newTest: this.newName,
       counter: this.counter++
     })
-    console.log(this.state.name)
+    console.log(this.state.newTest)
   }
- 
+
 
 
 
@@ -44,6 +49,8 @@ export default class App extends Component {
         <div className="main-container">
           <Navigation />
           <HeroImage
+         
+          newName={this.state.newName}
           count={this.count.bind(this)}
           name={this.state.name}
              />
