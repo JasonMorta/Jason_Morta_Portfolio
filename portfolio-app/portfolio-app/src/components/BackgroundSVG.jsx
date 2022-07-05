@@ -5,3 +5,4 @@ export default function BackgroundSVG() {
    <div className="background"></div>
   )
 }
+ 

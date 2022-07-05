@@ -38,7 +38,7 @@ export default function HeroImage(props) {
    }
       props.count()
   }
-
+ 
   //give each letter a number using set-attribute
   let num = 1;
   //map over each letter in array
