@@ -152,15 +152,7 @@ section {
 
 }
 
-.intro-headings {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-.intro-headings h3 {
-  font-size: medium;
-}
 
 .intro-img img {
   background-color: #93253b;
@@ -291,29 +283,7 @@ h4 {
   font-family: 'Poiret One', cursive;
 }
 
-.intro-section h1 {
-  text-align: end;
-}
 
-.stack {
-  color: burlywood;
-}
-
-.first-name {
-  font-family: 'Audiowide', cursive;
-  font-size: 7rem;
-  color: #e8dec5;
-  line-height: 0.8;
-  letter-spacing: -1px;
-}
-
-.last-name {
-  font-family: 'Audiowide', cursive;
-  font-size: 7rem;
-  color: #C22948;
-  line-height: 0.8;
-  letter-spacing: 0.0rem;
-}
 
 .paraDiv {
   width: 90%;

@@ -1,0 +1,49 @@
+.intro-headings {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+
+.intro-headings h3 {
+ font-size: medium;
+}
+
+.intro-section h1 {
+ text-align: left;
+}
+
+.stack {
+ color: burlywood;
+}
+
+.first-name {
+ font-family: 'Audiowide', cursive;
+ font-size: 7rem;
+ color: #e8dec5;
+ line-height: 0.8;
+ letter-spacing: -1px;
+}
+
+.last-name {
+ font-family: 'Audiowide', cursive;
+ font-size: 7rem;
+ color: #C22948;
+ line-height: 0.8;
+ letter-spacing: 0.0rem;
+}
+.first-name{
+ transition: 2s;
+}
+
+.first-name:hover {
+ transition: .1s;
+color: #C22948;
+}
+
+.animatedWord {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ flex-direction: row;
+}
+

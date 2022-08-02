@@ -1,9 +1,10 @@
 import React from "react";
 import hero_image from "../img/me.jpg";
+import Header from "./header/Header";
 import "./heroImage.css";
 
 
-export default function HeroImage(props) {
+export default function HeroImage() {
 
  
 
@@ -24,41 +25,10 @@ export default function HeroImage(props) {
   }
 
 
-  //update array if 1st letter is clicked
-  function edit(e) {
-
-   if (e.target.dataset.id === "1"){
-      let newName = prompt("Change Name", "Enter a name");
-      if (newName != null) {
-         props.name.splice(0, 100);
-        let text = newName.split("");
-        props.name.push(text);
-        console.log("props: "+typeof props.name);
-      }
-   }
-      props.count()
-  }
- 
-  //give each letter a number using set-attribute
-  let num = 1;
-  //map over each letter in array
 
   return (
     <section id="section-1" className="intro-section">
-      <div className="intro-headings">
-        <h1>
-          {props.name.map((i, index) => (
-            <span className="first-name" data-id={num++} onClick={edit} key={index}>
-              {i}
-            </span>
-          ))}
-          <br />
-          <span className="last-name" >Morta</span>
-        </h1>
-        <h3>
-          <span className="stack">Full Stack</span> Web-Developer
-        </h3>
-      </div>
+      <Header />
       <div className="intro-img" onPointerMove={hover} onPointerOut={hoverOut}>
         <img src={hero_image} alt="myImage" className="img-thumbnail p-pic" />
       </div>
