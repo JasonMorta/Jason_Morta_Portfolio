@@ -6,6 +6,7 @@
 
 .intro-headings h3 {
  font-size: medium;
+ margin-left: 0;
 }
 
 .intro-section h1 {
@@ -45,5 +46,6 @@ color: #C22948;
  align-items: center;
  justify-content: flex-start;
  flex-direction: row;
+ min-height: 85px;
 }
 

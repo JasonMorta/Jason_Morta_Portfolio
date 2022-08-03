@@ -17,7 +17,7 @@ font-family: 'Wallpoet', cursive;
 font-family: 'Water Brush', cursive; */
 
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   scroll-behavior: smooth;
 }
@@ -68,11 +68,9 @@ Navigation
 .nav-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 45%;
   max-width: 800px;
-  justify-content: flex-end;
-
-  margin-right: auto;
+  margin-right: 0;
   margin-left: auto;
 }
 

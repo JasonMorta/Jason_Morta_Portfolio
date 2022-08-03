@@ -14,10 +14,10 @@ export default function Header() {
   function edit(e) {
    let newName = prompt("Change Name", name);
     if (newName != null) {
-
+     setName('')
      setTimeout(() => {
-       setName(newName)
-     }, 1000);
+      setName(newName)
+     }, 100);
      
    }  
   }
