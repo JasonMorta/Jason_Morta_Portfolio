@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Navigation() {
 
    let navigate = useNavigate();
-
+   
 
   return (
    <nav className="nav" id="top-nav">
@@ -22,7 +22,9 @@ export default function Navigation() {
             <h4>CONTACT</h4>
          </a>
          
-           <a> <h4 onClick={() => navigate("./BlogPosts")}>BLOGS</h4></a>
+         <a onClick={() => navigate("/BlogPosts")} >
+            <h4 >BLOGS</h4>
+         </a>
          
       </div>
    </nav>

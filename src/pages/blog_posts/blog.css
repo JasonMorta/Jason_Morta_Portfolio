@@ -1,0 +1,23 @@
+
+
+
+.blog-container {
+ background-color: #0f0f11;
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ padding: 10px;
+ margin-top: 60px;
+ box-shadow: 0 0px 3px 0px #c229482c;
+}
+.blog-container h1 {
+ position: relative;
+ font-size: xx-large;
+
+}
+
+.blog-container i {
+color: #b42744;
+margin: auto 0 0 auto;
+text-align: left;
+}

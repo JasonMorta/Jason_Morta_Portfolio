@@ -1,0 +1,51 @@
+.blog-posts-container {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ position: relative;
+}
+
+.main-heading {
+ font-size: 70px;
+ margin-top: 75px;
+ margin-bottom: 20px;
+}
+
+.blog-posts-container h1 :not(.main-heading) {
+ position: relative;
+ margin: revert;
+}
+
+
+
+.blog {
+ align-items: flex-start;
+ margin: 8px;
+}
+
+.blog:hover {
+ box-shadow: 0 0px 3px 0px #c2294883;
+ }
+
+ .head-content {
+  margin: 0;
+ }
+
+ .head-content i {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  font-size: small;
+  color: #e8dec5;
+ }
+
+
+ .desc {
+  position: relative;
+  margin: 0;
+ }
+
+ .desc i {
+  color: #bd2229;
+  cursor: pointer;
+ }

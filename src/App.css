@@ -24,6 +24,7 @@ font-family: 'Water Brush', cursive; */
 
 body {
   display: flex;
+  min-height: 60vh;
   flex-wrap: nowrap;
   flex-direction: column;
   min-width: 320px;
@@ -33,6 +34,8 @@ body {
   font-family: system-ui, sans-serif;
   z-index: 1;
   user-select: none;
+  max-width: 800px;
+  margin: auto;
 }
 
 
@@ -69,8 +72,12 @@ Navigation
   display: flex;
   flex-direction: row;
   max-width: 800px;
-  margin-right: 0;
   margin-left: auto;
+  margin-right: 0;
+  justify-content: flex-end;
+}
+.nav-container a {
+  margin: 0;
 }
 
 
@@ -246,7 +253,7 @@ div {
 .div-cont {
   display: flex;
   flex-direction: column;
-  background-color: #0f0f11;
+  background-color: #0f0f11bf;
   margin: 20px;
   padding: 20px;
   box-shadow: 0 0px 3px 0px #c229482c;
@@ -260,11 +267,13 @@ div {
   height: auto;
   transition: .3s;
   margin: auto;
+  color: #9e9e9e;
 }
 
-.div-cont:hover {
-  box-shadow: 0 0px 3px 0px #c2294883;
+.div-cont:hover :not(a,i){
+  color: rgb(212, 212, 212);
 }
+
 
 .contact-form {
   height: 50vh;
