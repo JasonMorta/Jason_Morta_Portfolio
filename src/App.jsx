@@ -17,7 +17,7 @@ export const sharedState = createContext();
 export default function App() {
 
   useEffect(() => {
-    ReactGA.initialize('G-JLNQYCBL8C')
+    ReactGA.initialize('UA-237424331-1')
     //To report page view
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
