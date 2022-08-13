@@ -1,5 +1,5 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default  [
+ 
+const BlogList = [
   {
     id: 1,
     blog: {
@@ -92,3 +92,6 @@ export default  [
     created: "2022"
   }
 ]
+
+
+export default BlogList
