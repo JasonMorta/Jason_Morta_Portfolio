@@ -53,7 +53,7 @@ export default  [
 
       }
     },
-    created: "Friday August 2022"
+    created: "Friday, August 12, 2022"
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ export default  [
 
       }
     },
-    created: "Friday August 2022"
+    created: "2022"
   },
   {
     id: 3,
@@ -77,7 +77,7 @@ export default  [
 
       }
     },
-    created: "Friday August 2022"
+    created: "2022"
   },
   {
     id: 4,
@@ -89,17 +89,6 @@ export default  [
 
       }
     },
-    created: "Friday August 2022"
+    created: "2022"
   }
 ]
-
-
-
- //  {
- //   id: 1,
- //   blog: [
- //     { heading: "",
- //       description: ""
-//      }],
- //   date: new Date()
- // },

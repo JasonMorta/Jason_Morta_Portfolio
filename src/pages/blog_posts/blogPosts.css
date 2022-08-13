@@ -23,6 +23,8 @@
 .blog {
  align-items: flex-start;
  margin: 8px;
+ min-height: 150px;
+ justify-content: space-evenly;
 }
 
 .blog:hover {
