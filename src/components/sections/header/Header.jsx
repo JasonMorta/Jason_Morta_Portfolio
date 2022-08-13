@@ -41,7 +41,7 @@ export default function Header() {
           <h1 className="last-name " >Morta</h1>
         </div>
         <h3>
-          <span className="stack">Full Stack</span> Web-Developer
+          <span className="stack">MERN Stack</span> Web-Developer
         </h3>
       </div>
     </>

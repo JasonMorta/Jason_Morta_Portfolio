@@ -223,20 +223,23 @@ section {
 
 
 .skill-card {
-  width: 200px;
+  width: 180px;
   font-size: 15px;
   padding: 5px;
   transition: .4s;
+    height: 120px;
+    background-color: #00000026;
+    margin: 2px;
+    font-size: small;
 }
 
 .skill-card:hover {
-  background-color: rgb(128 128 128 / 10%);
+  background-color: #c229481a;
   border-radius: 0px;
   transition: .4s;
 }
 
 .skill-card img {
-  width: 100px;
   float: left;
 }
 
@@ -290,6 +293,10 @@ h1,
 h2,
 h4 {
   font-family: 'Poiret One', cursive;
+}
+
+a {
+  color: #C22948;
 }
 
 a:visited {
@@ -552,7 +559,7 @@ My Work / Cards
   flex-direction: column;
   align-items: flex-start;
   width: 250px;
-  min-height:420px ;
+  min-height:430px ;
   padding: 10px;
   border-bottom: 2px solid #C22948;
   border-top: 2px solid #C22948;
@@ -567,9 +574,8 @@ My Work / Cards
 
 
 .image-container {
-  width: 95px;
-  height: 95px;
-  float: left;
+  width: 40px;
+  float: right;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -12,10 +12,14 @@ import next from '../../../img/next.png';
 import node from '../../../img/node.png';
 import mui from '../../../img/MUi.png';
 import express from '../../../img/express.png';
+import netlify from '../../../img/netlify.png';
 import store from '../../../img/workPreviews/store.jpg';
 import game from '../../../img/workPreviews/cardGame.jpg';
 import iTune from '../../../img/workPreviews/iTunesMusicAPI.jpg';
 import weather from '../../../img/workPreviews/weather.jpg';
+import movies from '../../../img/workPreviews/movies.jpg';
+import toDo from '../../../img/workPreviews/toDoList.png';
+import dogs from '../../../img/workPreviews/eventsplanner.jpg';
 
 
 //my works object
@@ -51,7 +55,8 @@ export const projectList = [
          '› Find any media on the iTunes API',
          '› Add/remove media to favorite',
          '› Loading indicators',
-         '› Express backend server'
+         '› Express backend server',
+         '› Async programing'
          
       ],
       gitLink: 'https://github.com/JasonMorta/Level-1-Capstone-Project-My-online-store.git',
@@ -89,8 +94,8 @@ export const projectList = [
             title: 'Git repo'
          },
          {
-            icon: herokuIcon,
-            link: 'https://match-your-animals-game.herokuapp.com/',
+            icon: netlify,
+            link: 'https://matchtheanimal.netlify.app/',
             title: 'Live demo'
 
          } 
@@ -106,17 +111,104 @@ export const projectList = [
          '› Get the local weather of any City',
          '› setTimeout, setInterval',
          '› .env API key',
-         '› Async await'
+         '› Async programing',
+         '› OpenWeatherMap API',
       ],
       links: [
          {  
             icon: gitIcon,
-            link:'https://github.com/JasonMorta/WD-LVL2-Project1_Game_React.git',
+            link:'https://github.com/JasonMorta/weather-app.git',
+            title: 'Git repo'
+         },
+         {
+            icon: netlify,
+            link: 'https://match-your-animals-game.herokuapp.com/',
+            title: 'Live demo'
+
+         } 
+      ]
+
+   },
+   {
+      id:   4,
+      prev: [movies],
+      title: "Popular Movies API",
+      skills:  [react, next, css, bootS, node, express],
+      features:   [
+         '› Return the current most popular movies',
+         '› themoviedb.org API',
+         '› Select move for more details',
+         '› Google Analytics',
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link:'https://github.com/JasonMorta/Next-Movie-API.git',
+            title: 'Git repo'
+         },
+         {
+            icon: netlify,
+            link: 'https://popularmoviesapi.netlify.app/',
+            title: 'Live demo'
+
+         } 
+      ]
+
+   },
+   {
+      id:   5,
+      prev: [toDo],
+      title: "MERN ToDoList",
+      skills:  [mongoDB, express, react, node, mui, css],
+      features:   [
+         '› Stores data to MongoDB',
+         '› JTW(JavaScript Token Authentication)',
+         '› CRUD operation',
+         '› User accounts',
+         '› LocalStorage',
+
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link:'https://github.com/JasonMorta/MongoDB-To-do-List-JWT.git',
             title: 'Git repo'
          },
          {
             icon: herokuIcon,
-            link: 'https://match-your-animals-game.herokuapp.com/',
+            link: 'https://mernstack-todolist.herokuapp.com/',
+            title: 'Live demo'
+
+         } 
+      ]
+
+   },
+   {
+      id:   6,
+      prev: [dogs],
+      title: "Dog Event Planner",
+      skills:  [mongoDB, express, react, node, mui, css],
+      features:   [
+         '› Stores data to MongoDB',
+         '› JTW(JavaScript Token Authentication)',
+         '› CRUD operation',
+         '› User accounts',
+         '› User rolls',
+         '› Comment section',
+
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link:'https://github.com/JasonMorta/doggy-event-planner.git',
+            title: 'Git repo'
+         },
+         {
+            icon: herokuIcon,
+            link: 'https://dogeventplanner.herokuapp.com/',
             title: 'Live demo'
 
          } 

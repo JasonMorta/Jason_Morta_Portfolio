@@ -1,25 +1,28 @@
 import js from '../../img/JS.svg'
 import html5 from '../../img/html5.svg'
 import css from '../../img/CSS.svg'
-import jQ from '../../img/jquery-official.svg'
+import jQ from '../../img/jquery.png'
 import boot from '../../img/boots.svg'
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
    {
       id: 'html5',
       skill_img: html5,
-      description: "HTML5: Everyday I'm learning more and better ways to use HTML elements. Writing much cleaner and reusable code."
+      description: [<p><b>HTML5: </b> Everyday I'm learning more and better ways to use HTML elements. 
+         Writing much cleaner and reusable code.</p>]
    },
    {
       id: 'css',
       skill_img: css,
-      description: `CSS3: I use CSS in every project, even the small ones. I'm familiar with Flex Box, Grid and
-      also make use of Bootstrap when needed.`
+      description: [<p><b>CSS3: </b> 
+      I use CSS in every project, even the small ones. 
+      I'm familiar with Flex Box, Grid and also make use of Bootstrap when needed.</p>]
    },
    {
       id: 'js',
       skill_img: js,
-      description: `Javascript: I regularly use JS to add extra functionality to my projects, using some of the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.`
+      description: [<p><b>Javascript:</b> I regularly use JS in my projects, using some of
+      the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.</p>]
    },
    {
       id: 'jq',
