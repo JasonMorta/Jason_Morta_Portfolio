@@ -12,7 +12,6 @@ export default function Navigation() {
                category: cat,
                action: act
          })
-         console.log(ReactGA.event)
    }
 
   
