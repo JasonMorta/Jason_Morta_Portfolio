@@ -1,15 +1,29 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import ReactGA from 'react-ga'
 
 export default function Navigation() {
 
    let navigate = useNavigate();
    
+   //Tell google analytics what button was clicked
+   function events(cat,act){
+         ReactGA.event({
+               category: cat,
+               action: act
+         })
+         console.log(ReactGA.event)
+   }
+
+  
 
   return (
    <nav className="nav" id="top-nav">
       <div className="nav-container">
-         <a className="active" href="#main" onClick={() => navigate("./")}>
+         <a className="active" href="#main" onClick={()=>{
+            navigate("./")
+            events("nav button", "clicked on main link")
+            } }>
             <h4>MAIN</h4>
          </a>
          <a className="active" href="#work" onClick={() => navigate("./")}>

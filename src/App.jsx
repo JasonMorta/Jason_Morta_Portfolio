@@ -9,7 +9,7 @@ import Home from "./pages/Home/Home";
 import BlogPosts from "./pages/blogposts/BlogPosts";
 import Blog from "./pages/blogposts/Blog.jsx";
 import { useEffect } from "react";
-import {ReactGa} from 'react-ga'
+import ReactGA from 'react-ga';
 
 
 export const sharedState = createContext();
@@ -17,10 +17,9 @@ export const sharedState = createContext();
 export default function App() {
 
   useEffect(() => {
-    ReactGa.initialize('G-JLNQYCBL8C')
-  
+    ReactGA.initialize('G-JLNQYCBL8C')
     //To report page view
-    ReactGa.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
   
 
