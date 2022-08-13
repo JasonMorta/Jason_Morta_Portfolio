@@ -1,6 +1,6 @@
 import React from 'react';
 import './blogPosts.css'
-import list from '../../components/data/BlogList'
+import list from '../../components/data/BlogList.jsx'
 import { useNavigate } from 'react-router';
 import { useContext } from 'react';
 import { sharedState } from '../../App';
