@@ -2,17 +2,12 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import BackgroundSVG from "./components/BackgroundSVG";
-import AboutMe from "./components/sections/about/AboutMe";
-import Education from "./components/sections/education/Education";
-import Contact from "./components/sections/contact/Contact";
 import './cursor.scss'
 import { React, createContext, useState } from "react";
-import MyWork from "./components/sections/my-work/MyWork";
-import HeroImage from "./components/sections/hero-image/HeroImage";
 import ErrorPage from "./pages/error/404";
 import Home from "./pages/Home/Home";
-import BlogPosts from "./pages/blog_posts/BlogPosts";
-import Blog from "./pages/blog_posts/Blog.jsx";
+import BlogPosts from "./pages/blogposts/BlogPosts";
+import Blog from "./pages/blogposts/Blog.jsx";
 
 
 export const sharedState = createContext();

@@ -4,13 +4,12 @@ import list from '../../components/data/BlogList.jsx'
 import { useNavigate } from 'react-router';
 import { useContext } from 'react';
 import { sharedState } from '../../App';
-import { useState } from 'react';
 
 export default function BlogPosts() {
 
   let navigate = useNavigate();
   let state = useContext(sharedState);
-  let [, , , , thisBlog, setThisBlog] = state
+  let [,,,,, setThisBlog] = state
 
 
   return (
