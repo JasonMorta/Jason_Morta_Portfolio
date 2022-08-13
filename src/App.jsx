@@ -1,8 +1,8 @@
-import "./App.css";
+import "./styles/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import BackgroundSVG from "./components/BackgroundSVG";
-import './cursor.scss'
+import './styles/cursor.scss'
 import { React, createContext, useState } from "react";
 import ErrorPage from "./pages/error/404";
 import Home from "./pages/Home/Home";

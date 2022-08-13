@@ -109,7 +109,7 @@ Navigation
  */
 
 .background {
-  background-image: url("./img/squares.svg");
+  background-image: url("../img/squares.svg");
   background-repeat: repeat;
   background-size: auto;
   background-position: inherit;
@@ -530,10 +530,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-/* Handle on hover */
-.contentContainer::-webkit-scrollbar-thumb:hover {
-  background: #6b0d20;
-}
+
 
 /* 
 ========================
@@ -555,6 +552,7 @@ My Work / Cards
   flex-direction: column;
   align-items: flex-start;
   width: 250px;
+  min-height:420px ;
   padding: 10px;
   border-bottom: 2px solid #C22948;
   border-top: 2px solid #C22948;
@@ -563,7 +561,7 @@ My Work / Cards
   border-image: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image-slice: 1;
   margin: 15px 0px;
-  background-image: url(./img/bkg.png);
+  background-image: url(../img/bkg.png);
   
 }
 

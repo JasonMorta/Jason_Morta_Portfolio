@@ -9,20 +9,20 @@ export default function Navigation() {
   return (
    <nav className="nav" id="top-nav">
       <div className="nav-container">
-         <a className="active" href="#" onClick={() => navigate("./")}>
+         <a className="active" href="#main" onClick={() => navigate("./")}>
             <h4>MAIN</h4>
          </a>
-         <a className="active" href="#section-3" onClick={() => navigate("./")}>
+         <a className="active" href="#work" onClick={() => navigate("./")}>
             <h4  >MY WORK</h4>
          </a>
-         <a href="#section-2" onClick={() => navigate("./")}>
+         <a href="#about" onClick={() => navigate("./")}>
             <h4>ABOUT ME</h4>
          </a>
-         <a href="#section-4" onClick={() => navigate("./")}>
+         <a href="#contact" onClick={() => navigate("./")}>
             <h4>CONTACT</h4>
          </a>
          
-         <a onClick={() => navigate("/BlogPosts")} >
+         <a onClick={() => navigate("/blogposts")} >
             <h4 >BLOGS</h4>
          </a>
          

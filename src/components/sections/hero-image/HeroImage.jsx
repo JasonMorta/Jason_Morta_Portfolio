@@ -27,7 +27,7 @@ export default function HeroImage() {
 
 
   return (
-    <section id="section-1" className="intro-section">
+    <section id="main" className="intro-section">
       <Header />
       <div className="intro-img" onPointerMove={hover} onPointerOut={hoverOut}>
         <img src={hero_image} alt="myImage" className="img-thumbnail p-pic" />

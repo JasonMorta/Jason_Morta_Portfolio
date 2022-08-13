@@ -26,7 +26,7 @@ export default function BlogPosts() {
             <p>{item.blog.description.intro}<i onClick={
               function toBlog(){
                 setThisBlog(item)
-                  navigate('/Blog')  
+                  navigate('/blog')  
               }
             }>Read more</i></p>
             

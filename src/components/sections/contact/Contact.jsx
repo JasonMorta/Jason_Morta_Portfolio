@@ -6,7 +6,7 @@ import mapImg from '../../../img/map.png'
 export default function Contact() {
   return (
     <div>
-      <section id="section-4" className="contact-form">
+      <section id="contact" className="contact-form">
          <div className="div-cont">
             <h1>GET IN TOUCH</h1>
             <div className="contact-map">

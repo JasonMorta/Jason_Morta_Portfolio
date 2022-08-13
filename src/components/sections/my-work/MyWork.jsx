@@ -12,6 +12,7 @@ export default function MyWork() {
       <div className="project-card-container" key={index}>
       <div className="project-card" >
         {item.prev.map((pic, index) => (
+          <div className="img-container">
           <img
           key={index}
             src={pic}
@@ -19,6 +20,7 @@ export default function MyWork() {
             style={{ width: "200px" }}
             className="img-thumbnail"
           />
+          </div>
         ))}
 
         <h3 className="h2-heading" id="header">
@@ -26,18 +28,23 @@ export default function MyWork() {
         </h3>
         <div className="stacks">
           {item.skills.map((skill, index) => (
-            <img src={skill} alt="" width="40px" key={index} />
+            <img src={skill} alt="" width="30px" key={index} />
           ))}
         </div>
-        <p style={{ color: "gray", marginBottom: 0 }}>Key features</p>
+        <p style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>Key features</p>
         <ul>
           {item.features.map((ftr, index) => (
             <li key={index}>{ftr}</li>
           ))}
         </ul>
-        <a href={item.link} target='_blank' rel="noreferrer">
-          <img src={gitPic} alt="gitLink" width="50px" title="GitHub Link" />
-        </a>
+       <div className="link-icons">
+        {item.links.map((link, index)=>(
+          <a href={link.link} target='_blank' rel="noreferrer" key={index}>
+              <img className="img-links" src={link.icon} alt="logo" width="30px" title={link.title} />
+          </a>
+        ))}
+          
+       </div>
       </div>
       </div>
     );
@@ -46,12 +53,10 @@ export default function MyWork() {
   
   return (
     <div>
-      <section id="section-3" className="my-work-section">
+      <section id="work" className="my-work-section">
         <div className="div-cont">
           <h1>My Work</h1>
-         
-            {myWork}
-        
+            <div className="project-container">{myWork}</div>
         </div>
       </section>
     </div>
