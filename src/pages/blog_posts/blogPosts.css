@@ -16,7 +16,9 @@
  margin: revert;
 }
 
-
+.blog p {
+ text-align: left;
+}
 
 .blog {
  align-items: flex-start;

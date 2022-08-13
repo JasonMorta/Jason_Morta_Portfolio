@@ -16,7 +16,7 @@ export default function Blog() {
       <br/>
       <p>{thisBlog.blog.description.intro.replace("..",'')}</p>
       <br/>
-      <p>{thisBlog.blog.description.paragraph}</p>
+      {thisBlog.blog.description.paragraph}
       <i>cr. {thisBlog.created} </i>
     </div>
   )
