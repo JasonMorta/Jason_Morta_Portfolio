@@ -12,13 +12,13 @@ export default function Home() {
        <div className="App custom-cursor">
           <BackgroundSVG />
   
-          <div className="main-container">
+          
               <HeroImage />
               <AboutMe />
               <Education />
               <MyWork />
               <Contact />
-          </div>
+          
         </div>
     
   )

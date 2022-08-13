@@ -31,21 +31,27 @@ export default function App() {
   return (
    
        <sharedState.Provider value={[name, setName, animationCSS, setAnimationCSS, thisBlog, setThisBlog]}>
-          <div className="App custom-cursor">
-          <BackgroundSVG />
-  
-          <div className="main-container">
-            <Router>
-              <Navigation />
-              <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/BlogPosts" element={<BlogPosts />} />
-              <Route path="/Blog" element={<Blog />} />
-              <Route path="*" element={<ErrorPage />} />
-              </Routes>
-            </Router>
+          <div className="custom-cursor">
+            <div className="App">
+            <BackgroundSVG />
+    
+            
+              <Router>
+                <Navigation />
+             <div className="main-container">
+                <Routes>
+                
+                  <Route path="/" element={<Home />} />
+                  <Route path="/BlogPosts" element={<BlogPosts />} />
+                  <Route path="/Blog" element={<Blog />} />
+                  <Route path="*" element={<ErrorPage />} />
+              
+                </Routes>
+              </div>
+              </Router>
+            
           </div>
-        </div>
+          </div>
        </sharedState.Provider>
     
   )
