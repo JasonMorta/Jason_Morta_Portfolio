@@ -1,8 +1,13 @@
+ import quad from '../../img/workPreviews/Quadratic functions.png'
+ import linearSearch from '../../img/workPreviews/linearSearch.png'
+ import binary from '../../img/workPreviews/binary.png'
+ import './style.css'
+
  
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
-    id: 1,
+    id: 0,
     blog: {
       heading: "Concurrency in Web-development",
       description: {
@@ -57,19 +62,72 @@ export default [
     created: "Friday, August 12, 2022"
   },
   {
-    id: 2,
+    id: 1,
     blog: {
       heading: "Big O notation basics for web developers",
       description: {
-        intro: `Intro 2...`,
-        paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
+        intro: `Big O notation is used in maths, complexity theory, and computer science, it basically tells you how fast a function grows and declines. AKA "Analyze your codes complexity or performance"...`,
+        paragraph: [
+        <>
+          <div className='big-O'>
+            <p><b>Why web developers should know about it.</b>
+            As a web-developer writing code that works is the goal in every project, but we should be able to do more than that. Web devs should also learn to write code as efficiently and effectively as possible. You must be able to analyze the performance in terms of speed and resources of any piece of code, i.e how fast the algorithm is or how much memory is required to run the code. With Big O notation we are able to do this.
+            </p>
+            <br/>
+            <p>In Big O notation there three algorithms/functions we use for analyzing our codes complexity.</p>
+          
+            <ul className='algorithms'>
+              <li>
+                Linear time complexity O(n) = as the size or input increases the amount of time it takes to complete this function also increases linearly.
+              </li>
+              <li>
+                Constant time complexity 0(1) = the
+                time to complete a function does not change even
+                if the input increases.
+              </li>
+              <li>
+                Quadratic time complexity  O(n²) = the time it takes to complete a function increases quadratically.
+              </li>
+            </ul>
+            <br/>
+            <br/>
+              <p style={{marginBottom: '10px'}}><b>Quadratic function O(n²)</b></p>
+              <p className='quad-function'>
+              In programming, we care more about the more significant functions than the smaller ones, because the larger or more complex an algorythm is, the more time and memory it needs to execute. The Quadratic(O(n²)) algorithm is a function that starts out linearly but becomes more complex as it makes reference to inputs multiple times. An of these concepts is nested loops. <br/>
+              If this loop had more nested loops, the input references would increase over time and would have an impact on performance.
+                <img  src={quad} alt="Quadratic function" />
+              </p>
+            <br/>
+          </div>
+          <div>
+            <p><b>Linear vs Binary searching</b></p>
+            <p>Searching is one of the most commonly performed tasks in programing. There are many functions and methods of searching for data in arrays or objects in JavaScript.
+            
+            </p><br/>
+
+            <p><b>Linear Search</b></p>
+            
+              <p  className='quad-function'>
+                Loner goes through a list one item at a time without skipping. The bigger the list gest the more time it takes to complete the search.  This is an O(n) search in complexity.<br/>
+              <img  src={linearSearch} alt="Linear Search" />
+              </p>
+            
+            <br/>
+            <br/>
+            <p><b>Binary Search</b></p>
+            <p  className='quad-function binary'>This method divides the array roughly in half every time it checks if the item in the array is the one we're looking for. So the search time is but in half. This is an O(Log n) search in complexity.
+            <img  src={binary} alt="Binary Search" />
+            </p>
+          </div>
+        </>
+      ]
 
       }
     },
     created: "2022"
   },
   {
-    id: 3,
+    id: 2,
     blog: {
       heading: "Interfaces",
       description: {
@@ -81,7 +139,7 @@ export default [
     created: "2022"
   },
   {
-    id: 4,
+    id: 3,
     blog: {
       heading: "Hashing",
       description: {
