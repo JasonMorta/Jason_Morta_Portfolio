@@ -169,9 +169,9 @@ export default [
   {
     id: 2,
     blog: {
-      heading: "Interfaces",
+      heading: "Interfaces In Web-development",
       description: {
-        intro: `An intercafe in the way your application inteacts with the outside world, I's any that another software can see on your software object and use ti interact with the softwares funtionallity...`,
+        intro: `An interface in the way your application interacts with the outside world, I's any that another software can see on your software object and use ti interact with the softwares functionality...`,
         paragraph: [
           <>
             <p>Another example if an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world</p>
