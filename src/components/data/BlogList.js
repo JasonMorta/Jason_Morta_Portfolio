@@ -108,7 +108,7 @@ export default [
             <p><b>Linear Search</b></p>
             
               <p  className='quad-function'>
-                Loner goes through a list one item at a time without skipping. The bigger the list gest the more time it takes to complete the search.  This is an O(n) search in complexity.<br/>
+              Linear goes through a list one item at a time without skipping. The bigger the list gest the more time it takes to complete the search.  This is an O(n) search in complexity.<br/>
               <img  src={linearSearch} alt="Linear Search" />
               </p>
             
