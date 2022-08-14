@@ -174,10 +174,15 @@ export default [
         intro: `An interface in the way your application interacts with the outside world, I's any that another software can see on your software object and use ti interact with the softwares functionality...`,
         paragraph: [
           <>
-            <p>Another example if an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world</p>
+            <p>Another example if an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world.</p>
             <br/>
-            <p>What are interfaces in OOP(Object Orientated Programing)</p>
-            <p>Interface in programing is the precess of exposing a programs functionality to an object like a button. This button exposes the methods or functionality of a program to the interface.</p>
+            <p><b>What are interfaces in OOP(Object Orientated Programing)</b></p>
+            <p>Interface in programing is the precess of exposing a programs functionality like an object. To create an object you need a class. A class is template for creating objects, or code written by a programer to define the attributes and operations of an object. The attributes defines the object because they contain data or properties.</p><p>OOp is not a programing langues or tool, its a style or a way of writing programs</p>
+            <br/>
+            <p><b>Why JavaScript does not really use interfaces</b>
+            JavaScript has no built-in way of creating or implementing interfaces, because of this ts doesn't use classes to create objects.Since JavaScript is very flexible, it has several ways of implementing interfaces.
+            </p>
+            
           </>
         ]
 
@@ -191,7 +196,7 @@ export default [
       heading: "Hashing",
       description: {
         intro: `Intro 3...`,
-        paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
+        paragraph: `Coming soon`
 
       }
     },
