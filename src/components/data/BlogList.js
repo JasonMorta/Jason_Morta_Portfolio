@@ -82,8 +82,7 @@ export default [
               <p className='source'>source: http://bigocheatsheet.com/</p>
             </div>
             <br/>
-            <p>In Big O notation there three algorithms/functions we use for analyzing our codes complexity.</p>
-          
+            <p>In Big O notation there three algorithms you can use for analyzing our codes complexity.</p>
             <ul className='algorithms'>
               <li>
                 Linear time complexity O(n) = as the size or input increases the amount of time it takes to complete this function also increases linearly.
@@ -172,8 +171,15 @@ export default [
     blog: {
       heading: "Interfaces",
       description: {
-        intro: `Intro 3...`,
-        paragraph: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
+        intro: `An intercafe in the way your application inteacts with the outside world, I's any that another software can see on your software object and use ti interact with the softwares funtionallity...`,
+        paragraph: [
+          <>
+            <p>Another example if an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world</p>
+            <br/>
+            <p>What are interfaces in OOP(Object Orientated Programing)</p>
+            <p>Interface in programing is the precess of exposing a programs functionality to an object like a button. This button exposes the methods or functionality of a program to the interface.</p>
+          </>
+        ]
 
       }
     },
