@@ -1,6 +1,8 @@
  import quad from '../../img/workPreviews/Quadratic functions.png'
  import linearSearch from '../../img/workPreviews/linearSearch.png'
  import binary from '../../img/workPreviews/binary.png'
+ import fibonacci from '../../img/workPreviews/fibonacci.png'
+ import complexity from '../../img/workPreviews/complexity.png'
  import './style.css'
 
  
@@ -74,6 +76,11 @@ export default [
             As a web-developer writing code that works is the goal in every project, but we should be able to do more than that. Web devs should also learn to write code as efficiently and effectively as possible. You must be able to analyze the performance in terms of speed and resources of any piece of code, i.e how fast the algorithm is or how much memory is required to run the code. With Big O notation we are able to do this.
             </p>
             <br/>
+            <div style={{position: 'relative'}}>
+              <img style={{width: '100%', maxWidth: '500px'}} src={complexity} alt='http://bigocheatsheet.com/'/>
+              <p className='source'>source: http://bigocheatsheet.com/</p>
+            </div>
+            <br/>
             <p>In Big O notation there three algorithms/functions we use for analyzing our codes complexity.</p>
           
             <ul className='algorithms'>
@@ -81,7 +88,7 @@ export default [
                 Linear time complexity O(n) = as the size or input increases the amount of time it takes to complete this function also increases linearly.
               </li>
               <li>
-                Constant time complexity 0(1) = the
+                Constant time complexity O(1) = the
                 time to complete a function does not change even
                 if the input increases.
               </li>
@@ -115,9 +122,25 @@ export default [
             <br/>
             <br/>
             <p><b>Binary Search</b></p>
-            <p  className='quad-function binary'>This method divides the array roughly in half every time it checks if the item in the array is the one we're looking for. So the search time is but in half. This is an O(Log n) search in complexity.
+            <p  className='quad-function binary' style={{flexDirection: 'row'}}>This method divides the array roughly in half every time it checks if the item in the array is the one we're looking for. This reduces the search time. This is an O(Log n) search in complexity.
+            <br/>
+            In this example, if the value is not found in the middle and is less the the middle value, it starts looking on the left side, cutting await the other half of the array. Then it repeats this process until the value is found.
             <img  src={binary} alt="Binary Search" />
             </p>
+            <br/>
+            <br/>
+            <p></p>
+            <p><b>The Fibonacci sequence</b></p>
+            <p  className='quad-function binary' style={{flexDirection: 'row'}}>A Fibonacci sequence is a group of numbers where every number is the sum of two numbers before it. It counts the sequence starting with index 0. So the fist ten number would be. 0,1,1,2,3,5,8,13. Thus any algorithm should return the same values.
+            <br/>
+            The two example below shows two example of the fibonacci sequence. The recursive and non-recursive way.<br/>
+            Even the the recursive function is the simplest, the downside is that is needs to recalculate all pervious values each time. In Big O notation complexity this would be equal to O(2^N) or hight if you more of these algorithms in your application and would not be an efficient wat to calculate and data.
+            </p>
+
+            <div className='fib-images'>
+            <img  src={fibonacci} alt="fibonacci" />
+            <img  src={fibonacci} alt="fibonacci" />
+            </div>
           </div>
         </>
       ]

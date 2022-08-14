@@ -2,7 +2,9 @@
  padding-left: 20px;
  text-align: left;
 }
-
+.big-O {
+    position: relative;
+}
 .quad-function {
  display: flex;
  flex-direction: row;
@@ -15,8 +17,16 @@
 
 @media only screen and (max-width: 700px) {
  .quad-function {
-  flex-direction: column;
+  flex-direction: column !important;
  }
+
+.fib-images img {
+    width: 100% !important;
+}
+
+.fib-images {
+    flex-direction: column;
+}
 }
 
 .quad-function img {
@@ -24,4 +34,20 @@
     border-radius: 5px;
     width: 100%;
     max-width: 400px;
+}
+
+.fib-images{
+    display: flex;
+
+}
+
+.fib-images img {
+    width: 50%;
+}
+
+.source {
+    position: absolute;
+    bottom: -13px;
+    right: 101px;
+    font-size: small;
 }
