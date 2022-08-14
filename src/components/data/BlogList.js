@@ -3,6 +3,7 @@
  import binary from '../../img/workPreviews/binary.png'
  import fibonacci from '../../img/workPreviews/fibonacci.png'
  import complexity from '../../img/workPreviews/complexity.png'
+ import fibSec from '../../img/workPreviews/recurFib.png'
  import './style.css'
 
  
@@ -108,38 +109,55 @@ export default [
           </div>
           <div>
             <p><b>Linear vs Binary searching</b></p>
-            <p>Searching is one of the most commonly performed tasks in programing. There are many functions and methods of searching for data in arrays or objects in JavaScript.
-            
-            </p><br/>
-
+            <p>
+              Searching is one of the most commonly performed tasks in programing. There are many functions 
+              and methods of searching for data in arrays or objects in JavaScript.
+            </p>
+            <br/>
             <p><b>Linear Search</b></p>
             
               <p  className='quad-function'>
-              Linear goes through a list one item at a time without skipping. The bigger the list gest the more time it takes to complete the search.  This is an O(n) search in complexity.<br/>
+              Linear goes through a list one item at a time without skipping. The bigger the list gest the 
+              more time it takes to complete the search.  This is an O(n) search in complexity.<br/>
               <img  src={linearSearch} alt="Linear Search" />
               </p>
             
             <br/>
             <br/>
             <p><b>Binary Search</b></p>
-            <p  className='quad-function binary' style={{flexDirection: 'row'}}>This method divides the array roughly in half every time it checks if the item in the array is the one we're looking for. This reduces the search time. This is an O(Log n) search in complexity.
-            <br/>
-            In this example, if the value is not found in the middle and is less the the middle value, it starts looking on the left side, cutting await the other half of the array. Then it repeats this process until the value is found.
-            <img  src={binary} alt="Binary Search" />
+            <p  className='quad-function binary' style={{flexDirection: 'row'}}>
+              This method divides the array roughly in half every time it checks if the 
+              item in the array is the one we're looking for. This reduces the search time. 
+              This is an O(Log n) search in complexity.
+              <br/>
+              In this example, if the value is not found in the middle and is less than the middle value,
+              it starts looking on the left side, cutting await the other half of the array. Then it repeats 
+              this process until the value is found.
+              <img  src={binary} alt="Binary Search" />
             </p>
             <br/>
             <br/>
-            <p></p>
-            <p><b>The Fibonacci sequence</b></p>
-            <p  className='quad-function binary' style={{flexDirection: 'row'}}>A Fibonacci sequence is a group of numbers where every number is the sum of two numbers before it. It counts the sequence starting with index 0. So the fist ten number would be. 0,1,1,2,3,5,8,13. Thus any algorithm should return the same values.
+            <p>
+              <b>The Fibonacci sequence</b></p>
+            <p  className='quad-function binary' style={{flexDirection: 'row'}}>
+              A Fibonacci sequence is a group of numbers where every 
+              number is the sum of two numbers before it. It counts the sequence 
+              starting with index 0. So the first ten numbers would be 
+              0,1,1,2,3,5,8,13... Thus any algorithm should return the same values.
+            </p>
             <br/>
-            The two example below shows two example of the fibonacci sequence. The recursive and non-recursive way.<br/>
-            Even the the recursive function is the simplest, the downside is that is needs to recalculate all pervious values each time. In Big O notation complexity this would be equal to O(2^N) or hight if you more of these algorithms in your application and would not be an efficient wat to calculate and data.
+            <p>
+              The examples below show two of the Fibonacci sequences. The recursive and non-recursive way.              
+              Even the recursive function is the simplest, the downside is that it needs to recalculate all 
+              previous values each time. In Big O notation complexity this would be equal to O(2^N) or high 
+              if you have more of these algorithms in your application and would not be an efficient way to 
+              calculate data, making the non recursive algorithm a more efficient way to calculate data.
             </p>
 
             <div className='fib-images'>
-            <img  src={fibonacci} alt="fibonacci" />
-            <img  src={fibonacci} alt="fibonacci" />
+            <img  src={fibonacci} alt="fibonacci non-recursive function" />
+            <br/>
+            <img  src={fibSec} alt="fibonacci recursive function" />
             </div>
           </div>
         </>
@@ -147,7 +165,7 @@ export default [
 
       }
     },
-    created: "2022"
+    created: "Sunday, August 14, 2022"
   },
   {
     id: 2,

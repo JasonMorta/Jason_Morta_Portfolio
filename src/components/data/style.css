@@ -43,6 +43,7 @@
 
 .fib-images img {
     width: 50%;
+    margin-top: 0;
 }
 
 .source {
