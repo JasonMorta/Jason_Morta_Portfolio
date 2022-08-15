@@ -174,7 +174,7 @@ export default [
         intro: `An interface in the way your application interacts with the outside world, I's any that another software can see on your software object and use ti interact with the softwares functionality...`,
         paragraph: [
           <>
-            <p>Another example if an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world.</p>
+            <p>Another example of an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world.</p>
             <br/>
             <p><b>What are interfaces in OOP(Object Orientated Programing)</b></p>
             <p>Interface in programing is the precess of exposing a programs functionality like an object. To create an object you need a class. A class is template for creating objects, or code written by a programer to define the attributes and operations of an object. The attributes defines the object because they contain data or properties.</p><p>OOp is not a programing langues or tool, its a style or a way of writing programs</p>

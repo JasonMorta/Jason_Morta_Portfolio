@@ -1,7 +1,21 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { projectList } from "./myWorkList";
 import gitPic from "../../../img/gitHub.svg";
 import './myWorks.css'
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
 export default function MyWork() {
 
 
@@ -27,8 +41,10 @@ export default function MyWork() {
           {item.title}
         </h3>
         <div className="stacks">
-          {item.skills.map((skill, index) => (
-            <img src={skill} alt="" width="30px" key={index} />
+          {item.skills.map((skill, index) => (//skill icons
+          <BootstrapTooltip title={skill.name}>
+            <img src={skill.icon} alt="" width="30px" key={index} />
+            </BootstrapTooltip>
           ))}
         </div>
         <p style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>Key features</p>
@@ -40,8 +56,11 @@ export default function MyWork() {
        <div className="link-icons">
         {item.links.map((link, index)=>(
           <a href={link.link} target='_blank' rel="noreferrer" key={index}>
+              <BootstrapTooltip title={link.title}>
               <img className="img-links" src={link.icon} alt="logo" width="30px" title={link.title} />
+              </BootstrapTooltip>
           </a>
+          
         ))}
           
        </div>

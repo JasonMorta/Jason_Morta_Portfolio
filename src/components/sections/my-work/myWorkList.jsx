@@ -28,7 +28,19 @@ export const projectList = [
       id:   0,
       prev: [store],
       title: "Store",
-      skills:  [html, css, js, bootS],
+      skills: [{
+         icon: html,
+         name: 'HTML5'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }, {
+         icon: js,
+         name: 'JavaScript'
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }],
       features:   [
          '› Cart system',
          '› VAT calculation',
@@ -50,7 +62,22 @@ export const projectList = [
       id:   1,
       prev: [iTune],
       title: "iTunes API",
-      skills:  [react, node, express, bootS, css],
+      skills: [{
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
       features:   [
          '› Find any media on the iTunes API',
          '› Add/remove media to favorite',
@@ -80,7 +107,16 @@ export const projectList = [
       id:   2,
       prev: [game],
       title: "Animal card game",
-      skills:  [react, css, bootS],
+      skills: [{
+         icon: react,
+         name: 'React'
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
       features:   [
          '› Class components',
          '› setTimeout, setInterval',
@@ -106,7 +142,16 @@ export const projectList = [
       id:   3,
       prev: [weather],
       title: "Weather API",
-      skills:  [react, bootS, css],
+      skills: [{
+         icon: react,
+         name: 'React'
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
       features:   [
          '› Get the local weather of any City',
          '› setTimeout, setInterval',
@@ -133,7 +178,25 @@ export const projectList = [
       id:   4,
       prev: [movies],
       title: "Popular Movies API",
-      skills:  [react, next, css, bootS, node, express],
+      skills: [{
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }, {
+         icon: next,
+         name: 'Next.js'
+      }],
       features:   [
          '› Return the current most popular movies',
          '› themoviedb.org API',
@@ -160,7 +223,25 @@ export const projectList = [
       id:   5,
       prev: [toDo],
       title: "MERN ToDoList",
-      skills:  [mongoDB, express, react, node, mui, css],
+      skills: [{
+         icon: mongoDB,
+         name: 'MongoDB'
+      }, {
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: mui,
+         name: 'Material Ui'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
       features:   [
          '› Stores data to MongoDB',
          '› JTW(JavaScript Token Authentication)',
@@ -189,7 +270,25 @@ export const projectList = [
       id:   6,
       prev: [dogs],
       title: "Dog Event Planner",
-      skills:  [mongoDB, express, react, node, mui, css],
+      skills: [{
+         icon: mongoDB,
+         name: 'MongoDB'
+      }, {
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: mui,
+         name: 'Material Ui'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
       features:   [
          '› Stores data to MongoDB',
          '› JTW(JavaScript Token Authentication)',
