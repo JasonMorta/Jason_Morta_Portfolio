@@ -13,7 +13,7 @@ export default function Education() {
    let slide = 0
    let container = document.querySelector('.skill-stack');
    let each = document.querySelectorAll('.each');
-
+   
    //The div has a length/index of 9.
   
    function goRight(){
@@ -59,11 +59,13 @@ export default function Education() {
 
       <h3>Skill Stack</h3>
 
-      <div className="contentContainer skill-stack" id="stacks">
-         <img onClick={goLeft} className='left-arrow' src={scrollLeft} alt='scroll button'/>
-         {mySkills}
-         <img onClick={goRight} className='right-arrow' src={scrollRight} alt='scroll button'/>
-      </div>
+   
+         <div className="contentContainer skill-stack" id="stacks">
+            <img onClick={goLeft} className='left-arrow' src={scrollLeft} alt='scroll button'/>
+            {mySkills}
+            <img onClick={goRight} className='right-arrow' src={scrollRight} alt='scroll button'/>
+         </div>
+     
    </div>
 </section>
   )
