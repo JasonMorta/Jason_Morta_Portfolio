@@ -18,7 +18,7 @@ export default [
       skill_img: css,
       description: [<p><b>CSS3: </b> 
       I use CSS in every project, even the small ones. 
-      I'm familiar with Flex Box, Grid and also make use of Bootstrap when needed.</p>]
+      I'm constantly improving my style and designs to create attractive designs.</p>]
    },
    {
       id: 'js',
