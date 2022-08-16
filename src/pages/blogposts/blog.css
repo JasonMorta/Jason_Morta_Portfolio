@@ -10,6 +10,7 @@
  margin: 60px auto 20px;
  box-shadow: 0 0px 3px 0px #c229482c;
  transition: .5s ease-in;
+ z-index: 0;
 }
 .blog-container h1 {
  position: relative;
@@ -25,4 +26,18 @@ text-align: left;
 
 .blog-container p {
  text-align: left;
+}
+
+.back-arrow2 {
+ position: fixed;
+ z-index: 1;
+ bottom: 0;
+ right: 50%;
+ transform: translate(-50%, -20px);
+ transition: .3s ease-in;
+
+}
+
+.back-arrow2:hover {
+ filter: sepia(1);
 }

@@ -127,6 +127,6 @@ transform: scale(1.2);
 .left-arrow2{
   position: absolute;
   top: 28px;
-  right: -15px;
+  left: 25px;
   transition: .3s ease-in-out;
 }
