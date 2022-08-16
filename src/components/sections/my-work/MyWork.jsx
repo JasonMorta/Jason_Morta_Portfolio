@@ -20,7 +20,6 @@ export default function MyWork() {
 
 
 
-
   const myWork = projectList.map((item, index) => {
     return (
       <div className="project-card-container" key={index}>
