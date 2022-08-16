@@ -3,6 +3,7 @@ import skills from '../../data/SkillsObject'
 import './style.css'
 import scrollRight from '../../../img/right.png'
 import scrollLeft from '../../../img/left.png'
+import { useEffect } from 'react'
 
 
 
@@ -12,7 +13,14 @@ export default function Education() {
 
    let slide = 0
    let container = document.querySelector('.skill-stack');
-   let each = document.querySelectorAll('.each');
+   let each = document.getElementsByClassName('each');
+
+   useEffect(() => {
+     
+   
+   
+   }, [])
+   
    
    //The div has a length/index of 9.
   
@@ -22,6 +30,7 @@ export default function Education() {
         } else {
          slide = 0 //when equal to 9, make it 0, restarting the slide
         }
+        
       //slide-scroll to the containers offsetLeft position using slide index value
       container.scrollTo(each[slide].offsetLeft-50, 0);
    }
@@ -41,7 +50,7 @@ export default function Education() {
                   <div className='image-container' >
                      <img width='40' src={skill.skill_img} alt="skill pic" />
                   </div>
-                  <p>{skill.description}
+                  <p key={index}>{skill.description}
                   </p>
                </div>
    })

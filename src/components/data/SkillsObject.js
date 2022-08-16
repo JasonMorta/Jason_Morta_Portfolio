@@ -16,23 +16,21 @@ export default [
       id: 'html5',
       title: 'HTML5',
       skill_img: html5,
-      description: [<p><b>HTML5: </b> Everyday I'm learning more and better ways to use HTML elements. 
-         Writing much cleaner and reusable code.</p>]
+      description: `HTML5: Everyday I'm learning more and better ways to use HTML elements. 
+         Writing much cleaner and reusable code.`
    },
    {
       id: 'CSS3',
       title: 'CSS3',
       skill_img: css,
-      description: [<p><b>CSS3: </b> 
-      I use CSS in every project, even the small ones. 
-      I'm constantly improving my style and designs to create attractive designs.</p>]
+      description: `CSS3: I use CSS in every project, even the small ones. 
+      I'm constantly improving my style and designs to create attractive designs.`
    },
    {
       id: 'JavaScript',
       title: 'JavaScript',
       skill_img: js,
-      description: [<p><b>Javascript:</b> I regularly use JS in my projects, using some of
-      the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.</p>]
+      description: `Javascript: I regularly use JS in my projects, using some of the latest ES-version syntax like for of, forEach, arrow functions, ternary operator, template literals, and more.`
    },
    {
       id: 'jQuery',
