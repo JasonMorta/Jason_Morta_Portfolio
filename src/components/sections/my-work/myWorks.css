@@ -110,3 +110,23 @@ scroll bar
 .project-container::-webkit-scrollbar-thumb:hover {
   background: #6b0d20;
 }
+
+.right-arrow2{
+  position: absolute;
+  top: 28px;
+  right: 15px;
+  transition: .3s ease-in-out;
+}
+
+.right-arrow2:active, 
+.left-arrow2:active{
+transform: scale(1.2);
+
+}
+
+.left-arrow2{
+  position: absolute;
+  top: 28px;
+  right: -15px;
+  transition: .3s ease-in-out;
+}

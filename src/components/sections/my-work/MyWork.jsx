@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import { projectList } from "./myWorkList";
 import gitPic from "../../../img/gitHub.svg";
 import './myWorks.css'
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { nanoid } from 'nanoid'
+import nextProject from '../../../img/projectRight.png';
+import prevProject from '../../../img/projectLeft.png';
+import { useState } from "react";
 
+
+//Material UI toolTip config
 const BootstrapTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
@@ -17,9 +22,42 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
   },
 }));
 
+
+
+
 export default function MyWork() {
 
 
+  let slide = 0
+  let container = document.querySelector('.project-container');
+  const [skill, setSkill] = useState('') 
+
+  useEffect(() => {
+     setSkill(document.getElementsByClassName('project-card'))
+  }, [])
+  
+  
+  //The div has a length/index of 9.
+ 
+  function goRight(){
+     if(slide !== 5){
+        slide += 1 //increment slide on each click by 1
+       } else {
+        slide = 0 //when equal to 5, make it 0, restarting the slide
+       }
+
+     //slide-scroll to the containers offsetLeft position using slide index value
+     container.scrollTo(skill[slide].offsetLeft-40, 0);
+  }
+
+  function goLeft(){
+     if(slide !== 0){
+        slide -= 1
+       } else {
+        slide += 5
+       }
+     container.scrollTo(skill[slide].offsetLeft-55, 0);
+  }
 
 
   const myWork = projectList.map((item, index) => {
@@ -76,7 +114,11 @@ export default function MyWork() {
       <section id="work" className="my-work-section">
         <div className="div-cont">
           <h1>My Work</h1>
-            <div className="project-container">{myWork}</div>
+            <div className="project-container">
+              <img onClick={goLeft} className='left-arrow2' src={prevProject} alt='scroll button'/>
+              {myWork}
+              <img onClick={goRight} className='right-arrow2' src={nextProject} alt='scroll button'/>
+            </div>
         </div>
       </section>
     </div>

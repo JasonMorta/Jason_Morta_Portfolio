@@ -16,10 +16,7 @@ export default function Education() {
    const [skill, setSkill] = useState('') 
 
    useEffect(() => {
-     
       setSkill(document.getElementsByClassName('each'))
-      
-    
    }, [])
    
    
@@ -33,7 +30,7 @@ export default function Education() {
         }
 
       //slide-scroll to the containers offsetLeft position using slide index value
-      container.scrollTo(skill[slide].offsetLeft-50, 0);
+      container.scrollTo(skill[slide].offsetLeft-55, 0);
    }
 
    function goLeft(){
@@ -42,7 +39,7 @@ export default function Education() {
         } else {
          slide += 9
         }
-      container.scrollTo(skill[slide].offsetLeft-50, 0);
+      container.scrollTo(skill[slide].offsetLeft-55, 0);
    }
 
 
