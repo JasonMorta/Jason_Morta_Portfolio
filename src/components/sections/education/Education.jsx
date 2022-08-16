@@ -10,12 +10,36 @@ import scrollLeft from '../../../img/left.png'
 
 export default function Education() {
 
+   let slide = 0
+   let container = document.querySelector('.skill-stack');
+   let each = document.querySelectorAll('.each');
+
+   //The div has a length/index of 9.
+  
+   function goRight(){
+      if(slide !== 9){
+         slide += 1 //increment slide on each click by 1
+        } else {
+         slide = 0 //when equal to 9, make it 0, restarting the slide
+        }
+      //slide-scroll to the containers offsetLeft position using slide index value
+      container.scrollTo(each[slide].offsetLeft-50, 0);
+   }
+
+   function goLeft(){
+      if(slide !== 0){
+         slide -= 1
+        } else {
+         slide += 9
+        }
+      container.scrollTo(each[slide].offsetLeft-50, 0);
+   }
 
 
    const mySkills = skills.map((skill, index) => {
-      return   <div className="skill-card" id={skill.id}  key={index}>
-                  <div className='image-container'>
-                     <img width='40' src={skill.skill_img} alt="skill pic"/>
+      return   <div className="skill-card each" id={skill.id}  key={index}>
+                  <div className='image-container' >
+                     <img width='40' src={skill.skill_img} alt="skill pic" />
                   </div>
                   <p>{skill.description}
                   </p>
@@ -35,10 +59,10 @@ export default function Education() {
 
       <h3>Skill Stack</h3>
 
-      <div className="contentContainer" id="stacks">
-         <img className='left-arrow' src={scrollLeft} alt='scroll button'/>
+      <div className="contentContainer skill-stack" id="stacks">
+         <img onClick={goLeft} className='left-arrow' src={scrollLeft} alt='scroll button'/>
          {mySkills}
-         <img className='right-arrow' src={scrollRight} alt='scroll button'/>
+         <img onClick={goRight} className='right-arrow' src={scrollRight} alt='scroll button'/>
       </div>
    </div>
 </section>
