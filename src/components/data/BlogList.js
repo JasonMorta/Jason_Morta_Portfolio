@@ -206,7 +206,7 @@ export default [
     blog: {
       heading: "Hashing in Web-development",
       description: {
-        intro: `Hashing is the process of taking a value or a string of characters and applying a mathematical function to it and changing its value. One of uses are to store hash passwords stored in a database...`,
+        intro: `Hashing is the process of taking a value or a string of characters and applying a mathematical function to it and changing its value. One of the uses is to store hash passwords stored in a database...`,
         paragraph: [
           <div className='big-O'>
           <p>Hashing a password, changing its results into random characters. Hashing in One-way. Meaning, that when a value is hashed, it cant be un-hashed to reveal its content. </p><br/>
