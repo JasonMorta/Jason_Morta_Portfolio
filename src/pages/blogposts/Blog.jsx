@@ -28,7 +28,7 @@ export default function Blog() {
         <i key={nanoid()}>cr. {thisBlog.created} </i>
        
       </div>
-      <img onClick={goBack} className='back-arrow2' src={backBtn} alt='scroll button'/>
+      <img onClick={goBack} className='back-arrow2 slide-in-bottom' src={backBtn} alt='scroll button'/>
     </>
   )
 }
