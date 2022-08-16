@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import skills from '../../data/SkillsObject'
 import './style.css'
 import scrollRight from '../../../img/right.png'
@@ -13,12 +13,13 @@ export default function Education() {
 
    let slide = 0
    let container = document.querySelector('.skill-stack');
-   let each = document.getElementsByClassName('each');
+   const [skill, setSkill] = useState('') 
 
    useEffect(() => {
      
-   
-   
+      setSkill(document.getElementsByClassName('each'))
+      
+    
    }, [])
    
    
@@ -30,9 +31,9 @@ export default function Education() {
         } else {
          slide = 0 //when equal to 9, make it 0, restarting the slide
         }
-        
+
       //slide-scroll to the containers offsetLeft position using slide index value
-      container.scrollTo(each[slide].offsetLeft-50, 0);
+      container.scrollTo(skill[slide].offsetLeft-50, 0);
    }
 
    function goLeft(){
@@ -41,20 +42,21 @@ export default function Education() {
         } else {
          slide += 9
         }
-      container.scrollTo(each[slide].offsetLeft-50, 0);
+      container.scrollTo(skill[slide].offsetLeft-50, 0);
    }
 
 
+ 
    const mySkills = skills.map((skill, index) => {
-      return   <div className="skill-card each" id={skill.id}  key={index}>
-                  <div className='image-container' >
-                     <img width='40' src={skill.skill_img} alt="skill pic" />
-                  </div>
-                  <p key={index}>{skill.description}
-                  </p>
-               </div>
-   })
-
+                  return   <div className="skill-card each" id={skill.id}  key={index}>
+                              <div className='image-container' >
+                                 <img width='40' src={skill.skill_img} alt="skill pic" />
+                              </div>
+                              <p key={index}>{skill.description}
+                              </p>
+                           </div>
+                           })
+ 
 
   return (
    <section id="section-2" className="about-section">
