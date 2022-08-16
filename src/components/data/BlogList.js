@@ -5,6 +5,7 @@
  import complexity from '../../img/workPreviews/complexity.png'
  import fibSec from '../../img/workPreviews/recurFib.png'
  import './style.css'
+ import classImg from '../../img/workPreviews/class.png'
 
  
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -177,30 +178,56 @@ export default [
             <p>Another example of an interface would be something like the ports on the back of a PC. These ports exposes the functionally inside the computer to the outside world.</p>
             <br/>
             <p><b>What are interfaces in OOP(Object Orientated Programing)</b></p>
-            <p>Interface in programing is the precess of exposing a programs functionality like an object. To create an object you need a class. A class is template for creating objects, or code written by a programer to define the attributes and operations of an object. The attributes defines the object because they contain data or properties.</p><p>OOp is not a programing langues or tool, its a style or a way of writing programs</p>
+            <p>Interface in programing is the precess of exposing a programs functionality like a class to another grogram or the outside world. A class is a template for creating objects, or code written by a programer to define the attributes and operations of an object, these properties can be for example a function that execute a payment. Interfaces can specify what a class must do but not how it does it. Interfaces doesnt allow you to make changes to a class, becasue everyhing inside a class are final or static. An interfaces on sets the rules for what the classes</p>
+            <p></p>
             <br/>
-            <p><b>Why JavaScript does not really use interfaces</b>
-            JavaScript has no built-in way of creating or implementing interfaces, because of this ts doesn't use classes to create objects.Since JavaScript is very flexible, it has several ways of implementing interfaces.
+            <p><b>Why JavaScript does not really use interfaces</b><br/>
+            JavaScript has no built-in method of  creating interfaces, but since JavaScript is an extremely dynamically typed language, you can create interfaces with methods. One method of creating objects in Javascript is with teh constructor method, this is a special method of a class for creating and initializing an object instance of that class.
             </p>
+            <br/>
+            <br/>
+            <img src={classImg} alt="class constructor snippet" />
+            <br/>
+            <br/>
+            <p><b>Strict mode is in JavaScript </b><br/>
+            In JavaScript Strict Mode allows you to place a function in a “strict” operating context. This strict context prevents certain actions from being taken. So a good reason for using it is because Strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations. It prevents or throws errors when relatively “unsafe” actions are taken. Strict mode also makes it easier to write “secure” JavaScript.
+            </p>
+            <p> In JavaScript, you can reference variables that don't exist or even work with a broken object, and when running the code you won't catch these errors until you run it inside the browser. TypeScript prevents errors like this from happening by using strict mode call types or type checking. The Language is a trick superset of JavaScript. Even though you can write the same Javascript code inside a .ts file, if you make any reference to a variable that doesn't yet exist in TypeScript, the IDE will throw an error. Because TypeScrypt is a strong type of language, it allows allows you to create your own interfaces. </p>
             
           </>
         ]
 
       }
     },
-    created: "2022"
+    created: "Monday August 15, 2022"
   },
   {
     id: 3,
     blog: {
-      heading: "Hashing",
+      heading: "Hashing in Web-development",
       description: {
-        intro: `Intro 3...`,
-        paragraph: `Coming soon`
+        intro: `Hashing is the process of taking a value or a string of characters and applying a mathematical function to it and changing its value. One of uses are to store hash passwords stored in a database...`,
+        paragraph: [
+          <div className='big-O'>
+          <p>Hashing a password, changing its results into random characters. Hashing in One-way. Meaning, that when a value is hashed, it cant be un-hashed to reveal its content. </p><br/>
+          
+          <p><b>Hash tables</b></p>
+          <p>Has tables are data structures that make finding data faster.</p>
+          <p>The benefit of using these data structures is, quicker access, you don't need to iterate through every index to look for a specific value. It has quicker access to both reading and writing.</p>
+
+          <p><b>Hashes vs encryptions</b></p>
+          <p>Hashing doesn't allow you to get the original input value back. Once the input value is hashed it returns a unique string of about 50 characters, which makes it impossible to determine the input value of a hashed input. Hashed values can not be reversed back to it's original.<br/>
+          Encryption however can be revised back to its original value. When encrypting a large file, the encrypted value is also large whereas hashing will remain around 50 characters even if something like a book was hashed.</p>
+          <br/>
+          <p><b>Map Objects</b></p>
+          <p>A Map object in JavaScript is a collection of key-value pares inside the map, very similar to an object, where an object can also hold a key with any value. Hashing in similar in that way, where the original input is the key and the hashed result is the value</p>
+          </div>
+
+        ]
 
       }
     },
-    created: "2022"
+    created: "Tuesday August 16, 2022"
   }
 ]
 

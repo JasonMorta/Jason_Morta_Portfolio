@@ -54,7 +54,13 @@ export const projectList = [
             icon: gitIcon,
             link:'https://github.com/JasonMorta/Level-1-Capstone-Project-My-online-store.git',
             title: 'Git repo'
-         }
+         },
+         {
+            icon: netlify,
+            link: 'https://htmlccsstore.netlify.app',
+            title: 'Live demo'
+
+         } 
       ]
 
    },
@@ -96,7 +102,7 @@ export const projectList = [
          },
          {
             icon: herokuIcon,
-            link: 'hhttps://fullstack-itunes-playlist.herokuapp.com/',
+            link: 'https://fullstack-itunes-playlist.herokuapp.com/',
             title: 'Live demo'
 
          } 
