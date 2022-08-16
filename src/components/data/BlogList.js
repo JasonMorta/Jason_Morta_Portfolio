@@ -68,9 +68,9 @@ export default [
   {
     id: 1,
     blog: {
-      heading: "Big O notation basics for web developers",
+      heading: "Big-O Notation basics for web-developers",
       description: {
-        intro: `Big O notation is used in maths, complexity theory, and computer science, it basically tells you how fast a function grows and declines. AKA "Analyze your codes complexity or performance"...`,
+        intro: `Big-O notation is used in maths, complexity theory, and computer science, it basically tells you how fast a function grows and declines.  "Analyze the complexity or performance of your code"...`,
         paragraph: [
         <>
           <div className='big-O'>
