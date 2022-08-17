@@ -17,10 +17,13 @@ font-family: 'Wallpoet', cursive;
 font-family: 'Water Brush', cursive; */
 
 html {
-  scroll-behavior: smooth;
+  
   background-color: #18191f;
 }
 
+* {
+  scroll-behavior: smooth;
+}
 
 
 .main-container {
