@@ -10,7 +10,7 @@ export default function Navigation() {
    let state = useContext(sharedState)
 
    let [, , , , , , nav, setNav] = state;
-   
+
    let navigate = useNavigate();
    //Tell google analytics what button was clicked
    function events(cat,act){
@@ -53,7 +53,10 @@ export default function Navigation() {
          <a onClick={() => {
             navigate("/blogposts");
             events("Button", "Blogposts");
-            
+            setNav('');
+            setTimeout(() => {
+               setNav('nav-container');
+            }, 1);
             } } >
 
             <h4 >BLOGS</h4>

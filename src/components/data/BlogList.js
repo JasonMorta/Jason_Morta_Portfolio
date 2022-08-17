@@ -186,7 +186,7 @@ export default [
             </p>
             <br/>
             <br/>
-            <img src={classImg} alt="class constructor snippet" />
+            <img src={classImg} style={{width: '100%'}} alt="class constructor snippet" />
             <br/>
             <br/>
             <p><b>Strict mode is in JavaScript </b><br/>
