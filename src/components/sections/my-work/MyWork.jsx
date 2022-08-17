@@ -40,7 +40,8 @@ export default function MyWork() {
   //The div has a length/index of 9.
  
   function goRight(){
-     if(slide !== 5){
+    console.log(skill.length)
+     if(slide !== skill.length -2){
         slide += 1 //increment slide on each click by 1
        } else {
         slide = 0 //when equal to 5, make it 0, restarting the slide
@@ -54,7 +55,7 @@ export default function MyWork() {
      if(slide !== 0){
         slide -= 1
        } else {
-        slide += 5
+        slide += skill.length -2
        }
      container.scrollTo(skill[slide].offsetLeft-30, 0);
   }
@@ -92,7 +93,7 @@ export default function MyWork() {
             <li key={nanoid()}>{ftr}</li>
           ))}
         </ul>
-       <div className="link-icons" key={nanoid()}>
+       <div className="link-icons" style={{margin: 'auto'}} key={nanoid()}>
         {item.links.map((link, index)=>(
           <a href={link.link} target='_blank' rel="noreferrer" key={nanoid()}>
               <BootstrapTooltip title={link.title} key={nanoid()}>

@@ -164,14 +164,13 @@ section {
 
 
 .skill-card {
-  width: 180px;
-  font-size: 15px;
-  padding: 5px;
+  width: 11.25rem;
+  font-size: 0.75rem;
+  padding: 0.3125rem;
   transition: .4s;
-    height: 120px;
+    height: 7.5rem;
     background-color: #00000026;
-    margin: 2px;
-    font-size: small;
+    margin: 0.125rem;
 }
 
 .skill-card:hover {
@@ -204,7 +203,7 @@ div {
   text-align: center;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 950px;
+  max-width: 59.375rem;
   width: 90%;
   position: relative;
   height: auto;
@@ -281,15 +280,15 @@ Nav arrows
 */
 
 .scroll-down {
-  width: 36px;
+  width: 2.25rem;
   position: fixed;
   bottom: 1%;
   opacity: .3;
-  right: 75px;
+  right: 4.6875rem;
   transform: translate(50%, 0%);
   z-index: 2;
   transition: ease-in-out;
-  height: 41px;
+  height: 2.5625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,17 +303,17 @@ Nav arrows
 }
 
 .scroll-top {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   background-color: #C22948;
   position: fixed;
-  bottom: 10px;
+  bottom: 0.625rem;
   color: black;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   opacity: .2;
-  right: 10px;
+  right: 0.625rem;
   text-align: center;
   z-index: 2;
   cursor: pointer;
@@ -334,7 +333,7 @@ Nav arrows
  */
 
 .scroll-down img {
-  width: 25px;
+  width: 1.5625rem;
   -webkit-animation: bounce-top 5s ease-in infinite;
   animation: bounce-top 5s ease-in infinite;
 }
@@ -495,7 +494,7 @@ My Work / Cards
   flex-direction: column;
   align-items: flex-start;
   width: 15.625rem;
-  min-height:28.4375rem ;
+  min-height:29.6875rem;
   padding: 0.625rem;
   border-bottom: 0.125rem solid #C22948;
   border-top: 0.125rem solid #C22948;

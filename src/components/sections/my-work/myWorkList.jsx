@@ -20,6 +20,7 @@ import weather from '../../../img/workPreviews/weather.jpg';
 import movies from '../../../img/workPreviews/movies.jpg';
 import toDo from '../../../img/workPreviews/toDoList.png';
 import dogs from '../../../img/workPreviews/eventsplanner.jpg';
+import carList from '../../../img/workPreviews/carsdb.png';
 
 
 //my works object
@@ -314,6 +315,53 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://dogeventplanner.herokuapp.com/',
+            title: 'Live demo'
+
+         } 
+      ]
+
+   },
+   {
+      id:   7,
+      prev: [carList],
+      title: "Cars List DB",
+      skills: [{
+         icon: mongoDB,
+         name: 'MongoDB'
+      }, {
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: mui,
+         name: 'Material Ui'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
+      features:   [
+         '› Stores data to MongoDB',
+         '› CRUD operation',
+         '› Sort by age',
+         '› Update by name',
+         '› Update Many',
+
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link:'https://github.com/JasonMorta/MongoDB_Express_React_NodeJS',
+            title: 'Git repo'
+         },
+         {
+            icon: herokuIcon,
+            link: 'https://cars-list-db.herokuapp.com/',
             title: 'Live demo'
 
          } 
