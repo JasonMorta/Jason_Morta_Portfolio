@@ -116,6 +116,7 @@ scroll bar
   top: 6rem;
   right: 15px;
   transition: .3s ease-in-out;
+  z-index: 2;
 }
 
 .right-arrow2:active, 
@@ -129,4 +130,5 @@ transform: scale(1.2);
   top: 96px;
   left: 1.5625rem;
   transition: .3s ease-in-out;
+  z-index: 2;
 }
