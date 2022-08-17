@@ -4,6 +4,7 @@
  min-height: 100vh;
  position: relative;
  align-items: center;
+ overflow: hidden;
 }
 
 .main-heading {
@@ -24,6 +25,7 @@
 .blog {
  align-items: flex-start;
  margin: 8px;
+ padding: 0 7px;
  min-height: 150px;
  justify-content: space-evenly;
 }

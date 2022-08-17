@@ -35,11 +35,12 @@ export default function App() {
             <div className="App custom-cursor">
       
     
-            
+            <BackgroundSVG />
               <Router>
                 <Navigation />
+                
                 <div className="main-container">
-                <BackgroundSVG />
+                
                 <Routes>
                 
                   <Route path="/" element={<Home />} />
