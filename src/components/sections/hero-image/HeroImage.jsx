@@ -6,6 +6,9 @@ import "./heroImage.css";
 
 export default function HeroImage() {
 
+  function noRightClick(event){
+event.preventDefault()
+  }
  
 
   //Profile image perspective
@@ -29,8 +32,12 @@ export default function HeroImage() {
   return (
     <section id="main" className="intro-section">
       <Header />
-      <div className="intro-img" onPointerMove={hover} onPointerOut={hoverOut}>
-        <img src={hero_image} alt="myImage" className="img-thumbnail p-pic" />
+      <div className="intro-img" >
+        <img src={hero_image} alt="myImage" 
+        className="img-thumbnail p-pic" 
+        onPointerMove={hover} 
+        onPointerOut={hoverOut} 
+        onContextMenu={noRightClick}  />
       </div>
     </section>
   );

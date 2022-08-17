@@ -35,7 +35,7 @@ export default function Header() {
              <h1 className={`first-name ${animationCSS}`} style={{animationDuration:`1.${num++}s`}}  data-id={num++}  key={index}>
                {letter}
              </h1>
-           ))}
+           )).splice(0,6)}
           </div>
          
           <h1 className="last-name " >Morta</h1>

@@ -60,17 +60,30 @@ export default function Education() {
    <div className="div-cont">
       <header>
          <em style={{color: 'gray'}}>Education</em>
-         <p>In 2009 I finished high school and started working as a machine operator at QTec Moulding. I took a few online classes when I started(2019) my web dev career, but didn't get as much out of it as I have hoped for. I'm now(April 2022) enrolled at <a href="https://www.hyperiondev.com/">Hyperion Dev's</a> on-site boot camp.
+         <p>In 2009 I finished high school and started working as 
+            a machine operator at QTec Moulding. I took a few online 
+            classes when I started(2019) my web dev career, 
+            but didn't get as much out of it as I have hoped for. 
+            On April 2022 enrolled and completed the Full-Stack Web-Developer course at 
+            <a href="https://www.hyperiondev.com/"> Hyperion Dev's</a> on-site boot camp.
          </p>
          <br/>
-         <a className='resume-link' href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" target="_blank" rel="noreferrer">🔗My Resume(PDF)</a>
+         <a className='resume-link' 
+            style={{margin: "auto"}}
+            href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" 
+            target="_blank" 
+            rel="noreferrer">
+            🔗My Resume(PDF)
+         </a>
        
-         <a className='resume-link' href='https://www.hyperiondev.com/portfolio/44140/' target="_blank" rel="noreferrer">My HyperionDev Portfolio</a>
+         <a className='resume-link' 
+            style={{margin: "auto"}}
+            href='https://www.hyperiondev.com/portfolio/44140/' 
+            target="_blank" rel="noreferrer">
+              🔗My HyperionDev Portfolio
+         </a>
       </header>
-
       <h3>Skill Stack</h3>
-
-   
          <div className="contentContainer skill-stack" id="stacks">
             <img onClick={goLeft} className='left-arrow' src={scrollLeft} alt='scroll button'/>
             {mySkills}
