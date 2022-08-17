@@ -10,6 +10,7 @@ import BlogPosts from "./pages/blogposts/BlogPosts";
 import Blog from "./pages/blogposts/Blog.jsx";
 import { useEffect } from "react";
 import ReactGA from 'react-ga';
+import BrowserAgent from "./components/browserDetect/BrowserAgent";
 
 
 export const sharedState = createContext();
@@ -34,7 +35,7 @@ export default function App() {
      
             <div className="App custom-cursor">
       
-    
+            <BrowserAgent />
             <BackgroundSVG />
               <Router>
                 <Navigation />
