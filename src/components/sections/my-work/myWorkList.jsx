@@ -21,6 +21,7 @@ import movies from '../../../img/workPreviews/movies.jpg';
 import toDo from '../../../img/workPreviews/toDoList.png';
 import dogs from '../../../img/workPreviews/eventsplanner.jpg';
 import carList from '../../../img/workPreviews/carsdb.png';
+import expressApp from '../../../img/workPreviews/express.png';
 
 
 //my works object
@@ -362,6 +363,47 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://cars-list-db.herokuapp.com/',
+            title: 'Live demo'
+
+         } 
+      ]
+
+   },
+   {
+      id:   8,
+      prev: [expressApp],
+      title: "Express Project List",
+      skills: [{
+         icon: express,
+         name: 'Express'
+      }, {
+         icon: react,
+         name: 'React'
+      }, {
+         icon: node,
+         name: 'Node.js'
+      }, {
+         icon: mui,
+         name: 'Material Ui'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }],
+      features:   [
+         '› Writes data to a .json file on the backend server',
+         '› CRUD operation',
+
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link:'https://github.com/JasonMorta/My-Frist-Experss-React-App',
+            title: 'Git repo'
+         },
+         {
+            icon: herokuIcon,
+            link: 'https://wd-project-list.herokuapp.com/',
             title: 'Live demo'
 
          } 
