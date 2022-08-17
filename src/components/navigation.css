@@ -19,6 +19,8 @@
  justify-content: flex-end;
 }
 
+
+
 .nav-container a {
  float: left;
  color: #C22948;
@@ -34,5 +36,5 @@
 }
 
 .nav-container h4 {
- margin-bottom: 0;
+ margin: 0;
 }
