@@ -11,12 +11,12 @@ export default function Navigation() {
          ReactGA.event({
                category: cat,
                action: act
-         })
+         });
    }
 
 
   return (
-   <nav className="nav" id="top-nav">
+   <nav className="nav">
       <div className="nav-container">
          <a className="active" href="#main" onClick={()=>{
             navigate("./");

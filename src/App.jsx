@@ -31,14 +31,15 @@ export default function App() {
   return (
    
        <sharedState.Provider value={[name, setName, animationCSS, setAnimationCSS, thisBlog, setThisBlog]}>
-          <div className="custom-cursor">
-            <div className="App">
-            <BackgroundSVG />
+     
+            <div className="App custom-cursor">
+      
     
             
               <Router>
                 <Navigation />
-             <div className="main-container">
+                <div className="main-container">
+                <BackgroundSVG />
                 <Routes>
                 
                   <Route path="/" element={<Home />} />
@@ -51,7 +52,7 @@ export default function App() {
               </Router>
             
           </div>
-          </div>
+         
        </sharedState.Provider>
     
   )

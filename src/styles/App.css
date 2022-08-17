@@ -40,7 +40,7 @@ body {
 
 
 .main-container {
-  max-width: 800px;
+  max-width: 850px;
   padding: 10px;
   margin: auto;
 }
@@ -67,8 +67,14 @@ Navigation
   -webkit-border-image: -webkit-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image-slice: 1;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
+@media only screen and (max-width: 600px) {
+  .nav {
+    font-size: clamp(.8rem, 2vw, 2rem);
+  }
+}
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -89,7 +95,7 @@ Navigation
   text-align: center;
   padding: 5px 13px;
   text-decoration: none;
-  font-size: 14px;
+ 
 }
 
 .nav a:hover {
