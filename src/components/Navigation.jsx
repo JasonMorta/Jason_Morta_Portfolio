@@ -2,6 +2,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import ReactGA from 'react-ga'
+import './navigation.css'
 
 export default function Navigation() {
 
@@ -16,7 +17,7 @@ export default function Navigation() {
 
 
   return (
-   <nav className="nav">
+
       <div className="nav-container">
          <a className="active" href="#main" onClick={()=>{
             navigate("./");
@@ -52,6 +53,6 @@ export default function Navigation() {
          </a>
          
       </div>
-   </nav>
+  
   )
 }

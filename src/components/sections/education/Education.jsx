@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState } from 'react'
 import skills from '../../data/SkillsObject'
 import './style.css'
@@ -21,7 +22,6 @@ export default function Education() {
    
    
    //The div has a length/index of 9.
-  
    function goRight(){
       if(slide !== 9){
          slide += 1 //increment slide on each click by 1
@@ -62,7 +62,10 @@ export default function Education() {
          <em style={{color: 'gray'}}>Education</em>
          <p>In 2009 I finished high school and started working as a machine operator at QTec Moulding. I took a few online classes when I started(2019) my web dev career, but didn't get as much out of it as I have hoped for. I'm now(April 2022) enrolled at <a href="https://www.hyperiondev.com/">Hyperion Dev's</a> on-site boot camp.
          </p>
-         <a className='resume-link' href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" target="_blank" rel="noreferrer">🔗PDF Resume</a>
+         <br/>
+         <a className='resume-link' href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" target="_blank" rel="noreferrer">🔗My Resume(PDF)</a>
+       
+         <a className='resume-link' href='https://www.hyperiondev.com/portfolio/44140/' target="_blank" rel="noreferrer">My HyperionDev Portfolio</a>
       </header>
 
       <h3>Skill Stack</h3>

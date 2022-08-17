@@ -47,7 +47,7 @@ export default function MyWork() {
        }
 
      //slide-scroll to the containers offsetLeft position using slide index value
-     container.scrollTo(skill[slide].offsetLeft-40, 0);
+     container.scrollTo(skill[slide].offsetLeft-30, 0);
   }
 
   function goLeft(){
@@ -56,7 +56,7 @@ export default function MyWork() {
        } else {
         slide += 5
        }
-     container.scrollTo(skill[slide].offsetLeft-55, 0);
+     container.scrollTo(skill[slide].offsetLeft-30, 0);
   }
 
 

@@ -17,8 +17,7 @@ font-family: 'Wallpoet', cursive;
 font-family: 'Water Brush', cursive; */
 
 * {
-  margin: auto;
-  padding: 0;
+ 
   scroll-behavior: smooth;
 }
 
@@ -50,57 +49,6 @@ Navigation
 ========================
 */
 
-.nav {
-  z-index: 4;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: #1d1a1a;
-  border: 0;
-  border: 0;
-  border-bottom: 2px solid #C22948;
-  -moz-border-image: -moz-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
-  -webkit-border-image: -webkit-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
-  border-image: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
-  border-image-slice: 1;
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: 0;
-  justify-content: flex-end;
-  
-}
-.nav-container a {
-  margin: 0;
-}
-
-
-
-.nav a {
-  float: left;
-  color: #C22948;
-  text-align: center;
-  padding: 5px 13px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.nav h4 {
-  margin-bottom: 0;
-}
 
 
 
@@ -156,7 +104,6 @@ section {
   position: relative;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 3.75rem;
   padding-top: 6.25rem;
 
 }
@@ -185,7 +132,7 @@ section {
 
 .p-pic {
   border-radius: 50%;
-  max-width: 300px;
+  width: clamp(10rem, 73%, 18rem);
 }
 
 
@@ -260,8 +207,7 @@ div {
   display: flex;
   flex-direction: column;
   background-color: #0f0f11bf;
-  margin: 20px;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 0px 3px 0px #c229482c;
   border-radius: 3px;
   text-align: center;
@@ -271,9 +217,9 @@ div {
   width: 90%;
   position: relative;
   height: auto;
-  margin: auto;
   color: #9e9e9e;
   transition: .5s ease-in;
+  margin: auto;
 }
 
 .div-cont:hover :not(a,i){
@@ -561,29 +507,29 @@ My Work / Cards
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 250px;
-  min-height:430px ;
-  padding: 10px;
-  border-bottom: 2px solid #C22948;
-  border-top: 2px solid #C22948;
+  width: 15.625rem;
+  min-height:28.4375rem ;
+  padding: 0.625rem;
+  border-bottom: 0.125rem solid #C22948;
+  border-top: 0.125rem solid #C22948;
   -moz-border-image: -moz-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   -webkit-border-image: -webkit-linear-gradient(right, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
   border-image-slice: 1;
-  margin: 15px 0px;
+  margin: 0.9375rem 0rem;
   background-image: url(../img/bkg.png);
   
 }
 
 
 .image-container {
-  width: 40px;
+  width: 2.5rem;
   float: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 

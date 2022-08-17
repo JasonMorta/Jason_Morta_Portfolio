@@ -28,7 +28,7 @@
 
  .img-container {
   display: flex;
-  min-height: 210px;
+  min-height: 13.125rem;
   margin: 0;
   width: 100%;
   align-items: center;
@@ -41,7 +41,7 @@
  .project-card img {
   margin: 2px;
    background-color: #ebebeb;
-   border-radius: 3px;
+   border-radius: 0.1875rem;
  }
 
  .project-card img:hover {
@@ -103,7 +103,7 @@ scroll bar
 /* Handle */
 .project-container::-webkit-scrollbar-thumb {
   background: #C22948;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 /* Handle on hover */
@@ -113,7 +113,7 @@ scroll bar
 
 .right-arrow2{
   position: absolute;
-  top: 28px;
+  top: 6rem;
   right: 15px;
   transition: .3s ease-in-out;
 }
@@ -126,7 +126,7 @@ transform: scale(1.2);
 
 .left-arrow2{
   position: absolute;
-  top: 28px;
-  left: 25px;
+  top: 96px;
+  left: 1.5625rem;
   transition: .3s ease-in-out;
 }

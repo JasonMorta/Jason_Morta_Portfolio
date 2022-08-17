@@ -1,7 +1,7 @@
 import React from 'react'
 import gitLogo from '../../../img/gitHub.svg'
 import mapImg from '../../../img/map.png'
-
+import './style.css'
 
 export default function Contact() {
   return (
