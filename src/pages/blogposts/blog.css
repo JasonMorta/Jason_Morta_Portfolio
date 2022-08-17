@@ -11,6 +11,7 @@
  box-shadow: 0 0px 3px 0px #c229482c;
  transition: .5s ease-in;
  z-index: 0;
+ overflow: hidden;
 }
 .blog-container h1 {
  position: relative;
