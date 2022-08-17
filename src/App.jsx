@@ -26,11 +26,11 @@ export default function App() {
   const [name, setName]                  = useState('Jason');
   const [animationCSS, setAnimationCSS]  = useState('bounce-in-top')
   const [thisBlog, setThisBlog]          = useState('')
-  
+  const [nav, setNav] = useState('nav-container')
   ;
   return (
    
-       <sharedState.Provider value={[name, setName, animationCSS, setAnimationCSS, thisBlog, setThisBlog]}>
+       <sharedState.Provider value={[name, setName, animationCSS, setAnimationCSS, thisBlog, setThisBlog, nav, setNav]}>
      
             <div className="App custom-cursor">
       
