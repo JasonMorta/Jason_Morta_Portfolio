@@ -208,19 +208,19 @@ export default [
       description: {
         intro: `Hashing is the process of taking a value or a string of characters and applying a mathematical function to it and changing its value. One of the uses is to store hash passwords stored in a database...`,
         paragraph: [
-          <div className='big-O'>
-          <p>Hashing a password, changing its results into random characters. Hashing in One-way. Meaning, that when a value is hashed, it cant be un-hashed to reveal its content. </p><br/>
+          <div className='big-O' style={{margin: '0'}}>
+          <p style={{marginTop: '0'}}>Hashing a password, changing its results into random characters. Hashing in One-way. Meaning, that when a value is hashed, it cant be un-hashed to reveal its content.</p>
           
-          <p><b>Hash tables</b></p>
-          <p>Has tables are data structures that make finding data faster.</p>
-          <p>The benefit of using these data structures is, quicker access, you don't need to iterate through every index to look for a specific value. It has quicker access to both reading and writing.</p>
+          <p style={{margin: '0'}}><b>Hash tables</b></p>
+          <p style={{margin: '0'}}>Has tables are data structures that make finding data faster.</p>
+          <p style={{marginTop: '0'}}>The benefit of using these data structures is, quicker access, you don't need to iterate through every index to look for a specific value. It has quicker access to both reading and writing.</p>
 
-          <p><b>Hashes vs encryptions</b></p>
-          <p>Hashing doesn't allow you to get the original input value back. Once the input value is hashed it returns a unique string of about 50 characters, which makes it impossible to determine the input value of a hashed input. Hashed values can not be reversed back to it's original.<br/>
+          <p style={{margin: '0'}}><b>Hashes vs encryptions</b></p>
+          <p style={{marginTop: '0'}}>Hashing doesn't allow you to get the original input value back. Once the input value is hashed it returns a unique string of about 50 characters, which makes it impossible to determine the input value of a hashed input. Hashed values can not be reversed back to it's original.<br/>
           Encryption however can be revised back to its original value. When encrypting a large file, the encrypted value is also large whereas hashing will remain around 50 characters even if something like a book was hashed.</p>
-          <br/>
-          <p><b>Map Objects</b></p>
-          <p>A Map object in JavaScript is a collection of key-value pares inside the map, very similar to an object, where an object can also hold a key with any value. Hashing in similar in that way, where the original input is the key and the hashed result is the value</p>
+         
+          <p style={{margin: '0'}}><b>Map Objects</b></p>
+          <p style={{marginTop: '0'}}>A Map object in JavaScript is a collection of key-value pares inside the map, very similar to an object, where an object can also hold a key with any value. Hashing in similar in that way, where the original input is the key and the hashed result is the value</p>
           </div>
 
         ]
