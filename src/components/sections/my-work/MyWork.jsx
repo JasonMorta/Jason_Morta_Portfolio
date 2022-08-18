@@ -8,6 +8,8 @@ import { nanoid } from 'nanoid'
 import nextProject from '../../../img/projectRight.png';
 import prevProject from '../../../img/projectLeft.png';
 import { useState } from "react";
+import Badge from '@mui/material/Badge';
+
 
 
 //Material UI toolTip config
@@ -97,7 +99,9 @@ export default function MyWork() {
         {item.links.map((link, index)=>(
           <a href={link.link} target='_blank' rel="noreferrer" key={nanoid()}>
               <BootstrapTooltip title={link.title} key={nanoid()}>
+              {link.title === 'Live demo' ? <Badge badgeContent={'Live'} color="secondary">
               <img className="img-links" src={link.icon} alt="logo" width="30px" />
+              </Badge>:  <img className="img-links" src={link.icon} alt="logo" width="30px" />}
               </BootstrapTooltip>
           </a>
           
