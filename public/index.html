@@ -10,8 +10,20 @@
       content="Web site created using create-react-app"
     />
 
-    <!-- Jquery Test -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Safari smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+    <script>
+        // patch all methods
+        seamless.polyfill();
+        // or use specific methods
+        seamless.scrollBy(window, { behavior: "smooth", top: 200, left: 0 });
+
+        seamless.scrollIntoView(document.querySelector("#target"), {
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+        });
+    </script>
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
