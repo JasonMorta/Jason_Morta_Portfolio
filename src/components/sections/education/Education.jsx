@@ -68,20 +68,25 @@ export default function Education() {
             <a href="https://www.hyperiondev.com/"> Hyperion Dev's</a> on-site boot camp.
          </p>
          <br/>
-         <a className='resume-link' 
-            style={{margin: "auto"}}
-            href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" 
-            target="_blank" 
-            rel="noreferrer">
-            🔗My Resume(PDF)
-         </a>
-       
-         <a className='resume-link' 
-            style={{margin: "auto"}}
-            href='https://www.hyperiondev.com/portfolio/44140/' 
-            target="_blank" rel="noreferrer">
-              🔗My HyperionDev Portfolio
-         </a>
+     <div className='edu-links'>
+            <a className='resume-link' 
+               href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" 
+               target="_blank" 
+               rel="noreferrer">
+               🔗My Resume(PDF)
+            </a>
+          
+            <a className='resume-link' 
+               href='https://www.hyperiondev.com/portfolio/44140/' 
+               target="_blank" rel="noreferrer">
+                 🔗My HyperionDev Portfolio
+            </a>
+            <a className='resume-link' 
+               href='https://drive.google.com/file/d/1Vkmrp9vdxqDNuQT2Sj2GF98jpW8JJqfH/view?usp=sharing' 
+               target="_blank" rel="noreferrer">
+                 🔗Bootcamp Completion Certificate
+            </a>
+     </div>
       </header>
       <h3>Skill Stack</h3>
          <div className="contentContainer skill-stack" id="stacks">
