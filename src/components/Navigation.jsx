@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, Outlet } from "react-router-dom";
 import ReactGA from 'react-ga'
 import './navigation.css'
 import { sharedState } from '../App';
@@ -24,13 +24,12 @@ export default function Navigation() {
   return (
 
       <div className={nav}>
-         <a className="active" href="#main" onClick={()=>{
-            navigate("./");
+         <Link className="active" href="#main" to='/' onClick={()=>{
+            window.scrollTo(0, 0)
             events("Button", "main");
-         
-            } }>
+            }}>
             <h4>MAIN</h4>
-         </a>
+         </Link>
          <a className="active" href="#work" onClick={() => {
             navigate("./");
             events("Button", "My Work");
@@ -50,8 +49,9 @@ export default function Navigation() {
             <h4>CONTACT</h4>
          </a>
          
-         <a onClick={() => {
-            navigate("/blogposts");
+         <Link
+            to="/blogposts" 
+            onClick={() => {
             events("Button", "Blogposts");
             setNav('');
             setTimeout(() => {
@@ -60,7 +60,8 @@ export default function Navigation() {
             } } >
 
             <h4 >BLOGS</h4>
-         </a>
+         </Link>
+         
          
       </div>
   

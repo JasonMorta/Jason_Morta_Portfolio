@@ -29,19 +29,7 @@ text-align: left;
  text-align: left;
 }
 
-.back-arrow2 {
- position: fixed;
- z-index: 1;
- bottom: 20px;
- right: 50%;
- transform: translate(-50%, -20px);
- transition: .3s ease-in;
 
-}
-
-.back-arrow2:hover {
- filter: sepia(1);
-}
 
 .slide-in-bottom {
 	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;

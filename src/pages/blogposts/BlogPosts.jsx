@@ -32,7 +32,10 @@ export default function BlogPosts() {
             <p>{item.blog.description.intro}<i onClick={
               function toBlog(){
                 setThisBlog(item)
-                  navigate('/blog')  
+             
+                 navigate('/blogposts/blog')   
+            
+                
               }
             }>Read more</i></p>
             

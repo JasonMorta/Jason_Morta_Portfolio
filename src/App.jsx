@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import BackgroundSVG from "./components/BackgroundSVG";
 import './styles/cursor.scss'
@@ -11,11 +11,13 @@ import Blog from "./pages/blogposts/Blog.jsx";
 import { useEffect } from "react";
 import ReactGA from 'react-ga';
 import BrowserAgent from "./components/browserDetect/BrowserAgent";
+import ScrollToTop from "./components/toTop/ScrollToTop";
 
 
 export const sharedState = createContext();
 
 export default function App() {
+
 
   useEffect(() => {
     ReactGA.initialize('UA-237424331-1')
@@ -45,12 +47,13 @@ export default function App() {
                 <Routes>
                 
                   <Route path="/" element={<Home />} />
-                  <Route path="/BlogPosts" element={<BlogPosts />} />
-                  <Route path="/Blog" element={<Blog />} />
+                  <Route path="/blogposts/" element={<BlogPosts />} />
+                  <Route path="/blogposts/blog" element={<Blog />} />
                   <Route path="*" element={<ErrorPage />} />
               
                 </Routes>
               </div>
+              <ScrollToTop />
               </Router>
             
           </div>
