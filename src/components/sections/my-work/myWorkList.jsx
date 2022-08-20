@@ -175,7 +175,7 @@ export const projectList = [
          },
          {
             icon: netlify,
-            link: 'https://match-your-animals-game.herokuapp.com/',
+            link: 'https://mortaweather.netlify.app/',
             title: 'Live demo'
 
          } 
