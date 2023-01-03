@@ -69,12 +69,12 @@ export default function Education() {
          </p>
          <br/>
      <div className='edu-links'>
-            <a className='resume-link' 
-               href="https://drive.google.com/file/d/1Ht3eDu1piX8iMPWNUk8xUUHvC1f-pNn7/view?usp=sharing" 
+            {/* <a className='resume-link' 
+               href="" 
                target="_blank" 
                rel="noreferrer">
                🔗My Resume(PDF)
-            </a>
+            </a> */}
           
             <a className='resume-link' 
                href='https://www.hyperiondev.com/portfolio/44140/' 
