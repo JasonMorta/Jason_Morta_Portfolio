@@ -24,6 +24,7 @@
  color: #e8dec5;
  line-height: 0.8;
  letter-spacing: -1px;
+ cursor: pointer;
 }
 
 .last-name {
