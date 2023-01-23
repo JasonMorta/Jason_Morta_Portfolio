@@ -33,7 +33,7 @@ event.preventDefault()
     <section id="main" className="intro-section">
       <Header />
       <div className="intro-img" >
-        <img src={hero_image} alt="myImage" 
+        <img src={hero_image} alt="Image of Jason Morta" 
         className="img-thumbnail p-pic" 
         onPointerMove={hover} 
         onPointerOut={hoverOut} 
