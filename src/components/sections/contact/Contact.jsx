@@ -14,6 +14,7 @@ export default function Contact() {
             </div>
             <p>I'm based in Cape Town, Sea Point, South Africa</p>
             <h4><a href="mailto:jasonmortadev@gmial.com">email me</a></h4>
+            <h4>jasonmortadev@gmail.com</h4>
             <a href="https://github.com/JasonMorta">
                <img src={gitLogo} alt="link_image"  width="50px" title="my github profile link"/>
             </a>
