@@ -58,6 +58,7 @@ export default function MyWork() {
     return (
       <div className="project-card-container" key={nanoid()}>
         <div className="project-card" key={nanoid()}>
+          {/* project image */}
           {item.prev.map((pic, index) => (
             <div className="img-container" key={nanoid()}>
               <img
@@ -70,9 +71,12 @@ export default function MyWork() {
             </div>
           ))}
 
+          {/* project title */}
           <h3 className="h2-heading" id="header" key={nanoid()}>
             {item.title}
           </h3>
+
+          {/* project skill icons */}
           <div className="stacks" key={nanoid()}>
             {item.skills.map(
               (
@@ -104,9 +108,18 @@ export default function MyWork() {
                 rel="noreferrer"
                 key={nanoid()}
               >
-                <BootstrapTooltip placement='top' title={link.title} key={nanoid()}>
+                <BootstrapTooltip
+                  placement="top"
+                  title={link.title}
+                  key={nanoid()}
+                >
                   {link.title === "Live demo" ? (
-                    <Badge badgeContent={link.status === 'offline' ? 'Offline':'Live'} color="secondary">
+                    <Badge
+                      badgeContent={
+                        link.status === "offline" ? "Offline" : "Live"
+                      }
+                      color="secondary"
+                    >
                       <img
                         className="img-links"
                         src={link.icon}

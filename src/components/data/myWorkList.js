@@ -422,25 +422,20 @@ export const projectList = [
    },
    {
       id:   8,
-      prev: [expressApp],
-      title: "In Progress",
+      prev: [],
+      title: "",
       skills: [],
-      features:   [
-         '====================',
-         '====================',
-
-        
-      ],
+      features:   [],
       links: [
          {  
-            icon: gitIcon,
-            link: '#',
-            title: '???'
+            icon: '',
+            link: '',
+            title: ''
          },
          {
-            icon: herokuIcon,
-            link: '#',
-            title: '???'
+            icon: '',
+            link: '',
+            title: ''
 
          } 
       ]
