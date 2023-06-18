@@ -9,18 +9,19 @@ export default function BrowserAgent() {
              
   let userAgent = navigator.userAgent;
   
-  if(userAgent.match(/chrome|chromium|crios/i)){
+  // Detect browser name
+  if(userAgent.match(/chrome|chromium|crios/i)){ // Detect Chrome
    setBrowser("chrome");
-    }else if(userAgent.match(/firefox|fxios/i)){
+    }else if(userAgent.match(/firefox|fxios/i)){  // Detect Firefox
      setBrowser("firefox");
-    }  else if(userAgent.match(/safari/i)){
+    }  else if(userAgent.match(/safari/i)){ // Detect Safari
      setBrowser("safari");
-    }else if(userAgent.match(/opr\//i)){
+    }else if(userAgent.match(/opr\//i)){ // Detect Opera
       setBrowser("opera");
-    } else if(userAgent.match(/edg/i)){
+    } else if(userAgent.match(/edg/i)){ // Detect Edge
       setBrowser("edge");
     }else{
-      setBrowser("No browser detection");
+      setBrowser("No browser detection"); // No browser detected
     }
    
    }
@@ -28,11 +29,12 @@ export default function BrowserAgent() {
 
    useEffect(() => {
     detectBrowser()
+    console.log(browser+" browser detected")
    }, [])
 
-console.log(browser+" browser detected")
+
 
   return (
-    <div></div>
+    <></>
   )
 }

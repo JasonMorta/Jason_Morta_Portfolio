@@ -138,6 +138,10 @@ transform: scale(1.2);
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .MuiBadge-badge {

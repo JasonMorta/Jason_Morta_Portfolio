@@ -60,12 +60,7 @@ export default function Education() {
    <div className="div-cont">
       <header>
          <em style={{color: 'gray'}}>Education</em>
-         <p>In 2009 I finished high school and started working as 
-            a machine operator at QTec Moulding. I took a few online 
-            classes when I started(2019) my web dev career, 
-            but didn't get as much out of it as I have hoped for. 
-            On April 2022 enrolled and completed the Full-Stack Web-Developer course at 
-            <a href="https://www.hyperiondev.com/"> Hyperion Dev's</a> on-site boot camp.
+         <p>After graduating from high school in 2009, I began my professional journey as a machine operator at QTec Moulding. When I ventured into web development in 2019, I initially took some online classes, although they didn't yield the desired outcomes I had anticipated. However, in April 2022, I made a significant leap by enrolling in and successfully completing the Full-Stack Web Developer course at <a href="https://www.hyperiondev.com/">HyperionDev</a>'s on-site boot camp.
          </p>
          <br/>
      <div className='edu-links'>

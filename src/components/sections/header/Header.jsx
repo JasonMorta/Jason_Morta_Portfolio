@@ -31,6 +31,7 @@ export default function Header() {
            <div className="intro-headings">
         <div onClick={edit}>
           <div className='animatedWord'>
+            {/* Name effect */}
            {name.split('').map((letter, index) => (
              <h1 className={`first-name ${animationCSS}`} style={{animationDuration:`1.${num++}s`}}  data-id={num++}  key={index}>
                {letter}

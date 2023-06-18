@@ -1,27 +1,27 @@
 
-import js from '../../../img/JS.svg';
-import css from '../../../img/CSS.svg';
-import html from '../../../img/html5.svg';
-import gitIcon from '../../../img/gitHub.svg';
-import herokuIcon from '../../../img/heroku.png';
-import jquery from '../../../img/jquery.png';
-import react from '../../../img/react.png';
-import bootS from '../../../img/boots.svg';
-import mongoDB from '../../../img/mongodb.svg';
-import next from '../../../img/next.png';
-import node from '../../../img/node.png';
-import mui from '../../../img/MUi.png';
-import express from '../../../img/express.png';
-import netlify from '../../../img/netlify.png';
-import store from '../../../img/workPreviews/store.jpg';
-import game from '../../../img/workPreviews/cardGame.jpg';
-import iTune from '../../../img/workPreviews/iTunesMusicAPI.jpg';
-import weather from '../../../img/workPreviews/weather.jpg';
-import movies from '../../../img/workPreviews/movies.jpg';
-import toDo from '../../../img/workPreviews/toDoList.png';
-import dogs from '../../../img/workPreviews/eventsplanner.jpg';
-import carList from '../../../img/workPreviews/carsdb.png';
-import expressApp from '../../../img/workPreviews/express.png';
+import js from '../../img/JS.svg';
+import css from '../../img/CSS.svg';
+import html from '../../img/html5.svg';
+import gitIcon from '../../img/gitHub.svg';
+import herokuIcon from '../../img/heroku.png';
+import jquery from '../../img/jquery.png';
+import react from '../../img/react.png';
+import bootS from '../../img/boots.svg';
+import mongoDB from '../../img/mongodb.svg';
+import next from '../../img/next.png';
+import node from '../../img/node.png';
+import mui from '../../img/MUi.png';
+import express from '../../img/express.png';
+import netlify from '../../img/netlify.png';
+import store from '../../img/workPreviews/store.jpg';
+import game from '../../img/workPreviews/cardGame.jpg';
+import iTune from '../../img/workPreviews/iTunesMusicAPI.jpg';
+import weather from '../../img/workPreviews/weather.jpg';
+import movies from '../../img/workPreviews/movies.jpg';
+import toDo from '../../img/workPreviews/toDoList.png';
+import dogs from '../../img/workPreviews/eventsplanner.jpg';
+import carList from '../../img/workPreviews/carsdb.png';
+import expressApp from '../../img/workPreviews/express.png';
 
 
 //my works object
@@ -60,7 +60,8 @@ export const projectList = [
          {
             icon: netlify,
             link: 'https://htmlccsstore.netlify.app',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: '!offline'
 
          } 
       ]
@@ -105,7 +106,9 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://fullstack-itunes-playlist.herokuapp.com/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: 'offline'
+
 
          } 
       ]
@@ -140,7 +143,8 @@ export const projectList = [
          {
             icon: netlify,
             link: 'https://matchtheanimal.netlify.app/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: '!offline'
 
          } 
       ]
@@ -176,7 +180,8 @@ export const projectList = [
          {
             icon: netlify,
             link: 'https://mortaweather.netlify.app/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: '!offline'
 
          } 
       ]
@@ -221,7 +226,8 @@ export const projectList = [
          {
             icon: netlify,
             link: 'https://popularmoviesapi.netlify.app/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: '!offline'
 
          } 
       ]
@@ -268,7 +274,8 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://mernstack-todolist.herokuapp.com/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: 'offline'
 
          } 
       ]
@@ -316,7 +323,8 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://dogeventplanner.herokuapp.com/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: 'offline'
 
          } 
       ]
@@ -363,7 +371,8 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://cars-list-db.herokuapp.com/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: 'offline'
 
          } 
       ]
@@ -404,7 +413,34 @@ export const projectList = [
          {
             icon: herokuIcon,
             link: 'https://wd-project-list.herokuapp.com/',
-            title: 'Live demo'
+            title: 'Live demo',
+            status: 'offline'
+
+         } 
+      ]
+
+   },
+   {
+      id:   8,
+      prev: [expressApp],
+      title: "In Progress",
+      skills: [],
+      features:   [
+         '====================',
+         '====================',
+
+        
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link: '#',
+            title: '???'
+         },
+         {
+            icon: herokuIcon,
+            link: '#',
+            title: '???'
 
          } 
       ]

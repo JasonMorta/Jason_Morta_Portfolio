@@ -1,9 +1,9 @@
 import React from 'react';
 import './blogPosts.css'
 import list from '../../components/data/BlogList'
-import { useNavigate } from 'react-router';
 import { useContext } from 'react';
 import { sharedState } from '../../App';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function BlogPosts() {
@@ -19,9 +19,7 @@ export default function BlogPosts() {
     <div className='blog-posts-container'>
       <h1 className='main-heading'>BLOGS</h1>
       {list.map((item, index)=>(
-        <div className={
-
-          index % 2 === 0 ? 'div-cont blog post slide-in-left' : 'div-cont blog post slide-in-right'
+        <div className={ index % 2 === 0 ? 'div-cont blog post slide-in-left' : 'div-cont blog post slide-in-right'
           } key={index*item.id}>
           <div className='head-content'>
             <h1>{item.blog.heading}</h1>

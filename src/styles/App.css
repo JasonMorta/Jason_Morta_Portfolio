@@ -504,6 +504,7 @@ My Work / Cards
   border-image-slice: 1;
   margin: 0.9375rem 0rem;
   background-image: url(../img/bkg.png);
+  position: relative;
   
 }
 
