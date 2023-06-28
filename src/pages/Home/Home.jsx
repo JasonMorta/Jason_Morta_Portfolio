@@ -5,6 +5,7 @@ import Contact from '../../components/sections/contact/Contact'
 import Education from '../../components/sections/education/Education'
 import HeroImage from '../../components/sections/hero-image/HeroImage'
 import MyWork from '../../components/sections/my-work/MyWork'
+import SkillIcons from '../../components/sections/skills-stack-slider/SkillIcons'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
               <HeroImage />
               <AboutMe />
               <Education />
+              <SkillIcons />
               <MyWork />
               <Contact />
             

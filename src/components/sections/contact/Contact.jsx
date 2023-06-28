@@ -13,9 +13,11 @@ export default function Contact() {
                <img src={mapImg} alt="location" className="my-location"/>
             </div>
             <p>I'm based in Cape Town, Sea Point, South Africa</p>
-            <h4><a href="mailto:jasonmortadev@gmial.com">email me</a></h4>
-            <h4>jasonmortadev@gmail.com</h4>
-            <a href="https://github.com/JasonMorta">
+            <div>
+               <h4 style={{margin: "0px"}}><a href="mailto:jasonmortadev@gmial.com" target="_blank" rel="noreferrer" >email me</a></h4>
+               <h4 style={{margin: "0px 0px 20px"}}>jasonmortadev@gmail.com</h4>
+            </div>
+            <a href="https://github.com/JasonMorta" target="_blank" rel="noreferrer" >
                <img src={gitLogo} alt="link_image"  width="50px" title="my github profile link"/>
             </a>
          </div>

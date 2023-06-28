@@ -104,6 +104,12 @@ section {
 .intro-img img {
   background-color: #93253b;
   border: 1px solid #93253b;
+  transition: .3s;
+}
+
+.intro-img img:hover {
+  filter: grayscale(.8);
+  transition: .3s;
 }
  
 .intro-img {
@@ -164,13 +170,24 @@ section {
 
 
 .skill-card {
-  width: 11.25rem;
-  font-size: 0.75rem;
+  display: flex;
+  color: gray;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0.3125rem;
   transition: .4s;
-    height: 7.5rem;
-    background-color: #00000026;
-    margin: 0.125rem;
+  height: fit-content;
+  background-color: #00000026;
+  margin: 0.125rem;
+  width: 80px;
+  color: gray;
+}
+
+.skill-card p {
+  margin: 0px;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .skill-card:hover {

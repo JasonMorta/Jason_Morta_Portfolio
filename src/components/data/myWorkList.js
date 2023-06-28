@@ -421,16 +421,16 @@ export const projectList = [
 
    },
    {
-      id:   8,
-      prev: [],
-      title: "",
+      id:   9,
+      prev: ["asd"],
+      title: "In progress: Django & MySQL",
       skills: [],
       features:   [],
       links: [
          {  
-            icon: '',
-            link: '',
-            title: ''
+            icon: gitIcon,
+            link: 'https://github.com/JasonMorta/Django-todo-crud-app',
+            title: 'Git repo'
          },
          {
             icon: '',

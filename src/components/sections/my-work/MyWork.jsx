@@ -3,12 +3,14 @@ import { styled } from "@mui/material/styles";
 import { projectList } from "../../data/myWorkList";
 import gitPic from "../../../img/gitHub.svg";
 import "./myWorks.css";
+import Placeholder from "react-bootstrap/Placeholder";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { nanoid } from "nanoid";
 import nextProject from "../../../img/projectRight.png";
 import prevProject from "../../../img/projectLeft.png";
 import { useState } from "react";
 import Badge from "@mui/material/Badge";
+import MyWorkSkeleton from "./MyWorkSkeleton";
 
 //Material UI toolTip config
 const BootstrapTooltip = styled(({ className, ...props }) => (
@@ -61,82 +63,97 @@ export default function MyWork() {
           {/* project image */}
           {item.prev.map((pic, index) => (
             <div className="img-container" key={nanoid()}>
-              <img
-                key={nanoid()}
-                src={pic}
-                alt="store"
-                style={{ width: "200px" }}
-                className="img-thumbnail"
-              />
+              {/* {matches strings ending with either ".png" or ".jpg" in a case-insensitive manner} */}
+              {/\.(png|jpg)$/i.test(pic) ? (
+                <img
+                  key={nanoid()}
+                  src={pic}
+                  alt="store"
+                  style={{ width: "200px" }}
+                  className="img-thumbnail"
+                />
+              ) : (
+                  <MyWorkSkeleton width={"100%"} height={200} />
+              )}
             </div>
           ))}
 
           {/* project title */}
           <h3 className="h2-heading" id="header" key={nanoid()}>
-            {item.title}
+            {item.title.length >= 1 ? (item.title) : (<MyWorkSkeleton width={"100%"} height={20} />)}
           </h3>
 
           {/* project skill icons */}
-          <div className="stacks" key={nanoid()}>
-            {item.skills.map(
-              (
-                skill,
-                index //skill icons
-              ) => (
+          {item.skills.length > 1 ? <div className="stacks" key={nanoid()}>
+            {item.skills.map((skill,index) => (
                 <BootstrapTooltip title={skill.name} key={nanoid()}>
                   <img src={skill.icon} alt="" width="30px" key={nanoid()} />
                 </BootstrapTooltip>
-              )
-            )}
-          </div>
-          <p
-            key={nanoid()}
-            style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}
-          >
+                ))}
+          </div>:
+                <MyWorkSkeleton width={50} height={34} />
+               }
+
+          {/* Descriptions */}
+          <p key={nanoid()} style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
             Key features
           </p>
           <ul>
-            {item.features.map((ftr, index) => (
-              <li key={nanoid()}>{ftr}</li>
-            ))}
+            {item.features.length > 1 ?
+              item.features.map((ftr, index) => (
+                <li key={nanoid()}>{ftr}</li>
+              ))
+              :
+              <>
+                <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
+                <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
+                <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
+                <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
+              </>
+            }
           </ul>
+          {/* project link icons */}
           <div className="link-icons" style={{ margin: "auto" }} key={nanoid()}>
             {item.links.map((link, index) => (
-              <a
-                href={link.link}
-                target="_blank"
-                rel="noreferrer"
-                key={nanoid()}
-              >
-                <BootstrapTooltip
-                  placement="top"
-                  title={link.title}
+              <>
+            
+              {link.link.length > 1 ? <a
+                  href={link.link}
+                  target="_blank"
+                  rel="noreferrer"
                   key={nanoid()}
                 >
-                  {link.title === "Live demo" ? (
-                    <Badge
-                      badgeContent={
-                        link.status === "offline" ? "Offline" : "Live"
-                      }
-                      color="secondary"
-                    >
+                  <BootstrapTooltip
+                    placement="top"
+                    title={link.title}
+                    key={nanoid()}
+                  >
+                    {link.title === "Live demo" ? (
+                      <Badge
+                        badgeContent={
+                          link.status === "offline" ? "Offline" : "Live"
+                        }
+                        color="secondary"
+                      >
+                        <img
+                          className="img-links"
+                          src={link.icon}
+                          alt="logo"
+                          width="30px"
+                        />
+                      </Badge>
+                    ) : (
                       <img
                         className="img-links"
                         src={link.icon}
                         alt="logo"
                         width="30px"
                       />
-                    </Badge>
-                  ) : (
-                    <img
-                      className="img-links"
-                      src={link.icon}
-                      alt="logo"
-                      width="30px"
-                    />
-                  )}
-                </BootstrapTooltip>
-              </a>
+                    )}
+                  </BootstrapTooltip>
+                </a>:
+                <MyWorkSkeleton width={30} height={30} sx={{marginLeft: 1}}/>}
+              </>
             ))}
           </div>
         </div>
