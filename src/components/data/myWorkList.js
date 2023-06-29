@@ -22,6 +22,7 @@ import toDo from '../../img/workPreviews/toDoList.png';
 import dogs from '../../img/workPreviews/eventsplanner.jpg';
 import carList from '../../img/workPreviews/carsdb.png';
 import expressApp from '../../img/workPreviews/express.png';
+import scims from '../../img/workPreviews/scims.png';
 
 
 //my works object
@@ -420,9 +421,48 @@ export const projectList = [
       ]
 
    },
+
    {
       id:   9,
-      prev: ["asd"],
+      prev: [scims],
+      title: "Scrimba course journal",
+      skills: [{
+         icon: react,
+         name: 'React'
+      }, {
+         icon: js,
+         name: 'JavaScript'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }, {
+         icon: html,
+         name: 'HTML5'
+      }],
+      features:   [
+         '▹ I created functional cards of all the small practices and projects in this course.',
+         '▹ The card designed were inspired by the Yu-Gi-Oh card game',
+         '▹ The starts was an indication of the difficulty level',
+         '▹ I built this before starting my Bootcamp course',],
+      links: [
+         {  
+            icon: gitIcon,
+            link: 'https://github.com/JasonMorta/SCRIMBA-react-CourseTemplates',
+            title: 'Git repo'
+         },
+         {
+            icon: netlify,
+            link: 'https://myscrims.netlify.app/',
+            title: 'Live demo',
+            status: '!offline'
+
+         } 
+      ]
+
+   },
+   {
+      id:  10,
+      prev: ['empty'],
       title: "In progress: Django & MySQL",
       skills: [],
       features:   [],

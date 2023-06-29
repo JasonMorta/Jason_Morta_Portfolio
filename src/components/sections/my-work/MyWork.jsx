@@ -69,7 +69,7 @@ export default function MyWork() {
                   key={nanoid()}
                   src={pic}
                   alt="store"
-                  style={{ width: "200px" }}
+                  style={{ width: "-webkit-fill-available" }}
                   className="img-thumbnail"
                 />
               ) : (
