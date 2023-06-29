@@ -441,7 +441,7 @@ export const projectList = [
       }],
       features:   [
          '▹ I created functional cards of all the small practices and projects in this course.',
-         '▹ The card designed were inspired by the Yu-Gi-Oh card game',
+         '▹ The card design was inspired by the Yu-Gi-Oh card game',
          '▹ The starts was an indication of the difficulty level',
          '▹ I built this before starting my Bootcamp course',],
       links: [
