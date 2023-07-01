@@ -508,6 +508,7 @@ My Work / Cards
 
 .project-card {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
   width: 15.625rem;
@@ -522,6 +523,7 @@ My Work / Cards
   margin: 0.9375rem 0rem;
   background-image: url(../img/bkg.png);
   position: relative;
+  height: 500px;
   
 }
 

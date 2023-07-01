@@ -5,10 +5,16 @@ import html from '../../img/html5.svg';
 import gitIcon from '../../img/gitHub.svg';
 import herokuIcon from '../../img/heroku.png';
 import jquery from '../../img/jquery.png';
+import MySQL from '../../img/MySQL.png';
+import firebase from '../../img/firebase.png';
+import Django from '../../img/django.png';
 import react from '../../img/react.png';
 import bootS from '../../img/boots.svg';
 import mongoDB from '../../img/mongodb.svg';
+import py from '../../img/python.png';
 import next from '../../img/next.png';
+import chrome from '../../img/chrome.png';
+import dropbox from '../../img/dropbox.png';
 import node from '../../img/node.png';
 import mui from '../../img/MUi.png';
 import express from '../../img/express.png';
@@ -23,6 +29,8 @@ import dogs from '../../img/workPreviews/eventsplanner.jpg';
 import carList from '../../img/workPreviews/carsdb.png';
 import expressApp from '../../img/workPreviews/express.png';
 import scims from '../../img/workPreviews/scims.png';
+import djangoPrev from '../../img/workPreviews/django.png';
+import dropboxPrev from '../../img/workPreviews/ext.jpg';
 
 
 //my works object
@@ -45,10 +53,10 @@ export const projectList = [
          name: 'Bootstrap'
       }],
       features:   [
-         '› Cart system',
-         '› VAT calculation',
-         '› Shipping methods',
-         '› LocalStorage'
+         'Cart system',
+         'VAT calculation',
+         'Shipping methods',
+         'LocalStorage'
       ],
       gitLink: '',
       herokuLink: "",
@@ -89,11 +97,11 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Find any media on the iTunes API',
-         '› Add/remove media to favorite',
-         '› Loading indicators',
-         '› Express backend server',
-         '› Async programing'
+         'Find any media on the iTunes API',
+         'Add/remove media to favorite',
+         'Loading indicators',
+         'Express backend server',
+         'Async programing'
          
       ],
       gitLink: 'https://github.com/JasonMorta/Level-1-Capstone-Project-My-online-store.git',
@@ -130,10 +138,10 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Class components',
-         '› setTimeout, setInterval',
-         '› Ternary Operator',
-         '› Game data is stored in state'
+         'Class components',
+         'setTimeout, setInterval',
+         'Ternary Operator',
+         'Game data is stored in state'
       ],
       links: [
          {  
@@ -166,11 +174,11 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Get the local weather of any City',
-         '› setTimeout, setInterval',
-         '› .env API key',
-         '› Async programing',
-         '› OpenWeatherMap API',
+         'Get the local weather of any City',
+         'setTimeout, setInterval',
+         '.env API key',
+         'Async programing',
+         'OpenWeatherMap API',
       ],
       links: [
          {  
@@ -212,10 +220,10 @@ export const projectList = [
          name: 'Next.js'
       }],
       features:   [
-         '› Return the current most popular movies',
-         '› themoviedb.org API',
-         '› Select move for more details',
-         '› Google Analytics',
+         'Return the current most popular movies',
+         'themoviedb.org API',
+         'Select move for more details',
+         'Google Analytics',
         
       ],
       links: [
@@ -258,11 +266,11 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Stores data to MongoDB',
-         '› JTW(JavaScript Token Authentication)',
-         '› CRUD operation',
-         '› User accounts',
-         '› LocalStorage',
+         'Stores data to MongoDB',
+         'JTW(JavaScript Token Authentication)',
+         'CRUD operation',
+         'User accounts',
+         'LocalStorage',
 
         
       ],
@@ -306,12 +314,12 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Stores data to MongoDB',
-         '› JTW(JavaScript Token Authentication)',
-         '› CRUD operation',
-         '› User accounts',
-         '› User rolls',
-         '› Comment section',
+         'Stores data to MongoDB',
+         'JTW(JavaScript Token Authentication)',
+         'CRUD operation',
+         'User accounts',
+         'User rolls',
+         'Comment section',
 
         
       ],
@@ -355,11 +363,11 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Stores data to MongoDB',
-         '› CRUD operation',
-         '› Sort by age',
-         '› Update by name',
-         '› Update Many',
+         'Stores data to MongoDB',
+         'CRUD operation',
+         'Sort by age',
+         'Update by name',
+         'Update Many',
 
         
       ],
@@ -400,8 +408,8 @@ export const projectList = [
          name: 'CSS3'
       }],
       features:   [
-         '› Writes data to a .json file on the backend server',
-         '› CRUD operation',
+         'Writes data to a .json file on the backend server',
+         'CRUD operation',
 
         
       ],
@@ -440,10 +448,10 @@ export const projectList = [
          name: 'HTML5'
       }],
       features:   [
-         '▹ I created functional cards of all the small practices and projects in this course.',
-         '▹ The card design was inspired by the Yu-Gi-Oh card game',
-         '▹ The starts was an indication of the difficulty level',
-         '▹ I built this before starting my Bootcamp course',],
+         'I created functional cards of all the small practices and projects in this course.',
+         'The card design was inspired by the Yu-Gi-Oh card game',
+         'The starts was an indication of the difficulty level',
+         'I built this before starting my Bootcamp course',],
       links: [
          {  
             icon: gitIcon,
@@ -462,9 +470,99 @@ export const projectList = [
    },
    {
       id:  10,
-      prev: ['empty'],
+      prev: [djangoPrev],
       title: "In progress: Django & MySQL",
-      skills: [],
+      skills: [{
+         icon: Django,
+         name: 'Django'
+      }, {
+         icon: MySQL,
+         name: 'MySQL'
+      }, {
+         icon: py,
+         name: 'Python'
+      
+      }, {
+         icon: bootS,
+         name: 'Bootstrap'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }, {
+         icon: html,
+         name: 'HTML5'
+      }
+         ],
+      features:   [
+         'CRUD operation',
+         'Stores data to MySQL Desktop',
+         'This was mainly a practice project to learn Django and MySQL',
+      ],
+      links: [
+         {  
+            icon: gitIcon,
+            link: 'https://github.com/JasonMorta/Django-todo-crud-app',
+            title: 'Git repo'
+         },
+         {
+            icon: '',
+            link: '',
+            title: ''
+         } 
+      ]
+   },
+   {
+      id:  11,
+      prev: [dropboxPrev],
+      title: "Chrome extension",
+      skills: [{
+         icon: js,
+         name: 'JavaScript'
+      }, {
+         icon: css,
+         name: 'CSS3'
+      }, {
+         icon: html,
+         name: 'HTML5'
+      }, {
+         icon: chrome,
+         name: 'Chrome extension API'
+      }, {
+         icon: dropbox,
+         name: 'Dropbox API'
+      }
+         ],
+      features:   [
+         'Chrome extension that finds student task folder on dropbox',
+         'Finds the current week folder automatically',
+         'Creates download and direct links to tasks',
+         'Also includes several DOM manipulation functions to improve reviewers productivity',
+
+      ],
+      links: [
+         {
+            icon: gitIcon,
+            link: 'https://github.com/Morta-Organization/Dropbox-File-Finder-UI-popup-chrome-extension',
+            title: 'Git repo'
+         },
+         {
+            icon: '',
+            link: '',
+            title: ''
+         }
+      ]
+   },
+
+   //Inprogress object
+   {
+      id:  12,
+      prev: ['empty'],
+      title: "In progress: Job tracker",
+      skills: [
+         {icon: react, name: 'React'},
+         {icon: bootS, name: 'Bootstrap'},
+         {icon: firebase, name: 'Firebase'}
+      ],
       features:   [],
       links: [
          {  
@@ -481,4 +579,4 @@ export const projectList = [
       ]
 
    }
-];
+]

@@ -98,20 +98,22 @@ export default function MyWork() {
           <p key={nanoid()} style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
             Key features
           </p>
-          <ul>
-            {item.features.length > 1 ?
-              item.features.map((ftr, index) => (
-                <li key={nanoid()}>{ftr}</li>
-              ))
-              :
-              <>
-                <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
-                <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
-                <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
-                <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
-              </>
-            }
-          </ul>
+          <div className="key-feature-container">
+            <ul className="key-features">
+              {item.features.length > 1 ?
+                item.features.map((ftr, index) => (
+                  <li  key={nanoid()}>{ftr}</li>
+                ))
+                :
+                <>
+                  <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
+                  <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
+                  <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
+                  <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
+                </>
+              }
+            </ul>
+          </div>
           {/* project link icons */}
           <div className="link-icons" style={{ margin: "auto" }} key={nanoid()}>
             {item.links.map((link, index) => (
