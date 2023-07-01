@@ -230,6 +230,13 @@ div {
   margin: auto;
 }
 
+.div-cont h2 {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  
+}
+
 .div-cont:hover :not(a,i){
   color: rgb(212, 212, 212);
   transition: .2s ease-out;
