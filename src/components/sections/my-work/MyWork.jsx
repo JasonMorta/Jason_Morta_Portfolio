@@ -78,42 +78,44 @@ export default function MyWork() {
             </div>
           ))}
 
-          {/* project title */}
-          <h3 className="h2-heading" id="header" key={nanoid()}>
-            {item.title.length >= 1 ? (item.title) : (<MyWorkSkeleton width={"100%"} height={20} />)}
-          </h3>
-
-          {/* project skill icons */}
-          {item.skills.length > 1 ? <div className="stacks" key={nanoid()}>
-            {item.skills.map((skill,index) => (
-                <BootstrapTooltip title={skill.name} key={nanoid()}>
-                  <img src={skill.icon} alt="" width="30px" key={nanoid()} />
-                </BootstrapTooltip>
-                ))}
-          </div>:
-                <MyWorkSkeleton width={50} height={34} />
-               }
-
-          {/* Descriptions */}
-          <p key={nanoid()} style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
-            Key features
-          </p>
-          <div className="key-feature-container">
-            <ul className="key-features">
-              {item.features.length > 1 ?
-                item.features.map((ftr, index) => (
-                  <li  key={nanoid()}>{ftr}</li>
-                ))
-                :
-                <>
-                  <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
-                  <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
-                  <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
-                  <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
-                </>
-              }
-            </ul>
-          </div>
+        <div className="card-bottom">
+            {/* project title */}
+            <h3 className="h2-heading" id="header" key={nanoid()}>
+              {item.title.length >= 1 ? (item.title) : (<MyWorkSkeleton width={"100%"} height={20} />)}
+            </h3>
+  
+            {/* project skill icons */}
+            {item.skills.length > 1 ? <div className="stacks" key={nanoid()}>
+              {item.skills.map((skill,index) => (
+                  <BootstrapTooltip title={skill.name} key={nanoid()}>
+                    <img src={skill.icon} alt="" width="30px" key={nanoid()} />
+                  </BootstrapTooltip>
+                  ))}
+            </div>:
+                  <MyWorkSkeleton width={50} height={34} />
+                 }
+  
+            {/* Descriptions */}
+            <p key={nanoid()} style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
+              Key features
+            </p>
+            <div className="key-feature-container">
+              <ul className="key-features">
+                {item.features.length > 1 ?
+                  item.features.map((ftr, index) => (
+                    <li  key={nanoid()}>{ftr}</li>
+                  ))
+                  :
+                  <>
+                    <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
+                    <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
+                    <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
+                    <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
+                  </>
+                }
+              </ul>
+            </div>
+        </div>
           {/* project link icons */}
           <div className="link-icons" style={{ margin: "auto" }} key={nanoid()}>
             {item.links.map((link, index) => (

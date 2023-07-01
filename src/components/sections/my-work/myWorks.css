@@ -26,6 +26,10 @@
    margin: 0;
  }
 
+ .card-bottom {
+  
+ }
+
  .img-container {
   display: flex;
   min-height: 13.125rem;
