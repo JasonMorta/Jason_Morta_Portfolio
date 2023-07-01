@@ -76,7 +76,7 @@ export default [
    },
    {
       id: 'next',
-      title: 'next.js',
+      title: 'Next.js',
       skill_img: next
    },
    {
@@ -86,22 +86,22 @@ export default [
    },
    {
       id: 'firebase',
-      title: 'firebase',
+      title: 'Firebase',
       skill_img: firebase
    },
    {
       id: 'sass',
-      title: 'sass',
+      title: 'SASS',
       skill_img: sass
    },
    {
       id: 'dropbox',
-      title: 'dropbox',
+      title: 'DropBox API',
       skill_img: dropbox
    },
    {
       id: 'figma',
-      title: 'figma',
+      title: 'Figma',
       skill_img: figma
    },
    {
@@ -121,17 +121,17 @@ export default [
    },
    {
       id: 'php',
-      title: 'php',
+      title: 'PHP',
       skill_img: php
    },
    {
       id: 'typescript',
-      title: 'typescript',
+      title: 'TypeScript',
       skill_img: ts
    },
    {
       id: 'vue',
-      title: 'vue',
+      title: 'Vue.js',
       skill_img: vue
    },
    
