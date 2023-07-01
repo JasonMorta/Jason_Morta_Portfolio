@@ -5,7 +5,7 @@ import html from '../../img/html5.svg';
 import gitIcon from '../../img/gitHub.svg';
 import herokuIcon from '../../img/heroku.png';
 import jquery from '../../img/jquery.png';
-import MySQL from '../../img/MySQL.png';
+import mysql from '../../img/mysql.png';
 import firebase from '../../img/firebase.png';
 import Django from '../../img/django.png';
 import react from '../../img/react.png';
@@ -476,7 +476,7 @@ export const projectList = [
          icon: Django,
          name: 'Django'
       }, {
-         icon: MySQL,
+         icon: mysql,
          name: 'MySQL'
       }, {
          icon: py,
@@ -495,8 +495,8 @@ export const projectList = [
          ],
       features:   [
          'CRUD operation',
-         'Stores data to MySQL Desktop',
-         'This was mainly a practice project to learn Django and MySQL',
+         'Stores data to mysql Desktop',
+         'This was mainly a practice project to learn Django and mysql',
       ],
       links: [
          {  

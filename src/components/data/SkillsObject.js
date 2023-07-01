@@ -16,7 +16,7 @@ import dropbox from '../../img/dropbox.png'
 import figma from '../../img/figma.png'
 import chrome from '../../img/chrome.png'
 import py from '../../img/python.png'
-import MySQL from '../../img/MySQL.png'
+import mysql from '../../img/mysql.png'
 import php from '../../img/php.png'
 import ts from '../../img/typescript.png'
 import vue from '../../img/vue.png'
@@ -115,9 +115,9 @@ export default [
       skill_img: py
    },
    {
-      id: 'MySQL',
-      title: 'MySQL',
-      skill_img: MySQL
+      id: 'mysql',
+      title: 'mysql',
+      skill_img: mysql
    },
    {
       id: 'php',
