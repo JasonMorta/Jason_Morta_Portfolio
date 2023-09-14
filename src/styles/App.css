@@ -22,7 +22,7 @@ html {
 }
 
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 
@@ -101,35 +101,13 @@ section {
 
 
 
-.intro-img img {
-  background-color: #93253b;
-  border: 1px solid #93253b;
-  transition: .3s;
-}
 
-.intro-img img:hover {
-  filter: grayscale(.8);
-  transition: .3s;
-}
- 
-.intro-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px 0px;
-}
 
 .about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-}
-
-
-.p-pic {
-  border-radius: 50%;
-  width: clamp(10rem, 73%, 18rem);
 }
 
 
@@ -228,6 +206,8 @@ div {
   color: #9e9e9e;
   transition: .5s ease-in;
   margin: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .div-cont h2 {

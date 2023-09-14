@@ -134,9 +134,4 @@ export default [
       title: 'Vue.js',
       skill_img: vue
    },
-   
-
-
-
-
 ]

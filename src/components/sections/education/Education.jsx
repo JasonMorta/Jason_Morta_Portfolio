@@ -13,7 +13,7 @@ export default function Education() {
    <section id="section-2" className="about-section">
    <div className="div-cont">
       <header>
-         <em style={{color: 'gray'}}>Education</em>
+         <h1 style={{color: 'gray'}}>Education</h1>
          <p>After graduating from high school in 2009, I began my professional journey as a machine operator at QTec Moulding. When I ventured into web development in 2019, I initially took some online classes, although they didn't yield the desired outcomes I had anticipated. However, in April 2022, I made a significant leap by enrolling in and successfully completing the Full-Stack Web Developer course at <a href="https://www.hyperiondev.com/">HyperionDev</a>'s on-site boot camp.
          </p>
          <br/>

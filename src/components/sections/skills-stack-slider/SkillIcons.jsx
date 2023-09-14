@@ -24,7 +24,7 @@ export default function SkillIcons() {
 
   return (
     <div id="section-2" className="div-cont">
-      <h3>Skill Stack</h3>
+      <h1>My Stack</h1>
       <div className="contentContainer skill-stack" id="stacks">
    
         {mySkills}

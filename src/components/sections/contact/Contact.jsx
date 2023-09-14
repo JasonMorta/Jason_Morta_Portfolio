@@ -8,7 +8,7 @@ export default function Contact() {
     <div>
       <section id="contact" className="contact-form">
          <div className="div-cont">
-            <h1>GET IN TOUCH</h1>
+            <h1>Get In Touch</h1>
             <div className="contact-map">
                <img src={mapImg} alt="location" className="my-location"/>
             </div>
