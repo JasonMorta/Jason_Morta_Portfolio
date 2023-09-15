@@ -29,6 +29,7 @@ import dogs from '../../img/workPreviews/eventsplanner.jpg';
 import carList from '../../img/workPreviews/carsdb.png';
 import expressApp from '../../img/workPreviews/express.png';
 import scims from '../../img/workPreviews/scims.png';
+import render from '../../img/render.png';
 import djangoPrev from '../../img/workPreviews/django.png';
 import dropboxPrev from '../../img/workPreviews/ext.jpg';
 
@@ -113,10 +114,10 @@ export const projectList = [
             title: 'Git repo'
          },
          {
-            icon: herokuIcon,
-            link: 'https://fullstack-itunes-playlist.herokuapp.com/',
+            icon: render,
+            link: 'https://ituned.onrender.com/',
             title: 'Live demo',
-            status: 'offline'
+            status: 'online'
 
 
          } 
@@ -330,10 +331,10 @@ export const projectList = [
             title: 'Git repo'
          },
          {
-            icon: herokuIcon,
-            link: 'https://dogeventplanner.herokuapp.com/',
+            icon: render,
+            link: 'https://dog-event-app.onrender.com/',
             title: 'Live demo',
-            status: 'offline'
+            status: 'online'
 
          } 
       ]
