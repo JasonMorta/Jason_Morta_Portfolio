@@ -75,7 +75,7 @@
     width: calc(80px - 5px);
     color: gray;
     animation-name: scrollLeft;
-    animation-duration: 30s;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }

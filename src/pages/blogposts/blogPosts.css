@@ -58,7 +58,11 @@
  .desc {
   position: relative;
   margin: 0;
- }
+}
+  .desc p {
+    font-size: 1.1rem;
+  }
+
 
  .desc i {
   color: #bd2229;

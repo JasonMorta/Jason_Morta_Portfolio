@@ -12,13 +12,14 @@ export default function BlogPosts() {
   let state = useContext(sharedState);
   let [,,,,, setThisBlog] = state
 
- 
+   // Reverse the list to show the last index first
+   const reversedList = [...list].reverse();
 
   return (
   
     <div className='blog-posts-container'>
       <h1 className='main-heading'>BLOGS</h1>
-      {list.map((item, index)=>(
+      {reversedList.map((item, index)=>(
         <div className={ index % 2 === 0 ? 'div-cont blog post slide-in-left' : 'div-cont blog post slide-in-right'
           } key={index*item.id}>
           <div className='head-content'>
@@ -30,10 +31,7 @@ export default function BlogPosts() {
             <p>{item.blog.description.intro}<i onClick={
               function toBlog(){
                 setThisBlog(item)
-             
                  navigate('/blogposts/blog')   
-            
-                
               }
             }>Read more</i></p>
             

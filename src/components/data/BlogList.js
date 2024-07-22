@@ -228,7 +228,59 @@ export default [
       }
     },
     created: "Tuesday August 16, 2022"
-  }
+  },
+  {
+    id: 4,
+    blog: {
+      heading: "Five Important Tips for Beginner Web Developers Before Diving into Learning Next.js",
+      description: {
+        intro: "Next.js is a powerful React framework that enables developers to build server-rendered React applications with ease. However, before diving into learning NextJS...",
+        paragraph: [
+          <div style={{margin: '0'}}>
+          <p style={{marginTop: '0'}}><b>Solidify your Fundamentals:</b> Before learning a framework like Next.js, ensure that you have a strong grasp of fundamental web development concepts such as HTML, CSS, and JavaScript. Understanding these basics will provide a strong foundation for learning more advanced frameworks.</p>
+          <p style={{marginTop: '0'}}><b>Familiarize Yourself with React:</b> Next.js is built on top of React, so having a good understanding of React fundamentals is essential. Make sure you are comfortable with React components, state management, and JSX syntax to better comprehend the concepts and principles in Next.js.</p>
+          <p style={{marginTop: '0'}}><b>Learn about Server-Side Rendering (SSR) and Static Site Generation (SSG):</b> Next.js provides powerful features for server-side rendering and static site generation. Familiarize yourself with these concepts and understand their significance in improving page load times, search engine optimization (SEO), and overall user experience.</p>
+          <p style={{marginTop: '0'}}><b>Explore Routing and Data Fetching:</b> Gain an understanding of how Next.js handles routing and data fetching. Learn about the different routing mechanisms available and how to fetch data from APIs or external sources using Next.js's built-in functions and methods.</p>
+          <p style={{marginTop: '0'}}><b>Practice with Small Projects:</b> Start by working on small projects using Next.js to get hands-on experience. Build simple applications or websites to familiarize yourself with the framework's structure, components, and functionalities. This will help you gain confidence and deepen your understanding of Next.js.</p>
+          </div>
+        ]
+      }
+    },
+    created: "15 September 2023"
+  },
+  {
+    id: 5,
+    blog: {
+      heading: "How to Optimize Your LinkedIn Profile as a Web Developer",
+      description: {
+        intro: "Optimizing your LinkedIn profile can significantly boost your visibility and attractiveness to potential employers or clients. Here are some essential tips for web developers to enhance their LinkedIn profiles and make a lasting impression...",
+        paragraph: [
+          <div style={{margin: '0'}}>
+          <p style={{marginTop: '0'}}><b>Optimize Your Profile:</b> Use a professional profile picture and a compelling headline that reflects your expertise. Craft a summary that highlights your key skills, experiences, and what you can bring to potential employers or clients.</p>
+          <p style={{marginTop: '0'}}><b>Showcase Your Work:</b> Add a dedicated section to showcase your web development projects. Include visually appealing images, descriptions, and links to live projects or repositories. Provide details about the technologies and tools you used, as well as the challenges you overcame during the project.</p>
+          <p style={{marginTop: '0'}}><b>Endorsements and Recommendations:</b> Ask colleagues, clients, or supervisors to provide endorsements and recommendations that highlight your skills and work ethic. Offer to write recommendations for others, as this can encourage them to reciprocate.</p>
+          <p style={{marginTop: '0'}}><b>Engage with the Community:</b> Join and participate in relevant LinkedIn groups and discussions related to web development. Share your insights, articles, or projects to demonstrate your knowledge and passion for the field. Comment on and like posts from other professionals in your network to increase your visibility.</p>
+          <p style={{marginTop: '0'}}><b>Continuous Learning and Certifications:</b> Highlight any relevant certifications, online courses, or workshops you've completed, demonstrating your commitment to staying updated in the ever-evolving field of web development. Share insights or key takeaways from any recent courses or workshops you've attended.</p>
+          </div>
+        ]
+      }
+    },
+    created: "19 October 2023"
+  },
+  // {
+  //   id: 6,
+  //   blog: {
+  //     heading: "Why Express.js is Awesome for Web Development",
+  //     description: {
+  //       intro: "Express.js, a minimalist web framework for Node.js, is renowned for its simplicity, flexibility, and robust feature set. It's an essential tool for web developers looking to build efficient and scalable web applications. Here are some reasons why Express.js is awesome, along with a few code examples to illustrate its power.",
+   
+  //     }
+  //   },
+  //   created: "1 October 2023"
+  // }
+  
+  
+  
 ]
 
 
