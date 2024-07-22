@@ -27,21 +27,21 @@ export default function AboutMe() {
          <header>
             <h1>ABOUT ME</h1>
             <p>
-               <i style={{color: 'gray'}}>To advance effectively, it is crucial to have a solid grasp of the fundamentals.</i>
-            </p>
-            <br/>
-            <p>Greetings from Cape Town! I'm Jason Morta, a passionate full-stack web developer with a flair for crafting digital wonders. My journey into the world of web development took off in 2019, and I've been hooked ever since.
-            </p>
-            <br />
-            <p>
-               <b>My love affair with web development</b> ignited when I created my very first website from scratch. Witnessing my ideas transform into digital realities was nothing short of magical. Since then, I've been on an exhilarating quest to bring creativity to life through code.
+    <i style={{color: "gray"}}>To advance effectively, it is crucial to have a solid grasp of the fundamentals.</i>
+</p>
+<br/>
+<p>
+    Greetings from Cape Town! I'm Jason Morta, a passionate full-stack web developer dedicated to crafting digital wonders. My journey into web development began in 2019, and I've been captivated ever since.
+</p>
+<br />
+<p>
+    <b>My love for web development</b> ignited when I created my first website from scratch. Seeing my ideas come to life digitally was a transformative experience. Since then, I have pursued an exhilarating quest to bring creativity to life through code.
+</p>
+<br />
+<p>
+    What truly <b>sets me apart</b> is my unwavering commitment to creating exceptional digital experiences. I believe in the power of clean code, responsive design, and continuous learning. I strive to stay at the forefront of technology, delivering innovative solutions that stand out in the digital world.
+</p>
 
-            </p>
-            <br />
-            <p>
-               What truly <b>sets me apart</b> is my unwavering commitment to creating exceptional digital experiences. I believe in the power of clean code, responsive design, and relentless learning. I strive to stay at the forefront of technology, ensuring that I provide innovative solutions that stand out in the digital world.
-            </p>
-           
          
             <i onClick={()=> setAboutHeight()} className='about-section-readMore'>{reamMore}</i>
          </header>
