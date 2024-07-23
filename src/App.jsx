@@ -33,7 +33,7 @@ export default function App() {
   const [nav, setNav] = useState("nav-container");
   return (
     <sharedState.Provider
-      value={[
+      value={{
         name,
         setName,
         animationCSS,
@@ -42,7 +42,7 @@ export default function App() {
         setThisBlog,
         nav,
         setNav,
-      ]}
+      }}
     >
       <div className="App custom-cursor">
         <BrowserAgent />

@@ -8,7 +8,7 @@ export default function Header() {
 
  let state = useContext(sharedState)
 
- let [name, setName, animationCSS,] = state
+ const {name, setName, animationCSS} = state
 
   //update array if 1st letter is clicked
   function edit(e) {

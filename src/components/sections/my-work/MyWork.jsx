@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import { projectList } from "../../data/myWorkList";
-import gitPic from "../../../img/gitHub.svg";
 import "./myWorks.css";
-import Placeholder from "react-bootstrap/Placeholder";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { nanoid } from "nanoid";
 import nextProject from "../../../img/projectRight.png";
 import prevProject from "../../../img/projectLeft.png";
 import { useState } from "react";
 import Badge from "@mui/material/Badge";
+
 import MyWorkSkeleton from "./MyWorkSkeleton";
+import NewWorkModal from "./NewWorkModal";
+
 
 //Material UI toolTip config
 const BootstrapTooltip = styled(({ className, ...props }) => (
@@ -59,17 +60,19 @@ export default function MyWork() {
   const myWork = projectList.map((item, index) => {
     return (
       <div className="project-card-container" key={nanoid()}>
+        
         <div className="project-card" key={nanoid()}>
+        <NewWorkModal toOpen={"edit"} />
           {/* project image */}
           {item.prev.map((pic, index) => (
             <div className="img-container" key={nanoid()}>
+             
               {/* {matches strings ending with either ".png" or ".jpg" in a case-insensitive manner} */}
               {/\.(png|jpg)$/i.test(pic) ? (
                 <img
                   key={nanoid()}
                   src={pic}
                   alt="store"
-                  style={{ width: "-webkit-fill-available" }}
                   className="img-thumbnail"
                 />
               ) : (
@@ -170,6 +173,8 @@ export default function MyWork() {
       <section id="work" className="my-work-section">
         <div className="div-cont">
           <h1>My Work</h1>
+     
+          <NewWorkModal toOpen={"add"} />
           <div className="project-container">
             <img
               onClick={goLeft}
