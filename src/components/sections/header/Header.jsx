@@ -3,20 +3,21 @@ import { sharedState } from '../../../App';
 import './style.css'
 import './NameAnimation.css'
 import { useState } from 'react';
+import { produce } from 'immer';
 
 export default function Header() {
 
- let state = useContext(sharedState)
+ let value = useContext(sharedState)
 
- const {name, setName, animationCSS} = state
+ const {state, setState} = value
 
   //update array if 1st letter is clicked
   function edit(e) {
-   let newName = prompt("Change Name", name);
+   let newName = prompt("Change Name", state.name);
     if (newName != null) {
-     setName('')
+     setState(produce((state) => {state.name = ''}));
      setTimeout(() => {
-      setName(newName)
+      setState(produce((state) => {state.name = newName}));
      }, 100);
      
    }  
@@ -32,8 +33,8 @@ export default function Header() {
         <div onClick={edit}>
           <div className='animatedWord'>
             {/* Name effect */}
-           {name.split('').map((letter, index) => (
-             <h1 className={`first-name ${animationCSS}`} style={{animationDuration:`1.${num++}s`}}  data-id={num++}  key={index}>
+           {state.name.split('').map((letter, index) => (
+             <h1 className={`first-name ${state.animationCSS}`} style={{animationDuration:`1.${num++}s`}}  data-id={num++}  key={index}>
                {letter}
              </h1>
            )).splice(0,6)}

@@ -7,12 +7,13 @@ import ReactGA from "react-ga";
 import "./navigation.css";
 import { sharedState } from "../App";
 import LoginModal from "./LoginModal";
+import { produce } from "immer";
 
 export default function Navigation() {
-  let state = useContext(sharedState);
+  let value = useContext(sharedState);
 
 
-  const { nav, setNav } = state;
+  const { state, setState } = value;
 
   let navigate = useNavigate();
   //Tell google analytics what button was clicked
@@ -24,7 +25,7 @@ export default function Navigation() {
   }
 
   return (
-    <div className={nav}>
+    <div className={state.nav}>
       {/* <p className="log-in-btn">LOGIN</p> */}
 
       <div className="inner-nav">
@@ -72,9 +73,9 @@ export default function Navigation() {
           to="/blogposts"
           onClick={() => {
             events("Button", "Blogposts");
-            setNav("");
+            setState(produce((state) => { state.nav = ""}));
             setTimeout(() => {
-              setNav("nav-container");
+              setState(produce((state) => { state.nav = "nav-container nav-slide"}));
             }, 1);
           }}
         >

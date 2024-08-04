@@ -21,28 +21,26 @@ import ScrollToTop from "./components/toTop/ScrollToTop";
 export const sharedState = createContext();
 
 export default function App() {
+
+  // Google Analytics 
   useEffect(() => {
     ReactGA.initialize("UA-237424331-1");
     //To report page view
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
-  const [name, setName] = useState("Jason");
-  const [animationCSS, setAnimationCSS] = useState("bounce-in-top");
-  const [thisBlog, setThisBlog] = useState("");
-  const [nav, setNav] = useState("nav-container");
+  const [state, setState] = useState({
+    name: "Jason",
+    animationCSS: "bounce-in-top",
+    thisBlog: "",
+    currentUser: null,
+    isLoggedIn: false,
+    nav: "nav-container",
+  });
+
   return (
     <sharedState.Provider
-      value={{
-        name,
-        setName,
-        animationCSS,
-        setAnimationCSS,
-        thisBlog,
-        setThisBlog,
-        nav,
-        setNav,
-      }}
+      value={{state, setState}}
     >
       <div className="App custom-cursor">
         <BrowserAgent />

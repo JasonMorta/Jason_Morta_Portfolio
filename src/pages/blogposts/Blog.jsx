@@ -7,11 +7,8 @@ import ErrorPage from "../error/404";
 
 export default function Blog() {
   let state = useContext(sharedState);
-
   const { thisBlog } = state;
-  console.log('thisBlog', thisBlog)
 
-  console.log(thisBlog);
   return (
     <>
       <div className="blog-container div-cont" key={nanoid()}>

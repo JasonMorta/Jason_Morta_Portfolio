@@ -4,11 +4,12 @@ import list from "../../components/data/BlogList";
 import { useContext } from "react";
 import { sharedState } from "../../App";
 import { useNavigate } from "react-router-dom";
+import { produce } from "immer";
 
 export default function BlogPosts() {
   let navigate = useNavigate();
   let state = useContext(sharedState);
-  const { setThisBlog } = state;
+  const { setState } = state;
 
   // Reverse the list to show the last index first
   const reversedList = [...list].reverse();
@@ -34,7 +35,9 @@ export default function BlogPosts() {
               {item.blog.description.intro}
               <i
                 onClick={function toBlog() {
-                  setThisBlog(item);
+                  setState(produce((state) => {
+                         state.thisBlog = item;
+                        }));
                   navigate("/blogposts/blog");
                 }}
               >
