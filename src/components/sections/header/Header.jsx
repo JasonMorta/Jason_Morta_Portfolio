@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { sharedState } from '../../../App';
 import './style.css'
 import './NameAnimation.css'
-import { useState } from 'react';
 import { produce } from 'immer';
 
 export default function Header() {

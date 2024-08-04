@@ -4,15 +4,23 @@ import "./loginCSS.css";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { sharedState } from "../App";
+import { produce } from "immer";
 
 
 const LoginModal = () => {
-  const { setIsLoggedIn } = useContext(sharedState); // Use the context
+  const { setState, state } = useContext(sharedState); // Use the context
   const [open, setOpen] = useState(false);
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [loginStat, setLoginStat] = useState(""); // State for login status message
 
   const handleOpen = () => setOpen(true);
+
+  const handleLogout = () => {
+    setState(produce((state) => {state.isLoggedIn = false})); // Update the global state
+    setLoginStat(""); // Clear any previous error messages
+    setLoginData({ email: "", password: "" }); // Clear the login data
+    
+  };
 
   const handleClose = () => {
     setOpen(false);
@@ -28,7 +36,7 @@ const LoginModal = () => {
         loginData.password
       );
       console.log("Logged in user:", userCredential.user);
-      setIsLoggedIn(true); // Update parent state
+      setState(produce((state) => {state.isLoggedIn = true})); // Update the global state
       setLoginStat(""); // Clear any previous error messages
       handleClose(); // Close the modal on successful login
     } catch (error) {
@@ -38,15 +46,26 @@ const LoginModal = () => {
     }
   }
 
+  const style = {
+    height: "20px",
+    padding:" 0px 5px",
+    fontSize: "small",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  }
+
   return (
     <>
       <Button
-        style={{ height: "30px" }}
-        onClick={handleOpen}
+        style={style}
+        onClick={()=> {
+          !state.isLoggedIn ? handleOpen() : handleLogout() }}
         color="yellow"
         appearance="ghost"
       >
-        LOGIN
+       <span> {state.isLoggedIn ? "LOGOUT" : "LOGIN"}</span>
       </Button>
 
       <Modal size={"fit-content"} backdrop open={open} onClose={handleClose}>
@@ -83,7 +102,7 @@ const LoginModal = () => {
               appearance="primary"
               onClick={login} // Call the login function
             >
-              Login
+              LOGIN
             </Button>
       
             {loginStat && ( // Display error message if it exists

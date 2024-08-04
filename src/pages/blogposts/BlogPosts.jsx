@@ -8,8 +8,8 @@ import { produce } from "immer";
 
 export default function BlogPosts() {
   let navigate = useNavigate();
-  let state = useContext(sharedState);
-  const { setState } = state;
+  const { setState }  = useContext(sharedState);
+
 
   // Reverse the list to show the last index first
   const reversedList = [...list].reverse();

@@ -3,8 +3,13 @@ import {Radio, RadioGroup, CheckPicker, Uploader, Modal, Button, Form } from "rs
 import { IconButton } from "rsuite";
 import PlusIcon from "@rsuite/icons/PlusRound";
 import SettingHorizontalIcon from '@rsuite/icons/SettingHorizontal';
+import { sharedState } from "../../../App";
 
 const NewWorkModal = ({toOpen}) => {
+
+  const value = React.useContext(sharedState);
+  const { state } = value;
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -46,13 +51,13 @@ const NewWorkModal = ({toOpen}) => {
 
   return (
     <>
-      <IconButton
+      {state.isLoggedIn ? <IconButton
         appearance="ghost"
         color="orange"
         className={toOpen === "add" ? "add-work" : "edit-work"}
         onClick={handleOpen}
         icon={toOpen === "add" ? <PlusIcon /> : <SettingHorizontalIcon />}
-      ></IconButton>
+      ></IconButton> : <> </>}
 
       <Modal size={"fit-content"} backdrop open={open} onClose={handleClose}>
         <Modal.Body>
