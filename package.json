@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.0",
     "firebase": "^10.12.5",
+    "gsap": "^3.12.5",
     "immer": "^10.1.1",
     "nanoid": "^4.0.0",
     "prop-types": "^15.8.1",

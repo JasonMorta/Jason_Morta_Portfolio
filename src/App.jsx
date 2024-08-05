@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import ReactGA from "react-ga";
 import BrowserAgent from "./components/browserDetect/BrowserAgent";
 import ScrollToTop from "./components/toTop/ScrollToTop";
+import SmoothScroll from "./SmootheScroll.jsx";
 
 export const sharedState = createContext();
 
@@ -39,6 +40,7 @@ export default function App() {
   });
 
   return (
+    <SmoothScroll>
     <sharedState.Provider
       value={{state, setState}}
     >
@@ -60,5 +62,6 @@ export default function App() {
         </Router>
       </div>
     </sharedState.Provider>
+    </SmoothScroll>
   );
 }
