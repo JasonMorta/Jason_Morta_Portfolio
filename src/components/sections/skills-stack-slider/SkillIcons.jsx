@@ -19,7 +19,7 @@ export default function SkillIcons() {
     <div id="section-2" className="div-cont">
       <h1>My Stack</h1>
       <p>
-        My primary skills are in the MERN stack, but I am also familiar with other older and newer technologies.
+      While my primary skill lies in MERN, I also have extensive experience working with both older and newer technologies.
       </p>
       <div className="contentContainer skill-stack">
         {mySkills}

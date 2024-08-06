@@ -472,7 +472,7 @@ export const projectList = [
    {
       id:  10,
       prev: [djangoPrev],
-      title: "In progress: Django & MySQL",
+      title: "Django & MySQL",
       skills: [{
          icon: Django,
          name: 'Django'
@@ -558,7 +558,7 @@ export const projectList = [
    {
       id:  12,
       prev: ['empty'],
-      title: "In progress: Job tracker",
+      title: "More projects coming soon...",
       skills: [
          {icon: react, name: 'React'},
          {icon: bootS, name: 'Bootstrap'},
