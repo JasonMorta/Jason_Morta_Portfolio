@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap"; // Import GSAP animation library
+import { gsap } from "gsap"; 
 
 /**
  * SmoothScroll is a functional component that provides smooth scrolling

@@ -26,6 +26,10 @@ html {
 }
 
 
+.App {
+  height: -webkit-fill-available;
+}
+
 .main-container {
   max-width: 800px;
   padding: 10px;
@@ -50,14 +54,14 @@ Navigation
  */
 
 .background {
-  background-image: url("../img/squares.svg");
+  background-color: #1d1a1a;
+  background-image: url("../img/aaabstract-topaz.jpeg");
   background-repeat: repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: inherit;
   position: fixed;
   width: 100%;
-  background-size: 20px;
-  height: 100%;
+  height: 100dvh;
   z-index: 0;
   top: 0;
   left: 0;
@@ -162,9 +166,14 @@ div {
 .div-cont {
   display: flex;
   flex-direction: column;
-  background-color: #0f0f11bf;
+  background-color: #0f0f1185;
+  /* background-image: url("../img/bg2.png"); */
+  /* background-blend-mode: multiply; */
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: inherit;
   padding: 15px;
-  box-shadow: 0 0px 3px 0px #c229482c;
+  box-shadow: 0 0px 3px 0px #0000002c;
   border-radius: 3px;
   text-align: center;
   flex-wrap: wrap;
@@ -437,13 +446,13 @@ body::-webkit-scrollbar {
 
 /* Track */
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  /* box-shadow: inset 0 0 5px grey; */
   border-radius: 10px;
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-  background: #C22948;
+  background: linear-gradient(65deg, rgb(33, 146, 148) 0%, rgb(253, 187, 45) 100%);
   border-radius: 10px;
 }
 

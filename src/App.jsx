@@ -40,7 +40,7 @@ export default function App() {
   });
 
   return (
-    <SmoothScroll>
+  
     <sharedState.Provider
       value={{state, setState}}
     >
@@ -49,7 +49,7 @@ export default function App() {
         <BackgroundSVG />
         <Router>
           <Navigation />
-
+          <SmoothScroll>
           <div className="main-container">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -58,10 +58,11 @@ export default function App() {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
+          </SmoothScroll>
           <ScrollToTop />
         </Router>
       </div>
     </sharedState.Provider>
-    </SmoothScroll>
+
   );
 }

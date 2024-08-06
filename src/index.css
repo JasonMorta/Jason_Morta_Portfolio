@@ -1,5 +1,5 @@
 #root {
-  height: 100vh;
+  height: 100dvh;
 }
 
 body {
@@ -21,4 +21,3 @@ code {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: auto;   /* Allow vertical scrollbar if content overflows */
 }
-

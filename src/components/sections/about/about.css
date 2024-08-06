@@ -7,7 +7,7 @@
     width: 100%;
     padding: 2px;
     transform: translateX(-50%);
-    background: linear-gradient(0deg, #111115 0%, rgb(17 17 21 / 67%) 100%);
+    /* background: linear-gradient(0deg, #111115 0%, rgb(17 17 21 / 67%) 100%); */
    }
 
    #about p {

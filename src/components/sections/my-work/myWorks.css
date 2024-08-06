@@ -125,10 +125,11 @@ scroll bar
 
 .right-arrow2 {
   position: absolute;
-  top: 60px;
+  top: 40px;
   right: 15px;
   transition: .3s ease-in-out;
   z-index: 2;
+  cursor: pointer;
 }
 
 .div-cont {
@@ -157,10 +158,11 @@ scroll bar
 
 .left-arrow2 {
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 1.5625rem;
   transition: .3s ease-in-out;
   z-index: 2;
+  cursor: pointer;
 }
 
 .link-icons {
