@@ -7,7 +7,7 @@ export default function Education() {
     <section id="section-2" className="about-section">
       <div className="div-cont">
         <header>
-          <h1 style={{ color: "gray" }}>Web Education</h1>
+          <h1 style={{ color: "gray" }}>Developer Education</h1>
           <p>
             I began my journey into web development in 2019 by taking some
             online classes, although they didn't yield the desired outcomes I
