@@ -6,13 +6,13 @@ import { nanoid } from "nanoid";
 import ErrorPage from "../error/404";
 
 export default function Blog() {
-  let state = useContext(sharedState);
+  const { state } = useContext(sharedState);
   const { thisBlog } = state;
 
   return (
     <>
       <div className="blog-container div-cont" key={nanoid()}>
-        <h1  key={nanoid()}>{thisBlog?.blog?.heading}</h1>
+        <h1 key={nanoid()}>{thisBlog?.blog?.heading}</h1>
         <br />
         <p key={nanoid()}>
           {thisBlog?.blog?.description?.intro.replace("..", "")}
