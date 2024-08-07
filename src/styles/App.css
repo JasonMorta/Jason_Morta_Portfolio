@@ -166,7 +166,7 @@ div {
 .div-cont {
   display: flex;
   flex-direction: column;
-  background-color: #0f0f1185;
+  background-color: #00000085;
   /* background-image: url("../img/bg2.png"); */
   /* background-blend-mode: multiply; */
   background-repeat: repeat;
