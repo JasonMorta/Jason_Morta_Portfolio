@@ -1,8 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import skills from "../../data/SkillsObject";
 import "./style.css";
+import { sharedState } from "../../../App";
+
+import { db } from "../../../config/firebase";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+
 
 export default function SkillIcons() {
+  const { blogs, setBlogs } = useContext(sharedState);
+
+  // Fetch data from Firestore
+  useEffect(() => {
+    console.log('Fetching data from Firestore🍾');
+
+    // Fetch skillIcons from Firestore
+    const fetchData = async () => {
+      const docRef = doc(db, 'portfolioData', 'YML4ToApwoPbNRoAeZVS');
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        const skillIcons = data.skillIcons || [];
+        console.log('skillIcons', skillIcons);
+        //setSkillIcons(skillIcons);
+      } else {
+        console.log('No such document!');
+      }
+    };
+
+    //fetchData();
+  }, []);
+
+
+
   const mySkills = skills.map((skill, index) => {
     return (
       <div style={{
