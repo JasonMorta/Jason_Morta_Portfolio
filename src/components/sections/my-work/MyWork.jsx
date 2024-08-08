@@ -59,13 +59,13 @@ export default function MyWork() {
 
   const myWork = projectList.map((item, index) => {
     return (
-      <div className="project-card-container" key={nanoid()}>
+      <div className="project-card-container" key={index}>
         
-        <div className="project-card" key={nanoid()}>
+        <div className="project-card" >
         <NewWorkModal toOpen={"edit"} />
           {/* project image */}
           {item.prev.map((pic, index) => (
-            <div className="img-container" key={nanoid()}>
+            <div className="img-container" key={index+1}>
              
               {/* {matches strings ending with either ".png" or ".jpg" in a case-insensitive manner} */}
               {/\.(png|jpg)$/i.test(pic) ? (
@@ -83,15 +83,15 @@ export default function MyWork() {
 
         <div className="card-bottom">
             {/* project title */}
-            <h3 className="h2-heading" id="header" key={nanoid()}>
+            <h3 className="h2-heading" id="header" >
               {item.title.length >= 1 ? (item.title) : (<MyWorkSkeleton width={"100%"} height={20} />)}
             </h3>
   
             {/* project skill icons */}
-            {item.skills.length > 1 ? <div className="stacks" key={nanoid()}>
+            {item.skills.length > 1 ? <div className="stacks">
               {item.skills.map((skill,index) => (
-                  <BootstrapTooltip title={skill.name} key={nanoid()}>
-                    <img src={skill.icon} alt="" width="30px" key={nanoid()} />
+                  <BootstrapTooltip title={skill.name} key={index+2}>
+                    <img src={skill.icon} alt="" width="30px" />
                   </BootstrapTooltip>
                   ))}
             </div>:
@@ -99,14 +99,14 @@ export default function MyWork() {
                  }
   
             {/* Descriptions */}
-            <p key={nanoid()} style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
+            <p style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
               Key features
             </p>
-            <div className="key-feature-container">
+            <div className="key-feature-container" >
               <ul className="key-features">
                 {item.features.length > 1 ?
                   item.features.map((ftr, index) => (
-                    <li  key={nanoid()}>{ftr}</li>
+                    <li  key={index+3}>{ftr}</li>
                   ))
                   :
                   <>

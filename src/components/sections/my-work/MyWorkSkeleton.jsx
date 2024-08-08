@@ -11,8 +11,8 @@ function MyWorkSkeleton(props) {
 
   return (
     <div>
-      {variants.map((variant) => (
-        <Typography component="div" key={variant} variant={variant}>
+      {variants.map((variant,index) => (
+        <Typography component="div" key={index} variant={variant}>
           {loading ? <Skeleton /> : ""}
         </Typography>
       ))}
