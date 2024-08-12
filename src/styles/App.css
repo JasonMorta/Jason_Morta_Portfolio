@@ -553,7 +553,7 @@ My Work / Cards
   left: 0;
   width: 700px;
   height: 700px;
-  background: #ff8a7b;
+  background: #44f2eb;
   mix-blend-mode: lighten;
   -webkit-transform: translate(-30%, 40%);
   transform: translate(-30%, 40%);
@@ -566,7 +566,7 @@ My Work / Cards
   right: 0;
   width: 600px;
   height: 600px;
-  background: #44f2d5;
+  background: #ff7b7b;
   -webkit-transform: translate(20%, -40%);
   transform: translate(20%, -40%);
   -webkit-animation-name: gradientShapeAnimation2;
