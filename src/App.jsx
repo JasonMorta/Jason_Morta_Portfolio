@@ -34,6 +34,7 @@ export default function App() {
     name: "Jason",
     animationCSS: "bounce-in-top",
     thisBlog: "",
+    skillIcons: [],
     currentUser: null,
     isLoggedIn: false,
     nav: "nav-container",

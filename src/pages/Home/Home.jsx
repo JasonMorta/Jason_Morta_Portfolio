@@ -12,11 +12,12 @@ export default function Home() {
      
        <div className="App custom-cursor">
               <HeroImage />
-              <AboutMe />
-              <Education />
               <SkillIcons />
               <MyWork />
               <Contact />
+              <Education />
+              <AboutMe />
+              
      </div>
   )
 }

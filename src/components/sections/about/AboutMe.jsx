@@ -13,10 +13,10 @@ export default function AboutMe() {
    function setAboutHeight() {
 
       if(height < '250px') {
-         setHeight('470px');
+         setHeight('490px');
          setReadMore('Read Less');
       } else {
-         setHeight('220px');
+         setHeight('240px');
          setReadMore('Read More');
       }
    }
@@ -43,9 +43,9 @@ export default function AboutMe() {
 </p>
 
          
-            <i onClick={()=> setAboutHeight()} className='about-section-readMore'>{reamMore}</i>
+           
          </header>
-      
+         <i onClick={()=> setAboutHeight()} className='about-section-readMore'>{reamMore}</i>
       </div>
    </section>
   )
