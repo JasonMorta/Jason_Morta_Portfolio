@@ -1,0 +1,70 @@
+.nav-container {
+ z-index: 4;
+ position: fixed;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ top: 0;
+ left: 0;
+ overflow: hidden;
+ background-color: #1d1a1a;
+ border: 0;
+ padding-right: 5px;
+ border: 0;
+ border-bottom: 2px solid #C22948;
+ border-image-source: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
+ animation: border-01 3s linear infinite;
+ border-image-slice: 1;
+ font-size: clamp(0.6rem, 1.5vw, 1.2rem);
+ justify-content: flex-end;
+ align-items: center;
+}
+
+@keyframes border-01 {
+ 0% {
+    border-image-source: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
+ }
+ 50% {
+    border-image-source: linear-gradient(to left, #1d1a1a 40%, #C22948 50%, #1d1a1a 60%);
+ }
+ 100% {
+    border-image-source: linear-gradient(to left, #1d1a1a 0%, #C22948 50%, #1d1a1a 100%);
+ }
+}
+
+.inner-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+
+.log-in-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+cursor: pointer;
+}
+
+
+.nav-container p, .log-in-btn {
+
+ color: #C22948;
+ padding: 5px 13px;
+ width: fit-content;
+}
+
+.nav-container p:hover {
+ background-color: #ddd;
+ color: black;
+}
+
+.nav-container p {
+ margin: 0;
+ width: max-content;
+}
+
+.nav-container a {
+
+    text-decoration: none;
+}

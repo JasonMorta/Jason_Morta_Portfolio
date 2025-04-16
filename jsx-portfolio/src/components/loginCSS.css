@@ -1,0 +1,33 @@
+.rs-modal-content{
+    background-color: #292D33;
+    color: white;
+}
+
+.rs-picker-popup {
+    background-color: #3c424a;
+    color: white;
+}
+
+/* width */
+.rs-modal-body::-webkit-scrollbar {
+    height: 8px;
+    width: 5px;
+  }
+  
+  /* Track */
+  .rs-modal-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+   
+  }
+  
+  /* Handle */
+  .rs-modal-body::-webkit-scrollbar-thumb {
+    background: #C22948;
+    border-radius: 0.625rem;
+  }
+  
+  /* Handle on hover */
+  .rs-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #6b0d20;
+  }

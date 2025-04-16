@@ -1,0 +1,21 @@
+.about-section-readMore {
+    color: #bd2229;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    padding: 2px;
+    transform: translateX(-50%);
+
+    /* background: linear-gradient(0deg, #111115 0%, rgb(17 17 21 / 67%) 100%); */
+   }
+
+   #about p {
+    text-align: left;
+   }
+   
+
+   .about-section {
+    margin-bottom: 50px;
+   }

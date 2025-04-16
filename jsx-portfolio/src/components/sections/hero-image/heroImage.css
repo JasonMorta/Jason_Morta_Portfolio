@@ -1,0 +1,24 @@
+
+.p-pic {
+    border-radius: 100%;
+    width: 250px;
+  
+  }
+
+
+  .intro-img img {
+    /* background-color: #93253b; */
+    border: 1px solid #93253b;
+    transition: .3s;
+  }
+  
+  .intro-img img:hover {
+    transition: .3s;
+  }
+   
+  .intro-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px;
+  }

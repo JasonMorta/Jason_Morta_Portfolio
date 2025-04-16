@@ -1,0 +1,54 @@
+.algorithms {
+ padding-left: 20px;
+ text-align: left;
+}
+.big-O {
+    position: relative;
+}
+.quad-function {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+}
+
+.binary {
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 700px) {
+ .quad-function {
+  flex-direction: column !important;
+ }
+
+.fib-images img {
+    width: 100% !important;
+}
+
+.fib-images {
+    flex-direction: column;
+}
+}
+
+.quad-function img {
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.fib-images{
+    display: flex;
+
+}
+
+.fib-images img {
+    width: 50%;
+    margin-top: 0;
+}
+
+.source {
+    position: absolute;
+    bottom: -13px;
+    right: 101px;
+    font-size: small;
+}
