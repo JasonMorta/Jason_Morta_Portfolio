@@ -44,7 +44,7 @@
 
 .skill-stack {
     width: 90%;
-    height: 80px;
+    height: 90px;
     max-width: calc(200px * 8);
     mask-image: linear-gradient(to right,
             transparent,
@@ -73,6 +73,7 @@
     background-color: #00000026;
     margin: 0.125rem;
     width: calc(80px - 5px);
+    height: 78px;
     color: gray;
     animation-name: scrollLeft;
     animation-duration: 35s;

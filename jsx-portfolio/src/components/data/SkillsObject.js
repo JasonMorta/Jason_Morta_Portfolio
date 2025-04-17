@@ -20,8 +20,7 @@ import mysql from '../../img/mysql.png'
 import php from '../../img/php.png'
 import ts from '../../img/typescript.png'
 import vue from '../../img/vue.png'
-
-
+import aws from '../../img/icons/aws.svg'
 
 export default [
    {
@@ -106,17 +105,17 @@ export default [
    },
    {
       id: 'chrome',
-      title: 'chrome',
+      title: 'Chrome Extension',
       skill_img: chrome
    },
    {
       id: 'python',
-      title: 'python',
+      title: 'Python',
       skill_img: py
    },
    {
       id: 'mysql',
-      title: 'mysql',
+      title: 'MySql',
       skill_img: mysql
    },
    {
@@ -134,4 +133,9 @@ export default [
       title: 'Vue.js',
       skill_img: vue
    },
+   {
+      id: 'aws',
+      title: 'AWS',
+      skill_img: aws
+   }
 ]
