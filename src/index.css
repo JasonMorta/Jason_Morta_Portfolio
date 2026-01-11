@@ -21,4 +21,5 @@ code {
 .viewport {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: auto;   /* Allow vertical scrollbar if content overflows */
+  margin-top: 100px;
 }

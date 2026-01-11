@@ -29,6 +29,7 @@
     "rsuite": "^5.67.0",
     "sass": "^1.53.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.3.5",
     "vanilla-tilt": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
