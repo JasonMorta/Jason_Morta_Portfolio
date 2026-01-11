@@ -28,10 +28,15 @@ export default function Contact() {
                <img src={gitLogo} alt="link_image"  width="50px" title="my github profile link"/>
             </a>
          </div>
+         {
+          location.pathname === "/contact" && (
          <section>
+         
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmZbwxAPdHjtiYm86enNefolniyr8IOqgiCFroPierbY2PTA/viewform?embedded=true" 
             width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            
          </section>
+      )}
       </section>
     </div>
   )
