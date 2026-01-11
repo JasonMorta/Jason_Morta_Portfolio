@@ -1,9 +1,24 @@
+// ===============================
+// Firebase initialization
+// ===============================
+
+// Import Firebase core
 import { initializeApp } from 'firebase/app';
+
+// Import Firebase services
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
-console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+// ===============================
+// Environment variable check
+// ===============================
 
+// DEBUG: remove after confirming values load
+console.log('Firebase API Key:', process.env.REACT_APP_FIREBASE_API_KEY);
+
+// ===============================
+// Firebase config object
+// ===============================
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -14,9 +29,15 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
+// ===============================
+// Initialize Firebase
+// ===============================
+
 const app = initializeApp(firebaseConfig);
 
-const db = getFirestore(app);
-const auth = getAuth(app);
+// ===============================
+// Export services
+// ===============================
 
-export { db, auth };
+export const db = getFirestore(app);
+export const auth = getAuth(app);

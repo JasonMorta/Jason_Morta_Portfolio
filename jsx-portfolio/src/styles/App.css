@@ -166,7 +166,7 @@ div {
 .div-cont {
   display: flex;
   flex-direction: column;
-  background-color: #00000059;
+  background-color: #000000b3;
   /* background-image: url("../img/bg2.png"); */
   /* background-blend-mode: multiply; */
   background-repeat: repeat;
@@ -521,7 +521,7 @@ My Work / Cards
 
 @media (max-width: 568px) {
   .gradient-background__wrapper {
-      background:#FFFFFF
+      background:#000000
   }
 }
 .gradient-background {
