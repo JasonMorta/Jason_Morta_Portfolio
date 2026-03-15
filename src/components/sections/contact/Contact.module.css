@@ -1,0 +1,90 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divCont {
+  padding: 22px;
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.35fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.infoCard,
+.contactMap {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: center;
+  gap: 12px;
+}
+
+.infoCard h3,
+.infoCard p {
+  margin: 0;
+}
+
+.emailText {
+  color: #e8dec5;
+  font-size: 1.02rem;
+}
+
+.contactMap img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.myLocation {
+  border-bottom: 2px solid #c22948;
+  border-top: 2px solid #c22948;
+  border-image: linear-gradient(to left, #1d1a1a 0%, #c22948 50%, #1d1a1a 100%);
+  border-image-slice: 1;
+  border-radius: 10px;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  color: #e8dec5;
+  text-decoration: none;
+}
+
+.formEmbedWrap {
+  width: 90%;
+  max-width: 59.375rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(194, 41, 72, 0.22);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

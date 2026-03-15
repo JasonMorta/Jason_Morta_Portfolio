@@ -1,0 +1,90 @@
+.introHeadings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.introHeadings h3 {
+  font-size: medium;
+  margin: 0;
+}
+
+.stack {
+  color: burlywood;
+}
+
+.firstName,
+.lastName {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(4.5rem, 20vw, 7rem);
+  font-family: "Audiowide", cursive;
+  line-height: 0.8;
+}
+
+.firstName {
+  color: #e8dec5;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.firstName:hover {
+  transition: 0.1s;
+  color: #c22948;
+}
+
+.lastName {
+  color: #c22948;
+  letter-spacing: 0;
+}
+
+.animatedWord {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  min-height: 85px;
+  margin-top: 45px;
+}
+
+.bounceInTop {
+  animation: bounce-in-top both;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}

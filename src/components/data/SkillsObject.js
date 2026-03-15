@@ -1,3 +1,10 @@
+// Legacy local skills data. This file is no longer used by the runtime because the live skills section now reads from Firebase. Keep it only as a temporary reference until you decide to delete it.
+/*
+ * NOTE: This legacy local skills file is no longer used by the runtime skills UI.
+ * The live skills section now reads from Firebase.
+ * Keep this file only as the one-time migration source until the Firebase skill sync is fully verified.
+ */
+
 import js from '../../img/JS.svg'
 import html5 from '../../img/html5.svg'
 import css from '../../img/CSS.svg'

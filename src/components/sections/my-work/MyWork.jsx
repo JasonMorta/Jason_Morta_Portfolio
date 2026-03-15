@@ -1,197 +1,255 @@
-import React, { useEffect } from "react";
-import { styled } from "@mui/material/styles";
-import { projectList } from "../../data/myWorkList";
-import "./myWorks.css";
-import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
-import { nanoid } from "nanoid";
-import nextProject from "../../../img/projectRight.png";
-import prevProject from "../../../img/projectLeft.png";
-import { useState } from "react";
-import Badge from "@mui/material/Badge";
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { nanoid } from 'nanoid';
+import { AccentKicker, MetaPill, SectionTitle } from '../../../styles/uiShells.js';
+import nextProject from '../../../img/projectRight.png';
+import prevProject from '../../../img/projectLeft.png';
+import gitIcon from '../../../img/gitHub.svg';
+import herokuIcon from '../../../img/heroku.png';
+import renderIcon from '../../../img/render.png';
+import netlifyIcon from '../../../img/netlify.png';
+import reactIcon from '../../../img/react.png';
+import styles from './MyWork.module.css';
+import MyWorkSkeleton from './MyWorkSkeleton.jsx';
+import NewWorkModal from './NewWorkModal.jsx';
+import { fetchPortfolioProjects } from '../../../services/portfolioProjects.js';
+import { fetchPortfolioSkills } from '../../../services/portfolioSkills.js';
 
-import MyWorkSkeleton from "./MyWorkSkeleton";
-import NewWorkModal from "./NewWorkModal";
+function TooltipIcon({ title, children }) {
+  return (
+    <span className={styles.tooltipWrapper} title={title} aria-label={title}>
+      {children}
+    </span>
+  );
+}
 
+const linkIconMap = {
+  repo: gitIcon,
+  demo: netlifyIcon,
+  render: renderIcon,
+  heroku: herokuIcon,
+};
 
-//Material UI toolTip config
-const BootstrapTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} arrow classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.arrow}`]: {
-    color: theme.palette.common.black,
-  },
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.common.black,
-  },
-}));
+function resolveLinkIcon(link) {
+  const iconKey = link.iconType ?? link.type;
+
+  if (iconKey === 'repo') {
+    return gitIcon;
+  }
+
+  if (iconKey === 'render' || /render/i.test(link.link ?? '')) {
+    return renderIcon;
+  }
+
+  if (iconKey === 'heroku' || /heroku/i.test(link.link ?? '')) {
+    return herokuIcon;
+  }
+
+  return linkIconMap[iconKey] ?? netlifyIcon;
+}
 
 export default function MyWork() {
-  let slide = 0;
-  let container = document.querySelector(".project-container");
-  const [skill, setSkill] = useState("");
+  const containerRef = useRef(null);
+  const slideRef = useRef(0);
+  const [projectsList, setProjectsList] = useState([]);
+  const [skillsCatalog, setSkillsCatalog] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [statusMessage, setStatusMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    setSkill(document.getElementsByClassName("project-card"));
+    let isMounted = true;
+
+    async function loadProjects() {
+      setIsLoading(true);
+      setErrorMessage('');
+
+      try {
+        const [entries, skills] = await Promise.all([fetchPortfolioProjects(), fetchPortfolioSkills()]);
+        if (isMounted) {
+          setProjectsList(entries);
+          setSkillsCatalog(skills);
+        }
+      } catch (error) {
+        if (isMounted) {
+          setErrorMessage(error?.message ?? 'Unable to load portfolio projects from Firebase.');
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadProjects();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  //The div has a length/index of 9.
+  const skillIconMap = useMemo(
+    () =>
+      Object.fromEntries(
+        skillsCatalog
+          .filter((item) => item.title && item.skill_img)
+          .map((item) => [item.title, item.skill_img]),
+      ),
+    [skillsCatalog],
+  );
 
-  function goRight() {
-    console.log(skill.length);
-    if (slide !== skill.length - 2) {
-      slide += 1; //increment slide on each click by 1
-    } else {
-      slide = 0; //when equal to 5, make it 0, restarting the slide
-    }
+  function handleProjectSaved(savedProject, mode) {
+    setProjectsList((current) => {
+      if (mode === 'add') {
+        return [...current, savedProject].sort((first, second) => Number(first.order ?? first.id ?? 0) - Number(second.order ?? second.id ?? 0));
+      }
 
-    //slide-scroll to the containers offsetLeft position using slide index value
-    container.scrollTo(skill[slide].offsetLeft - 30, 0);
+      return current
+        .map((item) => (item.docId === savedProject.docId ? savedProject : item))
+        .sort((first, second) => Number(first.order ?? first.id ?? 0) - Number(second.order ?? second.id ?? 0));
+    });
+
+    setStatusMessage(mode === 'add' ? 'Project added to Firebase successfully.' : 'Project updated in Firebase successfully.');
   }
 
-  function goLeft() {
-    if (slide !== 0) {
-      slide -= 1;
-    } else {
-      slide += skill.length - 2;
-    }
-    container.scrollTo(skill[slide].offsetLeft - 30, 0);
+  function handleProjectDeleted(deletedDocId) {
+    setProjectsList((current) => current.filter((item) => item.docId !== deletedDocId));
+    setStatusMessage('Project removed from Firebase successfully.');
   }
 
-  const myWork = projectList.map((item, index) => {
-    return (
-      <div className="project-card-container" key={index}>
-        
-        <div className="project-card" >
-        <NewWorkModal toOpen={"edit"} />
-          {/* project image */}
-          {item.prev.map((pic, index) => (
-            <div className="img-container" key={index+1}>
-             
-              {/* {matches strings ending with either ".png" or ".jpg" in a case-insensitive manner} */}
-              {/\.(png|jpg)$/i.test(pic) ? (
-                <img
-                  key={nanoid()}
-                  src={pic}
-                  alt="store"
-                  className="img-thumbnail"
-                />
-              ) : (
-                  <MyWorkSkeleton width={"100%"} height={200} />
-              )}
-            </div>
-          ))}
+  const projects = useMemo(
+    () =>
+      projectsList.map((item, index) => {
+        return (
+          <div className={styles.projectCardContainer} key={item.docId ?? item.slug ?? index}>
+            <article className={styles.projectCard}>
+              <NewWorkModal mode="edit" project={item} skillOptions={skillsCatalog} onSaved={handleProjectSaved} onDeleted={handleProjectDeleted} />
 
-        <div className="card-bottom">
-            {/* project title */}
-            <h3 className="h2-heading" id="header" >
-              {item.title.length >= 1 ? (item.title) : (<MyWorkSkeleton width={"100%"} height={20} />)}
-            </h3>
-  
-            {/* project skill icons */}
-            {item.skills.length > 1 ? <div className="stacks">
-              {item.skills.map((skill,index) => (
-                  <BootstrapTooltip title={skill.name} key={index+2}>
-                    <img src={skill.icon} alt="" width="30px" />
-                  </BootstrapTooltip>
-                  ))}
-            </div>:
+              {(item.previewImages?.length ? item.previewImages : ['']).map((pic, imageIndex) => (
+                <div className={styles.imgContainer} key={`${item.title}-${imageIndex}`}>
+                  {pic ? <img src={pic} alt={item.title} className={styles.imgThumbnail} /> : <MyWorkSkeleton width="100%" height={200} />}
+                </div>
+              ))}
+
+              <div className={styles.cardBottom}>
+                <div className={styles.cardHeader}>
+                  <h3 className={styles.h2Heading}>{item.title || <MyWorkSkeleton width="100%" height={20} />}</h3>
+                  <MetaPill>{item.skills?.length ?? 0} Tech{(item.skills?.length ?? 0) === 1 ? '' : 's'}</MetaPill>
+                </div>
+
+                {item.skills?.length ? (
+                  <div className={styles.stacks}>
+                    {item.skills.map((skill, skillIndex) => (
+                      <TooltipIcon title={skill} key={`${skill}-${skillIndex}`}>
+                        <span className={styles.skillChip}>
+                          <img src={skillIconMap[skill] ?? reactIcon} alt={skill} width="24" />
+                          {/* <span>{skill}</span> */}
+                        </span>
+                      </TooltipIcon>
+                    ))}
+                  </div>
+                ) : (
                   <MyWorkSkeleton width={50} height={34} />
-                 }
-  
-            {/* Descriptions */}
-            <p style={{ color: "gray", marginBottom: 0, marginLeft: 0 }}>
-              Key features
-            </p>
-            <div className="key-feature-container" >
-              <ul className="key-features">
-                {item.features.length > 1 ?
-                  item.features.map((ftr, index) => (
-                    <li  key={index+3}>{ftr}</li>
-                  ))
-                  :
-                  <>
-                    <MyWorkSkeleton width={'75%'} height={15} sx={{marginBottom: 1}}/>
-                    <MyWorkSkeleton width={'60%'} height={15} sx={{marginBottom: 1}}/>
-                    <MyWorkSkeleton width={'70%'} height={15} sx={{marginBottom: 1}}/>
-                    <MyWorkSkeleton width={'85%'} height={15} sx={{marginBottom: 1}}/>
-                  </>
-                }
-              </ul>
-            </div>
-        </div>
-          {/* project link icons */}
-          <div className="link-icons" style={{ margin: "auto" }} key={nanoid()}>
-            {item.links.map((link, index) => (
-              <>
-            
-              {link.link.length > 1 ? <a
-                  href={link.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={nanoid()}
-                >
-                  <BootstrapTooltip
-                    placement="top"
-                    title={link.title}
-                    key={nanoid()}
-                  >
-                    {link.title === "Live demo" ? (
-                      <Badge
-                        badgeContent={
-                          link.status === "offline" ? "Offline" : "Live"
-                        }
-                        color="secondary"
-                      >
-                        <img
-                          className="img-links"
-                          src={link.icon}
-                          alt="logo"
-                          width="30px"
-                        />
-                      </Badge>
+                )}
+
+                <p className={styles.featureLabel}>Key features</p>
+                <div className={styles.keyFeatureContainer}>
+                  <ul className={styles.keyFeatures}>
+                    {item.features?.length ? item.features.map((feature, featureIndex) => <li key={`${feature}-${featureIndex}`}>{feature}</li>) : <li>No feature summary has been added yet.</li>}
+                  </ul>
+                </div>
+              </div>
+
+              <div className={styles.linkIcons} key={nanoid()}>
+                {(item.links ?? []).map((link, linkIndex) => (
+                  <div key={`${link.title}-${linkIndex}`}>
+                    {link.link?.length ? (
+                      <a href={link.link} target="_blank" rel="noreferrer">
+                        <TooltipIcon title={link.title}>
+                          <span className={styles.linkIconShell}>
+                            {link.title === 'Live demo' && <span className={styles.liveBadge}>{link.status === 'offline' || link.status === '!offline' ? 'Offline' : 'Live'}</span>}
+                            <img className={styles.imgLinks} src={resolveLinkIcon(link)} alt={link.title} width="30" />
+                          </span>
+                        </TooltipIcon>
+                      </a>
                     ) : (
-                      <img
-                        className="img-links"
-                        src={link.icon}
-                        alt="logo"
-                        width="30px"
-                      />
+                      <MyWorkSkeleton width={30} height={30} />
                     )}
-                  </BootstrapTooltip>
-                </a>:
-                <MyWorkSkeleton width={30} height={30} sx={{marginLeft: 1}}/>}
-              </>
-            ))}
+                  </div>
+                ))}
+              </div>
+            </article>
           </div>
-        </div>
-      </div>
-    );
-  });
+        );
+      }),
+    [projectsList, skillsCatalog, skillIconMap],
+  );
+
+  const scrollToProject = (direction) => {
+    const container = containerRef.current;
+    if (!container) {
+      return;
+    }
+
+    const cards = container.querySelectorAll(`.${styles.projectCard}`);
+    if (!cards.length) {
+      return;
+    }
+
+    const maxIndex = Math.max(cards.length - 2, 0);
+
+    if (direction === 'right') {
+      slideRef.current = slideRef.current !== maxIndex ? slideRef.current + 1 : 0;
+    } else {
+      slideRef.current = slideRef.current !== 0 ? slideRef.current - 1 : maxIndex;
+    }
+
+    const nextCard = cards[slideRef.current];
+    container.scrollTo({ left: nextCard.offsetLeft - 30, behavior: 'smooth' });
+  };
 
   return (
-    <div>
-      <section id="work" className="my-work-section">
-        <div className="div-cont">
-          <h1>My Work</h1>
-     
-          <NewWorkModal toOpen={"add"} />
-          <div className="project-container">
-            <img
-              onClick={goLeft}
-              className="left-arrow2"
-              src={prevProject}
-              alt="scroll button"
-            />
-            {myWork}
-            <img
-              onClick={goRight}
-              className="right-arrow2"
-              src={nextProject}
-              alt="scroll button"
-            />
+    <section id="work" className={styles.myWorkSection}>
+      <div className={styles.divCont}>
+        <div className={styles.sectionHeader}>
+          <div className={styles.headerText}>
+            <AccentKicker>Selected Projects</AccentKicker>
+            <SectionTitle>My Work</SectionTitle>
+            <p className={styles.sectionIntro}>
+              Portfolio projects are loaded from Firebase when this section renders, while logged-in admin controls can now add, edit, and delete the project records directly from the workspace.
+            </p>
+          </div>
+          <div className={styles.sectionActions}>
+            <NewWorkModal mode="add" skillOptions={skillsCatalog} onSaved={handleProjectSaved} />
           </div>
         </div>
-      </section>
-    </div>
+
+        {statusMessage ? <p className={styles.statusInfo}>{statusMessage}</p> : null}
+        {errorMessage ? <p className={styles.statusError}>{errorMessage}</p> : null}
+
+        {isLoading ? <div className={styles.stateCard}>Loading portfolio projects from Firebase...</div> : null}
+
+        {!isLoading && !errorMessage && projectsList.length === 0 ? (
+          <div className={styles.stateCard}>
+            <p className={styles.stateTitle}>No Firebase portfolio projects were found.</p>
+            <p className={styles.stateText}>
+              The My Work section now reads only from Firebase. Logged-in controls can create the first project directly inside the workspace.
+            </p>
+          </div>
+        ) : null}
+
+        {!isLoading && projectsList.length > 0 ? (
+          <>
+          <div className={styles.arrowContainer}>
+              <img onClick={() => scrollToProject('left')} className={styles.leftArrow2} src={prevProject} alt="Previous project" width="30" />
+                <img onClick={() => scrollToProject('right')} className={styles.rightArrow2} src={nextProject} alt="Next project" width="30" />
+          </div>
+            <div className={styles.projectContainer} ref={containerRef}>
+              {projects}
+            </div>
+          
+          </>
+        ) : null}
+      </div>
+    </section>
   );
 }

@@ -1,49 +1,47 @@
-import React from "react";
-import hero_image from "../../../img/me-removebg-preview.png";
-import Header from "../header/Header";
-import "./heroImage.css";
+import { useRef } from "react";
+import heroImage from "../../../img/me-removebg-preview.png";
+import Header from "../header/Header.jsx";
+import styles from "./HeroImage.module.css";
 
 export default function HeroImage() {
+  const cardRef = useRef(null);
+  const tilt = 5;
 
-  // Prevent right click on image
   function noRightClick(event) {
     event.preventDefault();
   }
 
-  // Tilt effect
-  let tilt = 5; // amount of tilt: less is more
+  function hover(event) {
+    const card = cardRef.current;
+    if (!card) {
+      return;
+    }
 
-  // Rotate the card on mouse move
-  function hover(e) {
-    let card = document.querySelector(".intro-img");
-    let offsetX = e.nativeEvent.offsetX - 125; //250 is half of the width of the image
-    let offsetY = e.nativeEvent.offsetY - 125;
+    const offsetX = event.nativeEvent.offsetX - 125;
+    const offsetY = event.nativeEvent.offsetY - 125;
 
-    // set the transition
-    card.style.transition = `all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
-
-    // apply the transform ti tilt the image
-    // perspective is set on the parent container
-    card.style.transform = `perspective(1000px) rotateX(${
-      offsetY / tilt
-    }deg) rotateY(${offsetX / -tilt}deg)  scale3d(1.05, 1.05, 1.05)`;
+    card.style.transition = "all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+    card.style.transform = `perspective(1000px) rotateX(${offsetY / tilt}deg) rotateY(${offsetX / -tilt}deg) scale3d(1.05, 1.05, 1.05)`;
   }
 
-  // Reset the transform on mouse leave
   function hoverOut() {
-    let card = document.querySelector(".intro-img");
-    card.style.transform = ` rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-    card.style.transition = `3s`;
+    const card = cardRef.current;
+    if (!card) {
+      return;
+    }
+
+    card.style.transform = "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    card.style.transition = "3s";
   }
 
   return (
-    <section id="main" className="intro-section">
+    <section id="main" className={styles.introSection}>
       <Header />
-      <div className="intro-img">
+      <div className={styles.introImg} ref={cardRef}>
         <img
-          src={hero_image}
+          src={heroImage}
           alt="Jason Morta"
-          className="img-thumbnail p-pic"
+          className={styles.pPic}
           onPointerMove={hover}
           onPointerOut={hoverOut}
           onContextMenu={noRightClick}

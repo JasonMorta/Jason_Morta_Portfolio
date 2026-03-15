@@ -1,25 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bangers&family=Black+Ops+One&family=Bungee+Inline&family=Concert+One&family=Henny+Penny&family=Lobster+Two&family=Luckiest+Guy&family=Poiret+One&family=Reggae+One&family=Tapestry&family=Wallpoet&family=Water+Brush&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
 #root {
-  height: 100dvh;
+  min-height: 100%;
 }
 
 body {
-  background-color: #000000;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 10px;
 }
 
-.viewport {
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  overflow-y: auto;   /* Allow vertical scrollbar if content overflows */
-  margin-top: 100px;
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(65deg, rgb(33, 146, 148) 0%, rgb(253, 187, 45) 100%);
+  border-radius: 10px;
+}
+
+a {
+  color: #c22948;
+}
+
+a:visited {
+  color: #c22948;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Poiret One", cursive;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

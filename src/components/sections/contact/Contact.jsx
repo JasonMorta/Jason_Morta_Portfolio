@@ -1,65 +1,62 @@
-import React from "react";
+import { useLocation } from "react-router-dom";
+import { ActionChip, AccentKicker, GlassPanel, MetaPill, PanelHeader, SectionTitle } from "../../../styles/uiShells.js";
 import gitLogo from "../../../img/gitHub.svg";
 import mapImg from "../../../img/map.png";
-import "./style.css";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
-  // get current route
   const location = useLocation();
 
-  // log route
-  console.log(location.pathname);
   return (
-    <div>
-      <section id="contact" className="contact-form">
-        <div className="div-cont">
-          <h1>Get In Touch</h1>
-          <div className="contact-map">
-            <img src={mapImg} alt="location" className="my-location" />
+    <section id="contact" className={styles.contactForm}>
+      <GlassPanel as="div" className={styles.divCont}>
+        <PanelHeader>
+          <div className={styles.headingBlock}>
+            <AccentKicker>Contact</AccentKicker>
+            <SectionTitle>Get In Touch</SectionTitle>
           </div>
-          <p>I'm based in Cape Town, Sea Point, South Africa</p>
-          <div>
-            <h4 style={{ margin: "0px" }}>
-              <a
-                href="mailto:jasonmortadev@gmial.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Email Me @
-              </a>
-            </h4>
-            <h4 style={{ margin: "0px 0px 20px" }}>jasonmortadev@gmail.com</h4>
+          <MetaPill>Available for freelance work and collaborative projects</MetaPill>
+        </PanelHeader>
+
+        <div className={styles.contactGrid}>
+          <div className={styles.infoCard}>
+            <h3>Location</h3>
+            <p>
+              I&apos;m based in Sea Point, Cape Town, South Africa, and I&apos;m open to discussing remote opportunities,
+              freelance engagements, and collaborative product work.
+            </p>
+            <ActionChip href="mailto:jasonmortadev@gmail.com" target="_blank" rel="noreferrer">
+              Email Me
+            </ActionChip>
+            <span className={styles.emailText}>jasonmortadev@gmail.com</span>
           </div>
-          <a
-            href="https://github.com/JasonMorta"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={gitLogo}
-              alt="link_image"
-              width="50px"
-              title="my github profile link"
-            />
-          </a>
+
+          <div className={styles.contactMap}>
+            <img src={mapImg} alt="Cape Town location" className={styles.myLocation} />
+          </div>
         </div>
-        {location.pathname === "/contact" && (
-          <section>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdmZbwxAPdHjtiYm86enNefolniyr8IOqgiCFroPierbY2PTA/viewform?embedded=true"
-              width="100%"
-              height="900"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-            >
-              Loading…
-            </iframe>
-          </section>
-        )}
-      </section>
-    </div>
+
+        <a href="https://github.com/JasonMorta" target="_blank" rel="noreferrer" className={styles.githubLink}>
+          <img src={gitLogo} alt="GitHub profile" width="50" title="GitHub profile" />
+          <span>View GitHub Profile</span>
+        </a>
+      </GlassPanel>
+
+      {location.pathname === "/contact" && (
+        <section className={styles.formEmbedWrap}>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdmZbwxAPdHjtiYm86enNefolniyr8IOqgiCFroPierbY2PTA/viewform?embedded=true"
+            width="100%"
+            height="900"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            title="Contact form"
+          >
+            Loading…
+          </iframe>
+        </section>
+      )}
+    </section>
   );
 }

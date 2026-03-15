@@ -1,0 +1,55 @@
+.algorithms {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.bigO {
+  position: relative;
+}
+
+.quadFunction {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.binary {
+  flex-direction: column;
+}
+
+.quadFunction img {
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.fibImages {
+  display: flex;
+}
+
+.fibImages img {
+  width: 50%;
+  margin-top: 0;
+}
+
+.source {
+  position: absolute;
+  bottom: -13px;
+  right: 101px;
+  font-size: small;
+}
+
+@media only screen and (max-width: 700px) {
+  .quadFunction {
+    flex-direction: column !important;
+  }
+
+  .fibImages {
+    flex-direction: column;
+  }
+
+  .fibImages img {
+    width: 100% !important;
+  }
+}

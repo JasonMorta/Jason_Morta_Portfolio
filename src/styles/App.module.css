@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vh;
+}
+
+.customCursor {
+  cursor: url("/pointer.png"), auto;
+}
+
+.mainContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  color: #ffffff;
+  user-select: none;
+}

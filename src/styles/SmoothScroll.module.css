@@ -1,0 +1,13 @@
+.viewport {
+  overflow-x: hidden;
+  margin-top: 110px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport {
+    will-change: auto;
+  }
+}

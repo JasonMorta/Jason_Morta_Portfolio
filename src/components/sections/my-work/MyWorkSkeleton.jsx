@@ -1,31 +1,23 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
-import Grid from '@mui/material/Grid';
+import PropTypes from "prop-types";
+import styles from "./MyWork.module.css";
 
-const variants = ['h1'];
+export default function MyWorkSkeleton({ width, height, sx, loading }) {
+  const inlineStyle = {
+    width,
+    height,
+    ...sx,
+  };
 
-function MyWorkSkeleton(props) {
-  const { loading = false } = props;
+  if (loading) {
+    return <span className={styles.skeletonBlock} />;
+  }
 
-  return (
-    <div>
-      {variants.map((variant,index) => (
-        <Typography component="div" key={index} variant={variant}>
-          {loading ? <Skeleton /> : ""}
-        </Typography>
-      ))}
-    </div>
-  );
+  return <span className={styles.skeletonBlock} style={inlineStyle} aria-hidden="true" />;
 }
 
 MyWorkSkeleton.propTypes = {
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  sx: PropTypes.object,
   loading: PropTypes.bool,
 };
-
-export default function SkeletonTypography(props) {
-  return (
-    <Skeleton variant="rectangular" width={props.width} height={props.height}  sx={props.sx} />
-  );
-}

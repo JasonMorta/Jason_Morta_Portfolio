@@ -1,53 +1,50 @@
-import { func } from 'prop-types';
-import React, { useState } from 'react'
-import './about.css'
+import { useState } from "react";
+import { AccentKicker, GlassPanel, MetaPill, PanelHeader, SectionTitle } from "../../../styles/uiShells.js";
+import styles from "./AboutMe.module.css";
 
 export default function AboutMe() {
-
-   //control height of about section
-   const [height, setHeight] = useState('220px');
-   // control read more text
-   const [reamMore, setReadMore] = useState('Read More');
-
-   //set height of about section and change read more text.
-   function setAboutHeight() {
-
-      if(height < '250px') {
-         setHeight('490px');
-         setReadMore('Read Less');
-      } else {
-         setHeight('240px');
-         setReadMore('Read More');
-      }
-   }
+  const [expanded, setExpanded] = useState(false);
 
   return (
-   <section id="about" className="about-section">
-      <div className="div-cont" style={{height: `${height}`}} >
-         <header>
-            <h1>ABOUT ME</h1>
-            <p>
-    <i style={{color: "gray"}}>To advance effectively, it is crucial to have a solid grasp of the fundamentals.</i>
-</p>
-<br/>
-<p>
-    Greetings from Cape Town! I'm Jason Morta, a passionate full-stack web developer dedicated to crafting digital wonders. My journey into web development began in 2019, and I've been captivated ever since.
-</p>
-<br />
-<p>
-    <b>My love for web development</b> ignited when I created my first website from scratch. Seeing my ideas come to life digitally was a transformative experience. Since then, I have pursued an exhilarating quest to bring creativity to life through code.
-</p>
-<br />
-<p>
-    What truly <b>sets me apart</b> is my unwavering commitment to creating exceptional digital experiences. I believe in the power of clean code, responsive design, and continuous learning. I strive to stay at the forefront of technology, delivering innovative solutions that stand out in the digital world.
-</p>
+    <section id="about" className={styles.aboutSection}>
+      <GlassPanel as="div" className={`${styles.divCont} ${expanded ? styles.expanded : ""}`}>
+        <PanelHeader>
+          <div className={styles.headingBlock}>
+            <AccentKicker>About</AccentKicker>
+            <SectionTitle>About Me</SectionTitle>
+          </div>
+          <MetaPill>Cape Town • Full-stack Web Developer</MetaPill>
+        </PanelHeader>
 
-         
-           
-         </header>
-         <i onClick={()=> setAboutHeight()} className='about-section-readMore'>{reamMore}</i>
-      </div>
-   </section>
-  )
+        <div className={styles.contentWrap}>
+          <p className={styles.lead}>
+            Strong digital products start with solid fundamentals, thoughtful execution, and a genuine focus on user experience.
+          </p>
+
+          <p>
+            I&apos;m Jason Morta, a full-stack web developer based in Cape Town with a strong interest in building polished,
+            practical, and engaging web experiences. My journey into development started in 2019, and it quickly became a
+            field I wanted to pursue seriously.
+          </p>
+
+          <p>
+            That interest grew into a long-term commitment when I built my first website from scratch and saw how design,
+            logic, and interactivity could come together to create something meaningful. Since then, I&apos;ve continued refining
+            my skills by building projects that balance technical quality with a clean, user-focused presentation.
+          </p>
+
+          <p>
+            I value clear structure, maintainable code, responsive design, and continuous improvement. Whether I&apos;m developing
+            a portfolio project or contributing to a broader product idea, I aim to create work that feels deliberate,
+            reliable, and professional from both a technical and visual perspective.
+          </p>
+        </div>
+
+        <div className={styles.footerFade} aria-hidden="true" />
+        <button type="button" onClick={() => setExpanded((value) => !value)} className={styles.readMore}>
+          {expanded ? "Read Less" : "Read More"}
+        </button>
+      </GlassPanel>
+    </section>
+  );
 }
- 

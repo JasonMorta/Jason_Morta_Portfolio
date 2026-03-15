@@ -1,36 +1,28 @@
-import React from 'react'
-import './style.css'
-import top from '../../img/top.png';
-import backBtn from '../../img/back.png'
 import { useNavigate } from "react-router-dom";
-import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
-import { styled } from '@mui/material/styles';
+import top from "../../img/top.png";
+import backBtn from "../../img/back.png";
+import styles from "./ScrollToTop.module.css";
 
-export default function ScrollToTop(props) {
+function TooltipIcon({ title, children }) {
+  return (
+    <span className={styles.tooltipWrapper} title={title} aria-label={title}>
+      {children}
+    </span>
+  );
+}
 
- let navigate = useNavigate();
-//Material UI toolTip config
-const BootstrapTooltip = styled(({ className, ...props }) => (
- <Tooltip {...props} arrow classes={{ popper: className }} />
-))(({ theme }) => ({
- [`& .${tooltipClasses.arrow}`]: {
-   color: theme.palette.common.black,
- },
- [`& .${tooltipClasses.tooltip}`]: {
-   backgroundColor: theme.palette.common.black,
- },
-}));
-
+export default function ScrollToTop() {
+  const navigate = useNavigate();
 
   return (
-    <div className='to-top'>
-      <BootstrapTooltip title={'BACK'} >
-     <img onClick={()=>(navigate(-1))} src={backBtn} alt='scroll button'/>
-     </BootstrapTooltip>
+    <div className={styles.toTop}>
+      <TooltipIcon title="BACK">
+        <img onClick={() => navigate(-1)} src={backBtn} alt="Go back" />
+      </TooltipIcon>
 
-     <BootstrapTooltip title={'TOP'} >
-     <img onClick={()=>( window.scrollTo(0, 0))} src={top} alt='scroll to top' />
-     </BootstrapTooltip>
+      <TooltipIcon title="TOP">
+        <img onClick={() => window.scrollTo(0, 0)} src={top} alt="Scroll to top" />
+      </TooltipIcon>
     </div>
-  )
+  );
 }

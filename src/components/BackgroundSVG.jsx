@@ -1,16 +1,15 @@
-import React from 'react'
+import styles from "./BackgroundSVG.module.css";
 
 export default function BackgroundSVG() {
   return (
-   <div className="background">
-     <div className="gradient-background__wrapper">
-        <div className="gradient-background">
-          <div className="gradient-background__shape gradient-background__shape--1"></div>
-          <div className="gradient-background__shape gradient-background__shape--2"></div>
+    <div className={styles.background}>
+      <div className={styles.gradientBackgroundWrapper}>
+        <div className={styles.gradientBackground}>
+          <div className={`${styles.gradientBackgroundShape} ${styles.gradientBackgroundShape1}`} />
+          <div className={`${styles.gradientBackgroundShape} ${styles.gradientBackgroundShape2}`} />
         </div>
-        <div className="gradient-background__noise"></div>
+        <div className={styles.gradientBackgroundNoise} />
       </div>
-   </div>
-  )
+    </div>
+  );
 }
- 

@@ -1,0 +1,140 @@
+:global(.rs-modal-content) {
+  background:
+    linear-gradient(180deg, rgba(24, 22, 24, 0.96) 0%, rgba(14, 14, 16, 0.97) 100%),
+    rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(194, 41, 72, 0.28);
+  border-radius: 20px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
+}
+
+:global(.rs-modal-header) {
+  padding-bottom: 0.35rem;
+}
+
+:global(.rs-modal-title) {
+  color: #f0ece4;
+  letter-spacing: 0.06em;
+}
+
+:global(.rs-modal-body) {
+  color: #d6d1c8;
+}
+
+:global(.rs-form-control-wrapper input) {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f4efe8 !important;
+  border-radius: 12px !important;
+  min-height: 46px;
+}
+
+:global(.rs-form-control-wrapper input:focus) {
+  border-color: rgba(194, 41, 72, 0.52) !important;
+  box-shadow: 0 0 0 3px rgba(194, 41, 72, 0.12) !important;
+}
+
+:global(.rs-form-control-label) {
+  color: #f0ece4;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+:global(.rs-picker-popup) {
+  background-color: #3c424a;
+  color: #ffffff;
+}
+
+:global(.rs-modal-body::-webkit-scrollbar) {
+  height: 8px;
+  width: 5px;
+}
+
+:global(.rs-modal-body::-webkit-scrollbar-track) {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+:global(.rs-modal-body::-webkit-scrollbar-thumb) {
+  background: #c22948;
+  border-radius: 0.625rem;
+}
+
+:global(.rs-modal-body::-webkit-scrollbar-thumb:hover) {
+  background: #6b0d20;
+}
+
+.loginModal {
+  backdrop-filter: blur(6px);
+}
+
+.modalLead {
+  margin: 0.45rem 0 0;
+  color: #bcb6ab;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.loginForm {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.loginErrorMessage {
+  margin-top: 12px;
+  color: #ff8b8b;
+  background: rgba(194, 41, 72, 0.1);
+  border: 1px solid rgba(194, 41, 72, 0.24);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+}
+
+.loginButton {
+  font-size: 0.8rem;
+  border: none !important;
+  padding: 1px 8px !important;
+}
+
+.compactButton {
+  padding-inline: 0.55rem !important;
+}
+
+.loginButton:hover,
+.loginButton:focus,
+.loginButton:active {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.loginButtonIconWrap {
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.loginButtonIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.loginButtonIcon:hover {
+  transform: scale(1.1);
+}
+
+.loginLabel {
+  color: #f0ece4;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .loginButton {
+    font-size: 10px;
+    padding: 0 5px !important;
+  }
+
+  .loginLabel {
+    display: none;
+  }
+}

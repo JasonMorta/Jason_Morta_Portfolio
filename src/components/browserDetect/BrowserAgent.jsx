@@ -1,40 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect } from "react";
 
 export default function BrowserAgent() {
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
 
- const [browser, setBrowser] = useState('');
-
-
- function detectBrowser(){
-             
-  let userAgent = navigator.userAgent;
-  
-  // Detect browser name
-  if(userAgent.match(/chrome|chromium|crios/i)){ // Detect Chrome
-   setBrowser("chrome");
-    }else if(userAgent.match(/firefox|fxios/i)){  // Detect Firefox
-     setBrowser("firefox");
-    }  else if(userAgent.match(/safari/i)){ // Detect Safari
-     setBrowser("safari");
-    }else if(userAgent.match(/opr\//i)){ // Detect Opera
-      setBrowser("opera");
-    } else if(userAgent.match(/edg/i)){ // Detect Edge
-      setBrowser("edge");
-    }else{
-      setBrowser("No browser detection"); // No browser detected
+    if (/chrome|chromium|crios/i.test(userAgent)) {
+      console.log("chrome browser detected");
+    } else if (/firefox|fxios/i.test(userAgent)) {
+      console.log("firefox browser detected");
+    } else if (/safari/i.test(userAgent)) {
+      console.log("safari browser detected");
+    } else if (/opr\//i.test(userAgent)) {
+      console.log("opera browser detected");
+    } else if (/edg/i.test(userAgent)) {
+      console.log("edge browser detected");
     }
-   
-   }
+  }, []);
 
-
-   useEffect(() => {
-    detectBrowser()
-    console.log(browser+" browser detected")
-   }, [])
-
-
-
-  return (
-    <></>
-  )
+  return null;
 }
