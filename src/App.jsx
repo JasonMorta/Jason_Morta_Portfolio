@@ -6,7 +6,6 @@ import Navigation from "./components/Navigation.jsx";
 import BackgroundSVG from "./components/BackgroundSVG.jsx";
 import BrowserAgent from "./components/browserDetect/BrowserAgent.jsx";
 import ScrollToTop from "./components/toTop/ScrollToTop.jsx";
-import SmoothScroll from "./SmootheScroll.jsx";
 import ErrorPage from "./pages/error/404.jsx";
 import Home from "./pages/Home/Home.jsx";
 import BlogPosts from "./pages/blogposts/BlogPosts.jsx";
@@ -38,20 +37,18 @@ function AppShell() {
       <BrowserAgent />
       <BackgroundSVG />
       <Navigation />
-      <SmoothScroll>
-        <main className={styles.mainContainer}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/blogposts" element={<BlogPosts />} />
-            <Route path="/mywork" element={<MyWork />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/blogposts/:slug" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </main>
-      </SmoothScroll>
+      <main className={styles.mainContainer}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blogposts" element={<BlogPosts />} />
+          <Route path="/mywork" element={<MyWork />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/blogposts/:slug" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </main>
       <ScrollToTop />
       <RouteTracker />
     </div>

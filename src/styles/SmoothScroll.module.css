@@ -1,13 +1,29 @@
 .viewport {
-  overflow-x: hidden;
-  margin-top: 110px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
 }
 
+.content {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 110px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .viewport {
+    position: static;
+    overflow: visible;
     will-change: auto;
+    transform: none !important;
+  }
+
+  .content {
+    min-height: auto;
+    padding-top: 110px;
   }
 }
