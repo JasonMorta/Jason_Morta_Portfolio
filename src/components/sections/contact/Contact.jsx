@@ -25,7 +25,7 @@ export default function Contact() {
               I&apos;m based in Sea Point, Cape Town, South Africa, and I&apos;m open to discussing remote opportunities,
               freelance engagements, and collaborative product work.
             </p>
-            <ActionChip href="mailto:jasonmortadev@gmail.com" target="_blank" rel="noreferrer">
+            <ActionChip href="/contact#contact-forms">
               Email Me
             </ActionChip>
             <span className={styles.emailText}>jasonmortadev@gmail.com</span>
@@ -43,8 +43,31 @@ export default function Contact() {
       </GlassPanel>
 
       {location.pathname === "/contact" && (
-        <section className={styles.formEmbedWrap}>
-          <iframe
+        <section id="contact-forms" className={styles.formSection}>
+          <div className={styles.formIntroCard}>
+            <h3>Choose the contact method that suits you</h3>
+            <p>
+              The button above takes you to your device's email app for a direct message. The form below is a structured
+              project enquiry form for sharing more detail about your website, app, or collaboration request.
+            </p>
+          </div>
+
+          <div className={styles.formLabelRow}>
+            <div className={styles.formLabelCard}>
+              <span className={styles.formEyebrow}>Direct contact</span>
+              <h4>Email app link</h4>
+              <p>Best for quick questions or short messages.</p>
+            </div>
+
+            <div className={styles.formLabelCard}>
+              <span className={styles.formEyebrow}>Project enquiry</span>
+              <h4>Google Form submission</h4>
+              <p>Best for project details, scope notes, and structured enquiries.</p>
+            </div>
+          </div>
+
+          <section className={styles.formEmbedWrap}>
+            <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdmZbwxAPdHjtiYm86enNefolniyr8IOqgiCFroPierbY2PTA/viewform?embedded=true"
             width="100%"
             height="900"
@@ -54,7 +77,8 @@ export default function Contact() {
             title="Contact form"
           >
             Loading…
-          </iframe>
+            </iframe>
+          </section>
         </section>
       )}
     </section>

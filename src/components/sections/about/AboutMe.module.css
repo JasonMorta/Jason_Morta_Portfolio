@@ -6,7 +6,7 @@
 }
 
 .divCont {
-  padding: 22px 22px 60px;
+  padding: 24px 24px 64px;
 }
 
 .headingBlock {
@@ -30,7 +30,7 @@
 .lead {
   color: #d8cebc;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .contentWrap p {

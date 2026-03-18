@@ -5,49 +5,49 @@ const serviceCards = [
   {
     title: 'Business websites',
     summary: 'Professional websites for companies, small businesses, and local services that need a clear online presence.',
-    deliverables: ['Home, about, service, and contact pages', 'Mobile-friendly layouts', 'Clean calls to action that make it easy to get enquiries'],
+    deliverables: ['Home, About, Services, and Contact pages', 'Mobile-friendly layouts', 'Clear calls to action for more enquiries'],
     benefit: 'Helps people understand what you offer quickly and gives them a clear next step to contact you or request a quote.',
   },
   {
     title: 'Landing pages',
     summary: 'Focused pages built to promote one service, one product, one offer, or one campaign.',
-    deliverables: ['Simple page structure with one clear goal', 'Lead forms or contact actions', 'Fast-loading layouts designed to keep visitors focused'],
+    deliverables: ['Simple page structure with one clear goal', 'Lead forms or contact actions', 'Fast-loading layouts that keep visitors focused'],
     benefit: 'Useful when you want more sign-ups, bookings, messages, or interest without sending people through a full website.',
   },
   {
     title: 'Portfolio websites',
     summary: 'Showcase websites for freelancers, creatives, and professionals who need to present their work in a polished way.',
-    deliverables: ['Project galleries and case-study sections', 'Personal brand presentation', 'Contact and enquiry sections'],
+    deliverables: ['Project galleries and case studies', 'Personal brand presentation', 'Contact and enquiry sections'],
     benefit: 'Makes your work easier to trust, easier to browse, and easier to remember.',
   },
   {
     title: 'Custom web apps',
     summary: 'Interactive browser-based tools built around a specific workflow, idea, or business need.',
-    deliverables: ['Dashboards, portals, calculators, trackers, or internal tools', 'Forms, saved records, and filtered data views', 'Flexible layouts built around how the tool will actually be used'],
+    deliverables: ['Dashboards, portals, calculators, and internal tools', 'Forms, saved records, and filtered data views', 'Layouts built around real workflow needs'],
     benefit: 'Saves time, reduces repetitive manual work, and gives you a tool designed around your process instead of forcing your process into a generic system.',
   },
   {
     title: 'Online stores and product pages',
     summary: 'Storefronts and product-focused pages for selling items online or presenting a catalogue clearly.',
-    deliverables: ['Product listings and detail pages', 'Store layout improvements', 'User-friendly shopping and browsing flows'],
+    deliverables: ['Product listings and product detail pages', 'Store layout improvements', 'Clearer shopping and browsing flows'],
     benefit: 'Helps customers find products faster, understand them better, and move more smoothly toward purchase or enquiry.',
   },
   {
     title: 'Admin panels and data tools',
     summary: 'Behind-the-scenes systems that make it easier to manage content, records, projects, or customer information.',
-    deliverables: ['Content management views', 'Tables, filters, editing tools, and forms', 'Connected data flows for more organised day-to-day work'],
+    deliverables: ['Content management views', 'Tables, filters, editing tools, and forms', 'Connected data flows for daily admin work'],
     benefit: 'Gives you more control over your own information so updates are quicker and less frustrating to manage.',
   },
   {
     title: 'Website redesigns and upgrades',
     summary: 'Improvements for existing websites that already work, but feel outdated, unclear, slow, or hard to use.',
-    deliverables: ['Layout refreshes', 'Page clean-up and better structure', 'Feature additions and quality-of-life improvements'],
+    deliverables: ['Layout refreshes', 'Clearer page structure and content flow', 'Feature additions and quality-of-life improvements'],
     benefit: 'Lets you improve what you already have without always needing to start again from scratch.',
   },
   {
     title: 'Forms and workflow systems',
     summary: 'Online forms and step-based flows for collecting information, enquiries, requests, or submissions more efficiently.',
-    deliverables: ['Smart forms with clear steps', 'Submission handling and confirmation flows', 'Better structure for collecting accurate information'],
+    deliverables: ['Step-by-step forms with clear guidance', 'Submission handling and confirmation flows', 'Better structure for collecting accurate information'],
     benefit: 'Makes it easier for people to submit the right information and easier for you to manage what comes in.',
   },
 ];
@@ -89,7 +89,7 @@ export default function Services() {
         <PanelHeader>
           <div className={styles.headingBlock}>
             <AccentKicker>Services</AccentKicker>
-            <SectionTitle>What I Can Build For You</SectionTitle>
+            <SectionTitle>Website and Web App Services</SectionTitle>
           </div>
           <MetaPill>Websites • Web Apps • Upgrades</MetaPill>
         </PanelHeader>
@@ -105,7 +105,7 @@ export default function Services() {
         </div>
 
         <div className={styles.buildBlock}>
-          <h2 className={styles.subHeading}>Common types of work I can help with</h2>
+          <h2 className={styles.subHeading}>Projects I can help you build and improve</h2>
           <div className={styles.buildGrid}>
             {buildTypes.map((item) => (
               <div key={item} className={styles.buildChip}>

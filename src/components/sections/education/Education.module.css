@@ -5,7 +5,7 @@
 }
 
 .divCont {
-  padding: 22px;
+  padding: 24px;
 }
 
 .headingBlock {
@@ -25,7 +25,8 @@
 .contentCard p {
   margin: 0;
   text-align: left;
-  line-height: 1.85;
+  line-height: 1.8;
+  color: #c8c8c8;
 }
 
 .eduLinks {
