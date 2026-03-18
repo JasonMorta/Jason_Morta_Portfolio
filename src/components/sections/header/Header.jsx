@@ -50,7 +50,7 @@ export default function Header() {
         <h1 className={styles.lastName}>Morta</h1>
       </div>
       <h3>
-        <span className={styles.stack}>MERN Stack</span> Developer
+        <span className={styles.stack}>MERN Stack</span> Web Developer
       </h3>
     </div>
   );
